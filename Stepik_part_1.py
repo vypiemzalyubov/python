@@ -1797,3 +1797,4 @@ while n != 0:
     product = product * digit
     n //= 10
 print(product)
+
