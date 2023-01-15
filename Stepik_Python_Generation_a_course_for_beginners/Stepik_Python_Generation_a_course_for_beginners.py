@@ -3234,3 +3234,182 @@ print(max([len(i) for i in input().split()]))
 #      Программа должна вывести текст в соответствии с условием задачи.
 
 print(*[i[1:] + i[0] + 'ки' for i in input().split()])
+
+# 262. Напишите функцию draw_box(), которая выводит звездный прямоугольник с размерами 14×10 в соответствии с образцом:
+#
+#      **********
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      *        *
+#      **********
+
+def draw_box():
+    print('*' * 10)
+    for i in range(12):
+        print('*' + ' ' * 8 + '*')
+    print('*' * 10)    
+
+
+draw_box()
+
+# 263. Напишите функцию draw_triangle(), которая выводит звездный прямоугольный треугольник с катетами, равными 10 в соответствии с образцом:
+#
+#      *
+#      **
+#      ***
+#      ****
+#      *****
+#      ******
+#      *******
+#      ********
+#      *********
+#      **********
+
+def draw_triangle():
+    for i in range(11):
+        print('*' * i)
+
+
+draw_triangle()
+
+# 264. Напишите функцию draw_triangle(fill, base), которая принимает два параметра:
+#
+#      fill – символ заполнитель;
+#      base – величина основания равнобедренного треугольника;
+#      а затем выводит его.
+#
+#      Гарантируется, что основание треугольника – нечетное число.
+
+def draw_triangle(fill, base):
+    for i in range(base):
+        print(fill * min(i + 1, base - i))
+
+fill = input()
+base = int(input())
+
+draw_triangle(fill, base)
+
+# 265. Напишите функцию print_fio(name, surname, patronymic), которая принимает три параметра:
+#
+#      name – имя человека;
+#      surname – фамилия человека;
+#      patronymic – отчество человека;
+#      а затем выводит на печать ФИО человека.
+#
+#      Предусмотрите тот факт, что все три буквы в ФИО должны иметь верхний регистр.
+
+def print_fio(name, surname, patronymic):
+    print(f"{surname[0]}{name[0]}{patronymic[0]}".upper())
+
+name, surname, patronymic = input(), input(), input()
+
+print_fio(name, surname, patronymic)
+
+# 266. Напишите функцию print_digit_sum(), которая принимает одно целое число num и выводит на печать сумму его цифр.
+
+def print_digit_sum(num):
+    print(sum(int(i) for i in str(num)))
+
+n = int(input())
+
+print_digit_sum(n)
+
+# 267. Напишите функцию convert_to_miles(km), которая принимает в качестве аргумента расстояние в километрах и возвращает расстояние в милях. 
+#      Формула для преобразования: мили = километры * 0.6214.
+
+def convert_to_miles(km):
+    return km * 0.6214
+
+num = int(input())
+
+print(convert_to_miles(num))
+
+# 268. Напишите функцию get_days(month), которая принимает в качестве аргумента номер месяца и возвращает количество дней в данном месяце.
+#      Гарантируется, что передаваемый аргумент находится в диапазоне от 1 до 12.
+#      Считайте, что год является невисокосным.
+
+def get_days(month):
+    if month == 2:
+        return 28
+    elif month in [4, 6, 9, 11]:
+        return 30
+    else:
+        return 31
+
+num = int(input())
+
+print(get_days(num))
+
+# 269. Напишите функцию get_factors(num), принимающую в качестве аргумента натуральное число и возвращающую список всех делителей данного числа.
+
+def get_factors(num):
+    res = []
+    for i in range(1, num + 1):
+        if num % i == 0:
+            res.append(i)
+    return res        
+            
+n = int(input())
+
+print(get_factors(n))
+
+# 270. Напишите функцию number_of_factors(num), принимающую в качестве аргумента число и возвращающую количество делителей данного числа.
+#      Используйте уже реализованную функцию get_factors(num) из предыдущей задачи.
+
+def get_factors(num):
+    return [i for i in range(1, n + 1) if n % i == 0]
+
+def number_of_factors(num):
+    return len(get_factors(num))
+
+n = int(input())
+
+print(number_of_factors(n))
+
+# 271. Напомним, что строковый метод find('a') возвращает местоположение первого вхождения символа a в строке. 
+#      Проблема заключается в том, что данный метод не находит местоположение всех символов а.
+#      Напишите функцию с именем find_all(target, symbol), которая принимает два аргумента: строку target и символ symbol и возвращает список, 
+#      содержащий все местоположения этого символа в строке.
+#      Если указанный символ не встречается в строке, то следует вернуть пустой список.
+
+def find_all(target, symbol):
+    res = [i for i in range(len(target)) if target[i] == symbol]
+    return res
+
+s = input()
+char = input()
+
+print(find_all(s, char))
+
+# 272. Напишите функцию merge(list1, list2), которая принимает в качестве аргументов два отсортированных по возрастанию списка, состоящих из целых чисел, 
+#      и объединяет их в один отсортированный список.
+#      Списки list1 и list2 могут иметь разную длину.
+
+def merge(list1, list2):
+    for i in list2:
+        list1.append(i)
+    return sorted(list1)
+
+numbers1 = [int(c) for c in input().split()]
+numbers2 = [int(c) for c in input().split()]
+
+print(merge(numbers1, numbers2))
+
+# 273. На вход программе подается число n, а затем n строк, содержащих целые числа в порядке возрастания. Из данных строк формируются списки чисел. 
+#      Напишите программу, которая объединяет указанные списки в один отсортированный список с помощью функции quick_merge(), а затем выводит его.
+
+n = int(input())
+
+def quick_merge(n):
+    return sorted([int(i) for i in range(n) for i in input().split()])
+
+print(*quick_merge(n))
