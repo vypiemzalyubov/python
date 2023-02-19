@@ -3413,3 +3413,140 @@ def quick_merge(n):
     return sorted([int(i) for i in range(n) for i in input().split()])
 
 print(*quick_merge(n))
+
+# 274. Напишите функцию is_valid_triangle(side1, side2, side3), которая принимает в качестве аргументов три натуральных числа, 
+#      и возвращает значение True если существует невырожденный треугольник со сторонами side1, side2, side3 и False в противном случае.
+
+def is_valid_triangle(side1, side2, side3):
+    if (side1 + side2 > side3) and (side1 + side3 > side2) and (side2 + side3 > side1):
+        return True
+    else:
+        return False
+
+a, b, c = int(input()), int(input()), int(input())
+
+print(is_valid_triangle(a, b, c))
+
+# 275. Напишите функцию is_prime(num), которая принимает в качестве аргумента натуральное число и возвращает значение True если число является простым и False в противном случае.
+
+def is_prime(num):
+    return len([i for i in range(1, num + 1) if num % i == 0]) == 2
+
+n = int(input())
+
+print(is_prime(n))
+
+# 276. Напишите функцию get_next_prime(num), которая принимает в качестве аргумента натуральное число num и возвращает первое простое число большее числа num.
+
+def is_prime(num):
+    return len([i for i in range(1, num+1) if num % i == 0]) == 2
+
+def get_next_prime(num):
+    j = num + 1
+    while is_prime(j) == False:
+        j += 1
+    return j
+        
+n = int(input())
+
+print(get_next_prime(n))
+
+# 277. Напишите функцию is_password_good(password), которая принимает в качестве аргумента строковое значение пароля password и возвращает значение True если пароль является надежным и False в противном случае.
+#      Пароль является надежным если:
+#      его длина не менее 8 символов; 
+#      он содержит как минимум одну заглавную букву (верхний регистр); 
+#      он содержит как минимум одну строчную букву (нижний регистр);
+#      он содержит хотя бы одну цифру.
+
+def is_password_good(password):
+    if len(password) < 8:
+        return False
+    if password.lower() == password:
+        return False
+    if password.upper() == password:
+        return False
+    if password.isalpha():
+        return False
+
+    return True
+    
+txt = input()
+
+print(is_password_good(txt))
+
+# 278. Напишите функцию is_one_away(word1, word2), которая принимает в качестве аргументов два слова word1 и word2 и возвращает значение True если слова имеют одинаковую длину 
+#      и отличаются ровно в 1 символе и False в противном случае.
+
+def is_one_away(word1, word2):
+    if len(word1) == len(word2):
+        count = 0
+        for i in range(len(word1)):
+            if word1[i] == word2[i]:
+                count += 1
+        if len(word1) - count == 1:
+            return True
+    return False
+
+txt1 = input()
+txt2 = input()
+
+print(is_one_away(txt1, txt2))
+
+# 279. Напишите функцию is_palindrome(text), которая принимает в качестве аргумента строку text и возвращает значение True если указанный текст является палиндромом 
+#      и False в противном случае.
+#      При проверке считайте большие и маленькие буквы одинаковыми, а также игнорируйте пробелы, а также символы , . ! ? -.
+
+def is_palindrome(text):
+     text1 = [i.lower() for i in text if i.isalnum()] 
+     return text1 == text1[::-1]
+
+txt = input()
+
+print(is_palindrome(txt))
+
+# 280. BEEGEEK наконец открыл свой банк в котором используются специальные банкоматы с необычным паролем.
+#      Действительный пароль BEEGEEK банка имеет вид a:b:c, где a, b и c – натуральные числа. Поскольку основатель BEEGEEK фанатеет от математики, то он решил:
+#      число a – должно быть палиндромом;
+#      число b – должно быть простым;
+#      число c – должно быть четным.
+#      Напишите функцию is_valid_password(password), которая принимает в качестве аргумента строковое значение пароля password
+#      и возвращает значение True если пароль является действительным паролем BEEGEEK банка и False в противном случае.
+
+def is_valid_password(password):
+    password = password.split(':')
+    a, b, c = password[0], int(password[1]), int(password[2])
+    if len(password) != 3 or a != a[::-1] or c % 2 != 0:
+        return False
+    for i in range(2, b):
+        if b % i == 0:
+            return False
+    return True   
+    
+psw = input()
+
+print(is_valid_password(psw))
+
+# 281. Напишите функцию is_correct_bracket(text), которая принимает в качестве аргумента непустую строку text, состоящую из символов ( и ) 
+#      и возвращает значение True если поступившая на вход строка является правильной скобочной последовательностью и False в противном случае.
+#      Правильной скобочной последовательностью называется строка, состоящая только из символов ( и ), где каждой открывающей скобке найдется парная закрывающая скобка.
+
+def is_correct_bracket(text):
+    while '()' in text:
+        text = text.replace('()', '')
+    return len(text) == 0
+
+txt = input()
+
+print(is_correct_bracket(txt))
+
+# 282. Напишите функцию convert_to_python_case(text), которая принимает в качестве аргумента строку в «верблюжьем регистре» и преобразует его в «змеиный регистр».
+
+def convert_to_python_case(text):
+    for c in text:
+        if c.isupper():
+            text = text.replace(c, '_' + c.lower())
+    return text[1:]
+
+txt = input()
+
+print(convert_to_python_case(txt))
