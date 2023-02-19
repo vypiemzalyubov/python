@@ -3550,3 +3550,43 @@ def convert_to_python_case(text):
 txt = input()
 
 print(convert_to_python_case(txt))
+
+# 283. Напишите функцию get_middle_point(x1, y1, x2, y2), которая принимает в качестве аргументов координаты концов отрезка (x1;y1) и (x2;y2)
+#      и возвращает координаты точки являющейся серединой данного отрезка.
+
+def get_middle_point(x1, y1, x2, y2):
+    return (x_1 + x_2) / 2, (y_1 + y_2) / 2
+
+x_1, y_1 = int(input()), int(input())
+x_2, y_2 = int(input()), int(input())
+
+x, y = get_middle_point(x_1, y_1, x_2, y_2)
+print(x, y)
+
+# 284. Напишите функцию get_circle(radius), которая принимает в качестве аргумента радиус окружности 
+#      и возвращает два значения: длину окружности и площадь круга, ограниченного данной окружностью.
+
+import math
+
+def get_circle(radius):
+    return 2 * math.pi * radius, math.pi * radius ** 2
+
+r = float(input())
+
+length, square = get_circle(r)
+print(length, square)
+
+# 285. Напишите функцию solve(a, b, c), которая принимает в качестве аргументов три целых числа a, b, c – коэффициенты квадратного уравнения 
+#      ax**2 + bx + c = 0 и возвращает его корни в порядке возрастания.
+
+def solve(a, b, c):
+    d = (b ** 2) - 4 * a * c
+    x1 = ((-1 * b) - d ** 0.5) / (2 * a)
+    x2 = ((-1 * b) + d ** 0.5) / (2 * a)
+    
+    return min(x1,x2), max(x1,x2)    
+
+a, b, c = int(input()), int(input()), int(input())
+
+x1, x2 = solve(a, b, c)
+print(x1, x2)
