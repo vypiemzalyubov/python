@@ -8,11 +8,11 @@
 
 print('Hello world!')
 
-user_name = input()
-print("Hello", user_name)
+user_name = input('Введите имя: ')
+print(f'Hello, {user_name}')
 
-x = int(input())
-y = int(input())
+x = int(input('Введите x: '))
+y = int(input('Введите y: '))
 print('Результат =', x + y)
 
 # 1.2
