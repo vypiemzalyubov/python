@@ -35,6 +35,8 @@ for _ in range(number):
 # Напишите программу-калькулятор, которая принимает два числа и оператор (в формате str), производит заданное арифметическое действие и печатает результат в формате: 
 # {num1} {operator) {num2) = {result}
 
+import sys
+
 try:
     num1 = int(input('Enter the first number: '))
     num2 = int(input('Enter the second number: '))
@@ -55,4 +57,5 @@ try:
         except ZeroDivisionError:
             print('You can\'t divide by zero')
 except ValueError:
-    print('You have to enter a number')        
+    print('You have to enter a number')
+    sys.exit()
