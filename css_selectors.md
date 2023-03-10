@@ -71,6 +71,7 @@ h1::first-letter {
     color: burlywood;
 }
 ```
+---
 ### Поиск в консоли DevTools:
 
 **по тегу**
