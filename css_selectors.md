@@ -19,6 +19,7 @@ p, h1 {
     font-size: 20px;
 }
 ```
+```
 p.another-class {
     background-color: aqua;
 }
