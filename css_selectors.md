@@ -41,11 +41,6 @@ a[href="https://google.com"] {
     color: blueviolet;
 }
 ```
-```
-a[href="https://ya.ru"] {
-    color: pink;
-}
-```
 **Селектор потомков (контекстный селектор)**
 ```
 .container h3 {
