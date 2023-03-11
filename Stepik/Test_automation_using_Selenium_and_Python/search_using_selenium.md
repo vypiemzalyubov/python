@@ -15,3 +15,18 @@
 **find_element(By.LINK_TEXT, value)** — поиск ссылки на странице по полному совпадению;
 
 **find_element(By.PARTIAL_LINK_TEXT, value)** — поиск ссылки на странице, если текст селектора совпадает с любой частью текста ссылки.
+
+**find_elements(locator, value)** - поиск нескольких элементов
+```
+Пример:  найти кнопку со значением id="submit_button"
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+browser = webdriver.Chrome()
+browser.get("http://suninjuly.github.io/simple_form_find_task.html")
+button = browser.find_element(By.ID, "submit_button")
+```
+### Отличие find_element и find_elements
+
+Если первый метод не смог найти элемент на странице, то он вызовет ошибку **NoSuchElementException**, которая прервёт выполнение кода. Второй же метод всегда возвращает валидный результат: если ничего не было найдено, то он вернёт пустой список и программа перейдет к выполнению следующего шага в коде.
