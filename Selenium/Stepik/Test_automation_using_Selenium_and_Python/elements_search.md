@@ -108,57 +108,57 @@ h1::first-letter {
 ## Поиск элементов в консоли DevTools:
 
 **по тегу**
-```
+```javascript
 $$ ("body")
 ```
 **по id**
-```
+```javascript
 $$ ("#abc")
 ```
 **по классу**
-```
+```javascript
 $$ (".appbar")
 ```
 **поиск по трем классам**
-```
+```javascript
 $$ (".col.rhscol.rhstcs")
 ```
 **найти тег у которого нет указанного класса**
-```
+```javascript
 $$ ("div:not(.col)")
 ```
 **по атрибуту**
-```
+```javascript
 $$ ("[role='main']")
 ```
-```
+```javascript
 $$ ("div[role]")
 ```
-```
+```javascript
 $$ ("div[role*='ai']")
 ```
-```
+```javascript
 $$ ("div[role^='ai']")
 ```
-```
+```javascript
 $$ ("div[role$='in']")
 ```
 **найти тег вложенный в другой тег**
-```
+```javascript
 $$ ("div[jscontroller='TxZWcc'] div.liYKde")
 ```
 **найти только ребенка, где тег вложен в другой тег**
-```
+```javascript
 $$ ("div[jscontroller='TxZWcc'] > div.liYKde")
 ```
 **найти у одного тега другой тег**
-```
+```javascript
 $$ ("ul li:first-child")
 ```
-```
+```javascript
 $$ ("ul li:last-child")
 ```
-```
+```javascript
 $$ ("li:nth-child(2)")
 ```
 
