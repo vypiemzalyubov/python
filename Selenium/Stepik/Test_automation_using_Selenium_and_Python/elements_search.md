@@ -18,8 +18,9 @@
 
 **find_elements(locator, value)** - поиск нескольких элементов
 
-:bulb: **Пример:** найти кнопку со значением id="submit_button"
 ```python
+# Пример: найти кнопку со значением id="submit_button"
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
