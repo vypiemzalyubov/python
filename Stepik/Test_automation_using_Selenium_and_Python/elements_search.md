@@ -104,9 +104,9 @@ h1::first-letter {
     color: burlywood;
 }
 ```
----
-### Поиск в консоли DevTools:
 
+### Поиск в консоли DevTools:
+---
 **по тегу**
 ```
 $$ ("body")
@@ -161,7 +161,7 @@ $$ ("ul li:last-child")
 ```
 $$ ("li:nth-child(2)")
 ```
----
+
 ### Поиск элементов с помощью XPath
 ---
 [Xpath cheatsheet](https://devhints.io/xpath)
