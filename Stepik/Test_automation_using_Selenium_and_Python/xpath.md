@@ -1,3 +1,3 @@
 ### XPath
 
-[Xpath cheatsheet](https://devhints.io/xpath#prefixes)
+[Xpath cheatsheet](https://devhints.io/xpath)
