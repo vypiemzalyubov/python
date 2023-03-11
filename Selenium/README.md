@@ -1,5 +1,5 @@
-## Stepik
+## Selenium
 
 <div id="header" align="center">
-  <img src="https://stepik.org/static/frontend/mobile-banner/stepik_logotype_square_black.svg" width="100"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/selenium/selenium-original.svg" width="100"/>
 </div>
