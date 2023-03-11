@@ -17,9 +17,9 @@
 **find_element(By.PARTIAL_LINK_TEXT, value)** — поиск ссылки на странице, если текст селектора совпадает с любой частью текста ссылки.
 
 **find_elements(locator, value)** - поиск нескольких элементов
-```
-Пример: найти кнопку со значением id="submit_button"
 
+**Пример:** найти кнопку со значением id="submit_button"
+```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -34,72 +34,72 @@ button = browser.find_element(By.ID, "submit_button")
 ## Поиск элементов с помощью CSS селекторов
 
 **универсальный** - применяется ко всем эелементам на странице
-```
+```css
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 ```
 **по тегу**
-```
+```css
 p, h1 {
     color: green;
 }
 ```
 **по классу**
-```
+```css
 .paragraph {
     color: red;
     font-size: 20px;
 }
 ```
-```
+```css
 p.another-class {
     background-color: aqua;
 }
 ```
 **по id**
-```
+```css
 #abc {
     color: lightcoral;
 }
 ```
-```
+```css
 h2#www {
     color: gray;
 }
 ```
 **по атрибуту**
-```
+```css
 a[href="https://google.com"] {
     color: blueviolet;
 }
 ```
 **селектор потомков** (контекстный селектор)
-```
+```css
 .container h3 {
     background: grey;
 }
 ```
 **дочерний селектор** (применяется только к единственному первому ребенку)
-```
+```css
 .container > p {
     text-decoration: line-through;
 }
 ```
 **сестринский селектор** (самый ближайший к элементу)
-```
+```css
 #heading + span {
     color: brown;
 }
 ```
 **селектор псевдоклассов**
-```
+```css
 a:hover {
     text-decoration: none;
 }
 ```
 **селектор псевдоэлементов**
-```
+```css
 h1::first-letter {
     color: burlywood;
 }
