@@ -58,9 +58,6 @@ button = browser.find_element(By.ID, "submit_button")
 ```javascript
 //span[contains(@class,'LC2Ob'])
 ```
-```javascript
-//span[contains(@class,'LC2Ob'])
-```
 **по номеру элемента**
 ```javascript
 //ul/li[1]
@@ -72,6 +69,7 @@ button = browser.find_element(By.ID, "submit_button")
 ```javascript
 //span[text()='text']/parent::div/following-sibling::div
 ```
+
 [Xpath cheatsheet](https://devhints.io/xpath)
 
 ## Поиск элементов с помощью CSS селекторов
