@@ -70,7 +70,7 @@ button = browser.find_element(By.ID, "submit_button")
 //span[text()='text']/parent::div/following-sibling::div
 ```
 
-[Xpath cheatsheet](https://devhints.io/xpath)
+:bulb: [Xpath cheatsheet](https://devhints.io/xpath)
 
 ## Поиск элементов с помощью CSS селекторов
 
