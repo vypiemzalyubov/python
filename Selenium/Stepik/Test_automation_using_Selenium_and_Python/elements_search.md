@@ -35,38 +35,38 @@ button = browser.find_element(By.ID, "submit_button")
 ## Поиск элементов с помощью XPath
 
 **по тегу**
-```javascript
+```
 //div
 ```
-```javascript
+```
 //div//p
 ```
 **по атрибуту**
-```javascript
+```
 //div[@class='g']
 ```
-```javascript
+```
 //*[@id='abc']
 ```
 **по тексту внутри тега**
-```javascript
+```
 //div[text()='text']
 ```
-```javascript
+```
 //div[contains(text(),'text'])
 ```
-```javascript
+```
 //span[contains(@class,'LC2Ob'])
 ```
 **по номеру элемента**
-```javascript
+```
 //ul/li[1]
 ```
-```javascript
+```
 //ul/li[last()]
 ```
 **обращение к соседнему элементу родителя**
-```javascript
+```
 //span[text()='text']/parent::div/following-sibling::div
 ```
 
