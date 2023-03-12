@@ -1,5 +1,5 @@
 ## Selenium
 
 <div id="header" align="center">
-  <img src="https://github.com/devicons/devicon/blob/master/icons/selenium/selenium-original.svg" width="100"/>
+  <img src="https://avatars0.githubusercontent.com/u/983927?v=3&s=400" width="100"/>
 </div>
