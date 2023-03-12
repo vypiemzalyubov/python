@@ -32,6 +32,48 @@ button = browser.find_element(By.ID, "submit_button")
 >
 >Если первый метод не смог найти элемент на странице, то он вызовет ошибку **NoSuchElementException**, которая прервёт выполнение кода. Второй же метод всегда возвращает валидный результат: если ничего не было найдено, то он вернёт пустой список и программа перейдет к выполнению следующего шага в коде.
 
+## Поиск элементов с помощью XPath
+
+**по тегу**
+```javascript
+//div
+```
+```javascript
+//div//p
+```
+**по атрибуту**
+```javascript
+//div[@class='g']
+```
+```javascript
+//*[@id='abc']
+```
+**по тексту внутри тега**
+```javascript
+//div[text()='text']
+```
+```javascript
+//div[contains(text(),'text'])
+```
+```javascript
+//span[contains(@class,'LC2Ob'])
+```
+```javascript
+//span[contains(@class,'LC2Ob'])
+```
+**по номеру элемента**
+```javascript
+//ul/li[1]
+```
+```javascript
+//ul/li[last()]
+```
+**обращение к соседнему элементу родителя**
+```javascript
+//span[text()='text']/parent::div/following-sibling::div
+```
+[Xpath cheatsheet](https://devhints.io/xpath)
+
 ## Поиск элементов с помощью CSS селекторов
 
 **универсальный** - применяется ко всем эелементам на странице
@@ -162,7 +204,3 @@ $$ ("ul li:last-child")
 ```javascript
 $$ ("li:nth-child(2)")
 ```
-
-## Поиск элементов с помощью XPath
-
-[Xpath cheatsheet](https://devhints.io/xpath)
