@@ -3,6 +3,7 @@
 # Вам нужно открыть страницу по ссылке и заполнить форму на этой странице с помощью Selenium. 
 # Если всё сделано правильно, то вы увидите окно с проверочным кодом. Это число вам нужно ввести в качестве ответа в этой задаче.
 
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time 
@@ -10,7 +11,7 @@ import time
 link = "http://suninjuly.github.io/simple_form_find_task.html"
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     browser.get(link)
 
     input1 = browser.find_element(By.TAG_NAME, "input")
@@ -25,5 +26,5 @@ try:
     button.click()
 
 finally:
-    time.sleep(30)
+    time.sleep(20)
     browser.quit()

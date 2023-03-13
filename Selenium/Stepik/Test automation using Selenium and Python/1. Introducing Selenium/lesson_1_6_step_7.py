@@ -9,6 +9,7 @@
 # В цикле for мы можем последовательно взять каждый элемент из найденного списка текстовых полей и отправить произвольный текст в каждое поле. 
 # Если скрипт не успевает заполнить форму, выберите текст покороче.
 
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -16,7 +17,7 @@ import random
 import string
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     browser.get("http://suninjuly.github.io/huge_form.html")
 
     elements = browser.find_elements(By.TAG_NAME, "input")
@@ -28,5 +29,5 @@ try:
     button.click()
 
 finally:
-    time.sleep(30)
+    time.sleep(20)
     browser.quit()

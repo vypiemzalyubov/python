@@ -9,6 +9,7 @@
 # 5. Заполните скриптом форму так же как вы делали в предыдущем шаге урока
 # 6. После успешного заполнения вы получите код - отправьте его в качестве ответа на это задание
 
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -17,7 +18,7 @@ import math
 link = "http://suninjuly.github.io/find_link_text"
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     browser.get(link)
 
     link = browser.find_element(By.LINK_TEXT, str(math.ceil(math.pow(math.pi, math.e)*10000)))
@@ -35,5 +36,5 @@ try:
     button.click()
 
 finally:
-    time.sleep(30)
+    time.sleep(20)
     browser.quit()
