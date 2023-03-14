@@ -288,7 +288,7 @@ grault bar grault baz grault qux
 >`replace()` может принимать опциональный третий аргумент `<count>`, который определяет количество замен.
 >```python
 >s = 'foo bar foo baz foo qux'
-  
+>  
 >>>>print(s.replace('foo', 'grault', 2))
 >grault bar grault baz foo qux
 >```
