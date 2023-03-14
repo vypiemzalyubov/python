@@ -258,7 +258,14 @@ s = 'foo bar foo baz foo qux'
 >>print(s.replace('foo', 'grault'))
 grault bar grault baz grault qux
 ```
->Методы строк возвращают изменные копии строк. Методы списков возвращают изменные списки.
+>`replace()` может принимать опциональный третий аргумент `<count>`, который определяет количество замен.
+>```python
+>s = 'foo bar foo baz foo qux'
+>>>>print(s.replace('foo', 'grault', 2))
+>grault bar grault baz foo qux
+>```
+  
+Методы строк возвращают изменные копии строк. Методы списков возвращают изменные списки.
 
 ---
 
