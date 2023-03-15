@@ -3,8 +3,8 @@
 # Вам нужно открыть страницу по ссылке и заполнить форму на этой странице с помощью Selenium. 
 # Если всё сделано правильно, то вы увидите окно с проверочным кодом. Это число вам нужно ввести в качестве ответа в этой задаче.
 
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time 
 

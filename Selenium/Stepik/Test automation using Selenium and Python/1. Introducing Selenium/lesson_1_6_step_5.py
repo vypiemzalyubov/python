@@ -9,8 +9,8 @@
 # 5. Заполните скриптом форму так же как вы делали в предыдущем шаге урока
 # 6. После успешного заполнения вы получите код - отправьте его в качестве ответа на это задание
 
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
 import math
