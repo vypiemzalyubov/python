@@ -16,12 +16,12 @@ from selenium.webdriver.common.by import By
 import time
 import math
 
+def calc(x):
+    return str(math.log(abs(12*math.sin(int(x)))))
+
 try:
     browser = webdriver.Chrome(executable_path=ChromeDriverManager().install())
     browser.get("https://suninjuly.github.io/math.html")
-    
-    def calc(x):
-       return str(math.log(abs(12*math.sin(int(x)))))
     
     x_element = browser.find_element(By.ID, "input_value")
     x = x_element.text
