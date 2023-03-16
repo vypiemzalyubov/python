@@ -14,7 +14,7 @@ Python  –  язык, **чувствительный** к регистру, `
 
 В Python есть набор **ключевых слов**, которые являются **зарезервированными словами**. Эти слова нельзя использовать в качестве имен переменных, имен функций или любых других идентификаторов. 
 
-Список зарезервированных слов [Python Keywords](https://www.w3schools.com/python/python_ref_keywords.asp)
+Список зарезервированных слов: [Python Keywords](https://www.w3schools.com/python/python_ref_keywords.asp)
 
 ---
 
