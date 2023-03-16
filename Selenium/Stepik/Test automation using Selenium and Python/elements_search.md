@@ -76,9 +76,7 @@ button = browser.find_element(By.ID, "submit_button")
 
 **универсальный** - применяется ко всем эелементам на странице
 ```css
-* {
-    font-family: Arial, Helvetica, sans-serif;
-}
+*
 ```
 **по тегу**
 ```css
