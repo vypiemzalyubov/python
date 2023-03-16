@@ -25,8 +25,8 @@ try:
     
     x_element = browser.find_element(By.ID, "input_value")
     x = x_element.text
+    
     y = calc(x)
-
     input_answer = browser.find_element(By.ID, "answer").send_keys(y)
 
     button_checkbox = browser.find_element(By.XPATH, "//*[@for='robotCheckbox']").click()
