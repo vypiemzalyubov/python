@@ -82,68 +82,45 @@ button = browser.find_element(By.ID, "submit_button")
 ```
 **по тегу**
 ```css
-p, h1 {
-    color: green;
-}
+p
 ```
 **по классу**
 ```css
-.paragraph {
-    color: red;
-    font-size: 20px;
-}
+.paragraph
 ```
 ```css
-p.another-class {
-    background-color: aqua;
-}
+p.another-class
 ```
 **по id**
 ```css
-#abc {
-    color: lightcoral;
-}
+#abc
 ```
 ```css
-h2#www {
-    color: gray;
-}
+h2#www
 ```
 **по атрибуту**
 ```css
-a[href="https://google.com"] {
-    color: blueviolet;
-}
+a[href="https://google.com"]
 ```
 **селектор потомков** (контекстный селектор)
 ```css
-.container h3 {
-    background: grey;
-}
+.container h3
 ```
 **дочерний селектор** (применяется только к единственному первому ребенку)
 ```css
-.container > p {
-    text-decoration: line-through;
-}
+.container > p
 ```
 **сестринский селектор** (самый ближайший к элементу)
 ```css
-#heading + span {
-    color: brown;
-}
+#heading + span
 ```
 **селектор псевдоклассов**
 ```css
-a:hover {
-    text-decoration: none;
-}
+a:hover
 ```
 **селектор псевдоэлементов**
 ```css
-h1::first-letter {
-    color: burlywood;
-}
+h1::first-letter
 ```
 
 ## Поиск элементов в консоли DevTools:
