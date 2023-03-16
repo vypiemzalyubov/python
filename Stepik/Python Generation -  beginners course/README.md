@@ -33,8 +33,8 @@ cats,dogs,mice
 Перенос строки можно заменить на любые символы через `end=""`.
 ```python
 phrase = ['printed', 'with', 'a', 'dash', 'in', 'between']
->>> for word in phrase:
-        print(word, end='-')
+for word in phrase:
+    print(word, end='-')
 
 printed-with-a-dash-in-between-
 ```
