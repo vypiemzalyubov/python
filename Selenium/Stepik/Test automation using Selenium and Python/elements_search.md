@@ -1,5 +1,5 @@
 <details>
-<summary><h3>Поиск элементов с помощью Selenium</h3></summary>
+<summary><b>Поиск элементов с помощью Selenium</b></summary>
 
 ```python
 find_element(By.ID, value)                  #поиск по уникальному атрибуту id элемента
@@ -37,7 +37,7 @@ button = browser.find_element(By.ID, "submit_button")
 </details>
 
 <details>
-<summary><h3>Поиск элементов с помощью XPath</h3></summary>
+<summary><b>Поиск элементов с помощью XPath</b></summary>
 
 **по тегу**
 ```
@@ -79,7 +79,7 @@ button = browser.find_element(By.ID, "submit_button")
 </details>
 
 <details>
-<summary><h3>Поиск элементов с помощью CSS селекторов</h3></summary>
+<summary><b>Поиск элементов с помощью CSS селекторов</b></summary>
 
 **универсальный** - применяется ко всем эелементам на странице
 ```css
@@ -130,7 +130,7 @@ h1::first-letter
 </details>
 
 <details>
-<summary><h3>Поиск элементов в консоли DevTools</h3></summary>
+<summary><b>Поиск элементов в консоли DevTools</b></summary>
 
 **по тегу**
 ```javascript
