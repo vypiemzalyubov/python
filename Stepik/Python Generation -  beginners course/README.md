@@ -442,7 +442,8 @@ Python is the most powerful language
 >Мы*учим*язык*Python
 >МыabcучимabcязыкabcPython
 >Мы123учим123язык123Python 
-```  
+```
+  
 :exclamation: Строковый метод `split()` служит для преобразования строки в список, а метод `join()` - для преобразования списка в строку.  
 
 ---
@@ -538,7 +539,6 @@ numbers = [5, 1, 3, 2, 4]
 
 for i in range(len(numbers)):
     print(numbers[i])
-
 5
 1
 3
@@ -550,7 +550,6 @@ numbers = [5, 1, 3, 2, 4]
 
 for num in numbers:
     print(num)
-
 5
 1
 3
