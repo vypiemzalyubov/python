@@ -71,14 +71,27 @@ button = browser.find_element(By.ID, "submit_button")
 //ul/li[last()]
 ```
 ```
+//ul/li[last()-1]
+```  
+```
 //ol[@class='list news_list']/li[2]//span[@class='news_item-content']
 ```  
+```
+//ol[@class='news']/li[position()=1]"))  
+```
   
 **обращение к соседнему элементу родителя**
 ```
 //span[text()='text']/parent::div/following-sibling::div
 ```
-
+  
+**поиск с использованием AND и OR**
+```
+//a[@rel='noopener' or @target='_blank']
+//a[@rel='noopener' and @target='_blank']
+//a[@rel='noopener' and @target='_blank' and contains(@class, 'home-link_black_yes')]
+```
+  
 :bulb: [Xpath cheatsheet](https://devhints.io/xpath)
 </details>
 
