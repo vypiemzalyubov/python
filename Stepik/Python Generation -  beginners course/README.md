@@ -425,6 +425,7 @@ words = s.split()
 ```
   
 `' '.join()` –  собирает строку из элементов списка, используя в качестве разделителя строку, к которой применяется метод.
+
 ```python
 words = ['Python', 'is', 'the', 'most', 'powerful', 'language']
 s = ' '.join(words)
@@ -432,13 +433,14 @@ s = ' '.join(words)
 >>>print(s)
 Python is the most powerful language  
 ```
+
 >Метод `join()` также может иметь необязательный параметр.
 >```python
 >words = ['Мы', 'учим', 'язык', 'Python']
 >
->>>print('*'.join(words))
->>>print('abc'.join(words))
->>>print('123'.join(words))
+>>>>print('*'.join(words))
+>>>>print('abc'.join(words))
+>>>>print('123'.join(words))
 >Мы*учим*язык*Python
 >МыabcучимabcязыкabcPython
 >Мы123учим123язык123Python 
