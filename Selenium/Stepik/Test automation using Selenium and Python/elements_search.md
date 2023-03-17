@@ -70,6 +70,10 @@ button = browser.find_element(By.ID, "submit_button")
 ```
 //ul/li[last()]
 ```
+```
+//ol[@class='list news_list']/li[2]//span[@class='news_item-content']
+```  
+  
 **обращение к соседнему элементу родителя**
 ```
 //span[text()='text']/parent::div/following-sibling::div
