@@ -490,23 +490,93 @@ del numbers[5]
 [1, 2, 3, 4, 5, 7, 8, 9]
 ```  
 
-`.insert(index, value)` – Передать строку value в список по индексу index. Элемент, который занимал этот индекс раньше, и все после него сдвинутся на один.
+`.insert(index, value)` – вставить значение в указанный индекс.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+>>>print(names)
+names.insert(0, 'Anders')
+>>>print(names)
+names.insert(3, 'Josef')
+>>>print(names)
+['Gvido', 'Roman' , 'Timur']
+['Anders', 'Gvido', 'Roman' , 'Timur']
+['Anders', 'Gvido', 'Roman' , 'Josef', 'Timur']  
+```  
 
-`.index(value)` – Найти индекс в списке у такого элемента, который соответствует строке value.
+`.index(value)` – возвращает индекс первого элемента, значение которого равняется переданному в метод значению. 
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+position = names.index('Timur')
+>>>print(position)
+2
+```  
 
-`.remove(value)` – Удалить из списка первый элемент, который соответствует строке value.
+`.remove(value)` – удаляет первый элемент, значение которого равняется переданному в метод значению.
+```python
+food = ['Рис', 'Курица', 'Рыба', 'Брокколи', 'Рис']
+food.remove('Рис')
+>>>print(food)
+['Курица', 'Рыба', 'Брокколи', 'Рис']
+```  
 
-`.pop(index)` – Удалить из списка элемент по индексу и "вернуть" его.
-
-`.count(value)` – Посчитать, сколько элементов в списке соответствуют строке value.
-
-`.reverse()` – Меняет порядок элементов в списке задом наперед.
-
-`.clear()` – Удаляет из списка абсолютно все элементы.
-
-`.sort()` – Сортирует список по возрастанию, от меньших элементов к большим.
-
-`.sort(reverse = True)` – Сортирует список по убыванию, от больших элементов к меньшим.
+`.pop(index)` – удаляет элемент по указанному индексу и возвращает его.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+item = names.pop(1)
+>>print(item)
+>>print(names)
+Roman
+['Gvido', 'Timur']
+```
+>В метод `pop()` передается один необязательный аргумент `index` - индекс элемента, который требуется удалить. Если индекс не указан, то метод удаляет и возвращает последний элемент списка.  
+  
+`.count(value)` – возвращает количество элементов в списке, значения которых равны переданному в метод значению.
+```python
+names = ['Timur', 'Gvido', 'Roman', 'Timur', 'Anders', 'Timur']
+cnt1 = names.count('Timur')
+cnt2 = names.count('Josef')
+>>>print(cnt1)
+>>>print(cnt2)
+3
+0
+```
+  
+`.reverse()` – меняет порядок элементов в списке на противоположный.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names.reverse()
+>>>print(names)
+['Timur', 'Roman', 'Gvido']
+```
+  
+`.clear()` –  удаляет все элементы из списка.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names.clear()
+>>>print(names)
+[]
+```
+  
+`copy()` - создает поверхностную копию списка.  
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names_copy = names.copy()
+>>>print(names)
+>>>print(names_copy)
+['Gvido', 'Roman', 'Timur']
+['Gvido', 'Roman', 'Timur']
+```  
+  
+`.sort()` – сортирует элементы списка по возрастанию, для сортировки по убыванию указать параметр `reverse = True`.
+```python
+a = [1, 7, -3, 9, 0, -67, 34, 12, 45, 1000, 6,  8, -2, 99]
+a.sort()
+a.sort(reverse = True)  
+>>>print(a)
+>>>print(a)  
+[-67, -3, -2, 0, 1, 6, 7, 8, 9, 12, 34, 45, 99, 1000]
+[1000, 99, 45, 34, 12, 9, 8, 7, 6, 1, 0, -2, -3, -67]
+```
 
 ---
 
