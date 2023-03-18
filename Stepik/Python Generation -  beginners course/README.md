@@ -441,158 +441,12 @@ Python is the most powerful language
 :exclamation: Строковый метод `split()` служит для преобразования строки в список, а метод `join()` - для преобразования списка в строку.  
 
 ## Списки
-
+  
 Индексация, срезы, конкатенация, умножение на число,встроенные функции `sum()`, `min()`, `max()`, оператор `in`, длина `len()` - работают **по аналогии** со строками.
 
 :exclamation: Отличие списков от строк в том, что **строки - неизменяемые объекты**, а **списки - изменяемые**. Изменять отдельные символы строк нельзя, однако можно изменять отдельные элементы списков. Для этого используется индексатор и оператор присваивания.   
 
-### Методы списков  
-  
-`.append()` – добавление нового элемента в конец списка.
-```python
-numbers = [1, 1, 2, 3, 5, 8, 13]
-numbers.append(21)
-numbers.append(34)
-
->>>print(numbers)
-[1, 1, 2, 3, 5, 8, 13, 21, 34]  
-```  
-
-`.extend()` – расширить список другим списком.
-```python
-numbers = [0, 2, 4, 6, 8, 10]
-odds = [1, 3, 5, 7]
-numbers.extend(odds)
-
->>>print(numbers)
-[0, 2, 4, 6, 8, 10, 1, 3, 5, 7]
-```  
->Отличие между методами `append()` и `extend()` проявляется при добавлении строки к списку.
->```python  
->words1 = ['iq option', 'stepik', 'beegeek']
->words2 = ['iq option', 'stepik', 'beegeek']
->words1.append('python')
->words2.extend('python')
->
->>>>print(words1)
->>>>print(words2)
->['iq option', 'stepik', 'beegeek', 'python']
->['iq option', 'stepik', 'beegeek', 'p', 'y', 't', 'h', 'o', 'n']
->```
->Метод `append()` добавляет строку 'python' целиком к списку, а метод `extend()` разбивает строку 'python' на  символы 'p', 'y', 't', 'h', 'o', 'n' и их >добавляет в качестве элементов списка. 
-   
-`del list[i]` – удалить элемент списка по индексу. Также работает и со срезами.
-```python
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-del numbers[5]
-
->>>print(numbers)
-[1, 2, 3, 4, 5, 7, 8, 9]
-```  
-
-`.insert(index, value)` – вставить значение в указанный индекс.
-```python
-names = ['Gvido', 'Roman' , 'Timur']
->>>print(names)
-names.insert(0, 'Anders')
->>>print(names)
-names.insert(3, 'Josef')
->>>print(names)
-['Gvido', 'Roman' , 'Timur']
-['Anders', 'Gvido', 'Roman' , 'Timur']
-['Anders', 'Gvido', 'Roman' , 'Josef', 'Timur']  
-```  
-
-`.index(value)` – возвращает индекс первого элемента, значение которого равняется переданному в метод значению. 
-```python
-names = ['Gvido', 'Roman' , 'Timur']
-position = names.index('Timur')
->>>print(position)
-2
-```  
-
-`.remove(value)` – удаляет первый элемент, значение которого равняется переданному в метод значению.
-```python
-food = ['Рис', 'Курица', 'Рыба', 'Брокколи', 'Рис']
-food.remove('Рис')
->>>print(food)
-['Курица', 'Рыба', 'Брокколи', 'Рис']
-```  
-
-`.pop(index)` – удаляет элемент по указанному индексу и возвращает его.
-```python
-names = ['Gvido', 'Roman' , 'Timur']
-item = names.pop(1)
->>print(item)
->>print(names)
-Roman
-['Gvido', 'Timur']
-```
->В метод `pop()` передается один необязательный аргумент `index` - индекс элемента, который требуется удалить. Если индекс не указан, то метод удаляет и возвращает последний элемент списка.  
-  
-`.count(value)` – возвращает количество элементов в списке, значения которых равны переданному в метод значению.
-```python
-names = ['Timur', 'Gvido', 'Roman', 'Timur', 'Anders', 'Timur']
-cnt1 = names.count('Timur')
-cnt2 = names.count('Josef')
->>>print(cnt1)
->>>print(cnt2)
-3
-0
-```
-  
-`.reverse()` – меняет порядок элементов в списке на противоположный.
-```python
-names = ['Gvido', 'Roman' , 'Timur']
-names.reverse()
->>>print(names)
-['Timur', 'Roman', 'Gvido']
-```
-  
-`.clear()` –  удаляет все элементы из списка.
-```python
-names = ['Gvido', 'Roman' , 'Timur']
-names.clear()
->>>print(names)
-[]
-```
-  
-`copy()` - создает поверхностную копию списка.  
-```python
-names = ['Gvido', 'Roman' , 'Timur']
-names_copy = names.copy()
->>>print(names)
->>>print(names_copy)
-['Gvido', 'Roman', 'Timur']
-['Gvido', 'Roman', 'Timur']
-```  
-  
-`.sort()` – сортирует элементы списка по возрастанию, для сортировки по убыванию указать параметр `reverse = True`.
-```python
-a = [1, 7, -3, 9, 0, -67, 34, 12, 45, 1000, 6,  8, -2, 99]
-a.sort()
-a.sort(reverse = True)  
->>>print(a)
->>>print(a)  
-[-67, -3, -2, 0, 1, 6, 7, 8, 9, 12, 34, 45, 99, 1000]
-[1000, 99, 45, 34, 12, 9, 8, 7, 6, 1, 0, -2, -3, -67]
-```
-
----
-
-#### Списочные выражения
-
-numbers = [i for i in range(10)]  –  заполнить список цифрами от 0 до 9.
-
-[выражение for переменная in последовательность]  –  общий вид списочного выражения.
-
-К списочным выражениям можно добавлять условия.
-
-evens = [i for i in range(21) if i % 2 == 0]  –  заполнить список четными числами от 0 до 20.  
-  
----
-
-#### Вывод элементов списка
+### Вывод элементов списка
 
 **Вывод с помощью цикла for**
 ```python
@@ -626,13 +480,163 @@ numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 >>>print(*numbers)
 0 1 2 3 4 5 6 7 8 9 10
 ```  
+  
+### Методы списков  
+  
+- `.append()` – добавление нового элемента в конец списка.
+```python
+numbers = [1, 1, 2, 3, 5, 8, 13]
+numbers.append(21)
+numbers.append(34)
+
+>>>print(numbers)
+[1, 1, 2, 3, 5, 8, 13, 21, 34]  
+```  
+
+- `.extend()` – расширить список другим списком.
+```python
+numbers = [0, 2, 4, 6, 8, 10]
+odds = [1, 3, 5, 7]
+numbers.extend(odds)
+
+>>>print(numbers)
+[0, 2, 4, 6, 8, 10, 1, 3, 5, 7]
+```  
+>Отличие между методами `append()` и `extend()` проявляется при добавлении строки к списку.
+>```python  
+>words1 = ['iq option', 'stepik', 'beegeek']
+>words2 = ['iq option', 'stepik', 'beegeek']
+>words1.append('python')
+>words2.extend('python')
+>
+>>>>print(words1)
+>>>>print(words2)
+>['iq option', 'stepik', 'beegeek', 'python']
+>['iq option', 'stepik', 'beegeek', 'p', 'y', 't', 'h', 'o', 'n']
+>```
+>Метод `append()` добавляет строку 'python' целиком к списку, а метод `extend()` разбивает строку 'python' на  символы 'p', 'y', 't', 'h', 'o', 'n' и их >добавляет в качестве элементов списка. 
+   
+- `del list[i]` – удалить элемент списка по индексу. Также работает и со срезами.
+```python
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+del numbers[5]
+
+>>>print(numbers)
+[1, 2, 3, 4, 5, 7, 8, 9]
+```  
+
+- `.insert(index, value)` – вставить значение в указанный индекс.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+>>>print(names)
+names.insert(0, 'Anders')
+>>>print(names)
+names.insert(3, 'Josef')
+>>>print(names)
+['Gvido', 'Roman' , 'Timur']
+['Anders', 'Gvido', 'Roman' , 'Timur']
+['Anders', 'Gvido', 'Roman' , 'Josef', 'Timur']  
+```  
+
+- `.index(value)` – возвращает индекс первого элемента, значение которого равняется переданному в метод значению. 
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+position = names.index('Timur')
+>>>print(position)
+2
+```  
+
+- `.remove(value)` – удаляет первый элемент, значение которого равняется переданному в метод значению.
+```python
+food = ['Рис', 'Курица', 'Рыба', 'Брокколи', 'Рис']
+food.remove('Рис')
+>>>print(food)
+['Курица', 'Рыба', 'Брокколи', 'Рис']
+```  
+
+- `.pop(index)` – удаляет элемент по указанному индексу и возвращает его.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+item = names.pop(1)
+>>print(item)
+>>print(names)
+Roman
+['Gvido', 'Timur']
+```
+>В метод `pop()` передается один необязательный аргумент `index` - индекс элемента, который требуется удалить. Если индекс не указан, то метод удаляет и возвращает последний элемент списка.  
+  
+- `.count(value)` – возвращает количество элементов в списке, значения которых равны переданному в метод значению.
+```python
+names = ['Timur', 'Gvido', 'Roman', 'Timur', 'Anders', 'Timur']
+cnt1 = names.count('Timur')
+cnt2 = names.count('Josef')
+>>>print(cnt1)
+>>>print(cnt2)
+3
+0
+```
+  
+- `.reverse()` – меняет порядок элементов в списке на противоположный.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names.reverse()
+>>>print(names)
+['Timur', 'Roman', 'Gvido']
+```
+  
+- `.clear()` –  удаляет все элементы из списка.
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names.clear()
+>>>print(names)
+[]
+```
+  
+- `copy()` - создает поверхностную копию списка.  
+```python
+names = ['Gvido', 'Roman' , 'Timur']
+names_copy = names.copy()
+>>>print(names)
+>>>print(names_copy)
+['Gvido', 'Roman', 'Timur']
+['Gvido', 'Roman', 'Timur']
+```  
+  
+- `.sort()` – сортирует элементы списка по возрастанию, для сортировки по убыванию указать параметр `reverse = True`.
+```python
+a = [1, 7, -3, 9, 0, -67, 34, 12, 45, 1000, 6,  8, -2, 99]
+a.sort()
+a.sort(reverse = True)  
+>>>print(a)
+>>>print(a)  
+[-67, -3, -2, 0, 1, 6, 7, 8, 9, 12, 34, 45, 99, 1000]
+[1000, 99, 45, 34, 12, 9, 8, 7, 6, 1, 0, -2, -3, -67]
+```
+
 ---
 
-#### Как перевести split в числа
+### Списочные выражения (list comprehension)
 
-`sp = input().split()`
+`[выражение for переменная in последовательность]`  –  общий вид списочного выражения.
+```python
+# Создать список, заполненный 10 нулями
+zeros = [0 for i in range(10)]
 
-`sp = [int(i) for i in sp]`
+# Создать список, заполненный квадратами целых чисел от 0 до 9
+squares = [i ** 2 for i in range(10)]
+
+# Создать список, заполненный символами строки
+chars = [c for c in 'abcdefg']
+  
+# Считывание входных данных
+lines = [input() for _ in range(int(input()))]
+
+# Условия в списочном выражении
+evens = [i for i in range(21) if i % 2 == 0]
+  
+# Вложенные циклы
+numbers = [i * j for i in range(1, 5) for j in range(2)]  
+```    
 
 ---
 
