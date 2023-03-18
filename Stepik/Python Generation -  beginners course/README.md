@@ -16,7 +16,7 @@ Python  –  язык, **чувствительный** к регистру, `
 
 :bulb: Список зарезервированных слов: [Python Keywords](https://www.w3schools.com/python/python_ref_keywords.asp)
 
----
+## Ввод-вывод данных
 
 `input()`  –   ввод данных
 
