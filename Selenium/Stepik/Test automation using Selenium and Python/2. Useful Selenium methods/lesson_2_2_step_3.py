@@ -14,7 +14,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 import time
-import math
 
 def calc(num1, num2):
     return str(int(num1) + int(num2))
