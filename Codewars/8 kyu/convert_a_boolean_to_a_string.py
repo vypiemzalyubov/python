@@ -7,6 +7,8 @@
 def boolean_to_string(b):
     return str(True) if b == True else str(False)
 
+
+
 # Best Practices
 
 def boolean_to_string(b):
