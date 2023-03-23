@@ -100,7 +100,7 @@ pytest scripts/drafts.py::test_register_new_user_parametrized
 ><img src="https://ucarecdn.com/6a53144b-e083-410f-92ef-404511fc6c07/" style="height: 420px; width:1103px;"/>  
 ></details>
 
-### PyTest — как пишут тесты
+### PyTest - как пишут тесты
   
 PyTest не требует написания дополнительных специфических конструкций в тестах, как того требует unittest. Также, PyTest может запускать тесты, написанные в unittest-стиле.
   
@@ -113,4 +113,55 @@ PyTest не требует написания дополнительных сп�
 >def test_abs2():
 >    assert abs(-42) == -42, "Should be absolute value of a number"  
 >```
+></details>  
+
+### PyTest - проверка ожидаемого результата (assert)
+
+В PyTest используется стандартный **assert** метод из языка Python для проверки ожидаемого результата.
+
+```python
+assert a == b, "Значения разные"
+  
+assert user_is_authorised(), "User is guest"  
+```  
+С помощью **assert** можно проверять любую конструкцию, которая возвращает **True/False**. Это может быть проверка равенства, неравенства, содержания подстроки в строке или любая другая вспомогательная функция, которую можно описать самостоятельно. 
+
+Если нужно проверить, что тест вызывает ожидаемое исключение, можно использовать конструкцию **with pytest.raises()**.
+
+><details><summary><b>Например, можно проверить, что на странице сайта не должен отображаться какой-то элемент</b></summary>
+>
+>```python
+>import pytest
+>
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>from selenium.common.exceptions import NoSuchElementException
+>
+>
+>def test_exception1():
+>    try:
+>        browser = webdriver.Chrome()
+>        browser.get("http://selenium1py.pythonanywhere.com/")
+>        with pytest.raises(NoSuchElementException):
+>            browser.find_element(By.CSS_SELECTOR, "button.btn")
+>            pytest.fail("Не должно быть кнопки Отправить")
+>    finally: 
+>        browser.quit()
+>
+>def test_exception2():
+>    try:
+>        browser = webdriver.Chrome()
+>        browser.get("http://selenium1py.pythonanywhere.com/")
+>        with pytest.raises(NoSuchElementException):
+>            browser.find_element(By.CSS_SELECTOR, "no_such_button.btn")
+>            pytest.fail("Не должно быть кнопки Отправить")
+>    finally: 
+>        browser.quit()
+>```  
+>В первом тесте элемент будет найден, поэтому ошибка **NoSuchElementException**, которую ожидает контекстный менеджер pytest.raises, не возникнет, и тест упадёт.
+>```python
+>test_3_3_9_pytest_raises.py:8 (test_exception1)
+>E   Failed: Не должно быть кнопки Отправить
+>```  
+>Во втором тесте, как мы и ожидали, кнопка не будет найдена, и тест пройдет.
 ></details>  
