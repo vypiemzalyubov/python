@@ -58,6 +58,8 @@ FAILED (failures=1)
 
 <details><summary><h3>PyTest</h3></summary>
 
+<details><summary><h4>Тестирование с помощью PyTest</h4></summary>  
+
 ### Установка и запуск
   
 Для начала работы с PyTest требуется установить его пакет в виртуальное окружение: `pip install pytest`
@@ -165,3 +167,4 @@ assert user_is_authorised(), "User is guest"
 >```  
 >Во втором тесте, как мы и ожидали, кнопка не будет найдена, и тест пройдет.
 ></details>  
+</details>
