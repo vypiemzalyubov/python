@@ -3,7 +3,7 @@ import time
 
 
 def test_basket_button(browser):
-    link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+    link = f'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
     browser.get(link)
     time.sleep(30)
     message = browser.find_element(By.XPATH, "//*[contains(@class, 'btn-add-to-basket')]")
