@@ -55,6 +55,7 @@ Ran 2 tests in 0.000s
 FAILED (failures=1)
 ```  
 </details>
+
 <details><summary><h3>PyTest</h3></summary>
 
 ### Установка и запуск
