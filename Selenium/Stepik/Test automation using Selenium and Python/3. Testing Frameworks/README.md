@@ -96,6 +96,21 @@ pytest scripts/drafts.py::test_register_new_user_parametrized
 
 В PyTest-отчёте упавший тест выделяется красным шрифтом. Для вывода дополнительной информации со списком тестов и статусом их прохождения используется параметр `-v`
 
-<details><summary><b>Пример отчёта с параметром -v</b></summary>
-<img src="https://ucarecdn.com/6a53144b-e083-410f-92ef-404511fc6c07/" style="height: 520px; width:1113px;"/>  
-</details>
+><details><summary><b>Пример отчёта с параметром -v</b></summary>
+><img src="https://ucarecdn.com/6a53144b-e083-410f-92ef-404511fc6c07/" style="height: 420px; width:1103px;"/>  
+></details>
+
+### PyTest — как пишут тесты
+  
+PyTest не требует написания дополнительных специфических конструкций в тестах, как того требует unittest. Также, PyTest может запускать тесты, написанные в unittest-стиле.
+  
+><details><summary><b>Пример простого кода</b></summary>
+>
+>```python
+>def test_abs1():
+>    assert abs(-42) == 42, "Should be absolute value of a number"
+>
+>def test_abs2():
+>    assert abs(-42) == -42, "Should be absolute value of a number"  
+>```
+></details>  
