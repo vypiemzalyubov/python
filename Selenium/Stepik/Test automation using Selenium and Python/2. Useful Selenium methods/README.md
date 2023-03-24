@@ -23,7 +23,19 @@ option1 = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
 people_radio = browser.find_element(By.ID, "peopleRule")
 people_checked = people_radio.get_attribute("checked")  
 ```  
-  
+
+### Метод select
+
+Класс **Select** предоставляет полезные методы для взаимодействия с раскрывающимися списками, выбора элементов и многого другого. Вначале нужно инициализировать новый объект, передав в него WebElement с тегом **select**. Далее можно найти любой вариант из списка с помощью метода **select_by_value(value)**
+```python
+from selenium.webdriver.support.ui import Select
+select = Select(browser.find_element(By.TAG_NAME, "select"))
+select.select_by_value("1")
+```  
+Метод **select_by_visible_text("text")** ищет элемент по видимому тексту.
+
+Метод **select.select_by_index(index)** ищет элемент по его индексу или порядковому номеру. Индексация начинается с нуля. 
+---
 ### Работа с элементами типа checkbox и radiobutton
   
 Checkbox позволяют выбирать/отключать любой из представленных вариантов, а radiobutton позволяют выбрать только один из вариантов.
@@ -69,8 +81,5 @@ Checkboxes могут иметь как одинаковые, так и разн
 </select>
 ```
 
-Варианты ответа задаются тегом **option**, значение **value** может отсутствовать. Можно отмечать варианты с помощью метода `click()`. Для этого сначала нужно применить метод `click()` для элемента с тегом **select**, чтобы список раскрылся, а затем кликнуть на нужный вариант ответа.
-```python
-browser.find_element(By.TAG_NAME, "select").click()
-browser.find_element(By.CSS_SELECTOR, "option:nth-child(2)").click()
-```
+Варианты ответа задаются тегом **option**, значение **value** может отсутствовать. Можно отмечать варианты с помощью метода `click()`. Для этого сначала нужно применить метод `click()` для элемента с тегом **select**, чтобы список раскрылся, а затем кликнуть на нужный вариант ответа. Но более удобным способом считается использование специального класса **Select** из библиотеки WebDriver.
+
