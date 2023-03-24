@@ -2,15 +2,20 @@
 
 <details><summary><b>Основные методы</b></summary>
   
-### Метод click()
+### Метод click
 
 Позволяет найти элемент и нажать на него
 ```python
 option1 = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
 ```  
   
+### Метод get_attribute  
   
-  
+Позволяет узнать значение атрибута элемента. Значение атрибута представляет собой строку. Если значение атрибута отсутствует, то это равносильно значению атрибута равному "false".
+```python
+people_radio = browser.find_element(By.ID, "peopleRule")
+people_checked = people_radio.get_attribute("checked")  
+```  
   
 ### Работа с элементами типа checkbox и radiobutton
   
