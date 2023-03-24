@@ -31,7 +31,8 @@ people_checked = people_radio.get_attribute("checked")
 from selenium.webdriver.support.ui import Select
 select = Select(browser.find_element(By.TAG_NAME, "select"))
 select.select_by_value("1")
-```  
+```
+  
 `select_by_visible_text("text")` ищет элемент по видимому тексту.
 
 `select.select_by_index(index)` ищет элемент по его индексу или порядковому номеру. Индексация начинается с нуля. 
