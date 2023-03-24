@@ -31,3 +31,14 @@ Checkboxes могут иметь как одинаковые, так и разн
 <input type="radio" name="language" value="python" checked>
 <input type="radio" name="language" value="selenium">
 ```   
+Тег **label** используется для того, чтобы сделать кликабельным текст, который отображается рядом с checkbox. Элемент **label** связывается с элементом **input** с помощью атрибута **for**, в котором указывается значение атрибута **id** для элемента **input**
+```html
+<div>
+  <input type="radio" id="python" name="language" checked>
+  <label for="python">Python</label>
+</div>
+<div>
+  <input type="radio" id="java" name="language">
+  <label for="java">Java</label>
+</div>
+```
