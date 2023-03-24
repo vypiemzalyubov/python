@@ -1,6 +1,13 @@
-## Полезные методы Selenium
+## Методы Selenium
 
 <details><summary><b>Основные методы</b></summary>
+
+### Метод get
+  
+Сообщает браузеру, что нужно открыть сайт по указанной ссылке
+```python
+driver.get("https://suninjuly.github.io/text_input_task.html")
+```  
   
 ### Метод click
 
@@ -11,7 +18,7 @@ option1 = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
   
 ### Метод get_attribute  
   
-Позволяет узнать значение атрибута элемента. Значение атрибута представляет собой строку. Если значение атрибута отсутствует, то это равносильно значению атрибута равному "false".
+Позволяет узнать значение атрибута элемента. Значение атрибута представляет собой строку. Если значение атрибута отсутствует, то это равносильно значению атрибута равному "false". Если атрибута нет, то метод вернёт значение None.
 ```python
 people_radio = browser.find_element(By.ID, "peopleRule")
 people_checked = people_radio.get_attribute("checked")  
@@ -43,3 +50,7 @@ Checkboxes могут иметь как одинаковые, так и разн
   <label for="python">Python</label>
 </div>
 ```
+
+
+### Работа со списками
+  
