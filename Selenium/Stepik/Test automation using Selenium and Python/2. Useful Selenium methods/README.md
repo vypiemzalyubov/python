@@ -166,7 +166,7 @@ prompt.accept()
 
 <details>
 <summary><b>Поиск элементов</b></summary>
-
+<br>
 <details>
 <summary><b>Поиск элементов с помощью Selenium</b></summary>
 
