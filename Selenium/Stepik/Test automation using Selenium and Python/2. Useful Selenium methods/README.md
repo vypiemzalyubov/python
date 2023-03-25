@@ -15,6 +15,19 @@ driver.get("https://suninjuly.github.io/text_input_task.html")
 ```python
 option1 = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
 ```  
+
+### Методы find_element и find_elements  
+  
+Данные методы, в сочетании с классом **By** для выбора атрибутов, могут быть полезны для поиска элементов страницы.
+
+`find_element` - возвращает первый экземпляр из нескольких веб-элементов с определенным атрибутом в DOM. Метод вызывает исключение **NoSuchElementException**, если ни один элемент не соответствует требуемому локатору. 
+
+`find_elements` - возвращает список всех экземпляров веб-элементов, соответствующих определенному атрибуту. Список будет пустым, если в DOM нет нужных элементов.
+```python
+from selenium.webdriver.common.by import By
+driver.find_element(By.XPATH, '//input[name()="password"]')
+driver.find_elements(By.XPATH, '//input')  
+```  
   
 ### Метод get_attribute  
   
