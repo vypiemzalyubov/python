@@ -45,7 +45,10 @@ people_checked = people_radio.get_attribute("checked")
 browser.execute_script("alert('Robots at work');")
   
 # Изменить заголовок страницы, затем вызвать alert  
-browser.execute_script("document.title='Script executing';alert('Robots at work');")  
+browser.execute_script("document.title='Script executing';alert('Robots at work');")
+  
+# Проскроллить страницу на 100 пикселей вниз
+browser.execute_script("window.scrollBy(0, 100);")
 ``` 
 
 ### Метод select
@@ -110,3 +113,18 @@ Checkboxes могут иметь как одинаковые, так и разн
 
 Варианты ответа задаются тегом **option**, значение **value** может отсутствовать. Можно отмечать варианты с помощью метода `click()`. Для этого сначала нужно применить метод `click()` для элемента с тегом **select**, чтобы список раскрылся, а затем кликнуть на нужный вариант ответа. Но более удобным способом считается использование специального класса **Select** из библиотеки WebDriver.
 
+### Загрузка файлов
+  
+Для загрузки файлов на веб-странице, можно использовать метод `send_keys`, где в качестве аргумента передается путь к нужному файлу на диске. Чтобы указать путь к файлу, можно использовать стандартный модуль Python для работы с операционной системой — **os**. Элемент в форме, который выглядит, как кнопка добавления файла, имеет атрибут **type="file"**. Сначала нужно найти этот элемент с помощью селектора, а затем применить к нему метод `send_keys(file_path)`.
+```python
+# Если файлы lesson2_7.py и file_example.txt" лежат в одном каталоге 
+  
+import os
+# получаем путь к директории текущего исполняемого скрипта lesson2_7.py
+current_dir = os.path.abspath(os.path.dirname(__file__))
+# имя файла, который будем загружать на сайт
+file_name = "file_example.txt"
+# получаем путь к file_example.txt  
+file_path = os.path.join(current_dir, file_name)
+element.send_keys(file_path)  
+```  
