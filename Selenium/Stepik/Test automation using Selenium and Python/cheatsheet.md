@@ -63,6 +63,21 @@ from selenium.webdriver.support.ui import Select
 select = Select(browser.find_element(By.TAG_NAME, "select"))
 select.select_by_value("1")
 ```
+  
+### Метод switch_to_window
+
+Позволяет переключиться на нужное окно. Дескриптор окна передается в качестве аргумента методу `switch_to_window()`.
+```python
+browser.switch_to.window(window_name)
+```  
+Чтобы узнать имя новой вкладки, нужно использовать метод `window_handles`, который возвращает массив имён всех вкладок.
+```python
+new_window = browser.window_handles[1]
+```
+Также можно запомнить имя текущей вкладки, чтобы иметь возможность потом к ней вернуться.
+```python
+first_window = browser.window_handles[0]
+```  
 </details>
   
 <details><summary><b>Работа с элементами веб-страницы</b></summary>  
