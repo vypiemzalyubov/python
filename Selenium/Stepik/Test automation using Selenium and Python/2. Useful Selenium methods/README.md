@@ -1,6 +1,6 @@
 ## Методы Selenium
 
-<details><summary><b>Основные методы</b></summary>
+<details><summary><b>Методы Selenium</b></summary>
 
 ### Метод get
   
@@ -63,9 +63,10 @@ from selenium.webdriver.support.ui import Select
 select = Select(browser.find_element(By.TAG_NAME, "select"))
 select.select_by_value("1")
 ```
-
----
+</details>
   
+<details><summary><b>Работа с элементами веб-страницы</b></summary>  
+
 ### Работа с элементами типа checkbox и radiobutton
   
 Checkbox позволяют выбирать/отключать любой из представленных вариантов, а radiobutton позволяют выбрать только один из вариантов.
@@ -161,3 +162,4 @@ prompt = browser.switch_to.alert
 prompt.send_keys("My answer")
 prompt.accept()
 ```   
+</details>
