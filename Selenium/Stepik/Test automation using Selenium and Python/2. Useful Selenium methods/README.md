@@ -130,3 +130,34 @@ file_path = os.path.join(current_dir, file_name)
 # отправляем файл  
 element.send_keys(file_path)  
 ```  
+
+### Обработка всплывающих окон и оповещений
+  
+Существует всего три основных типа всплывающих окон и предупреждений, которые обычно используются в веб-приложениях:
+- Simple Alert
+- Confirmation Alert
+- Prompt Alert
+
+#### driver.switch_to.alert
+  
+Свойство `switch_to.alert` возвращает открытый в данный момент объект **alert**.  Для этого нужно сначала переключиться на окно с **alert**, а затем принять его с помощью команды `accept()`.
+```python
+alert = browser.switch_to.alert
+alert.accept()  
+```
+Чтобы получить текст из **alert**, используется свойство `text` объекта **alert**.
+```python
+alert = browser.switch_to.alert
+alert_text = alert.text
+```
+Для работы с модальным окном **confirm** используются свойства `accept()` и `dismiss()`.
+```python
+confirm = browser.switch_to.alert
+confirm.dismiss()
+```  
+Модального окно **prompt** имеет дополнительное поле для ввода текста. Чтобы ввести текст, используется метод `send_keys()`.
+```python
+prompt = browser.switch_to.alert
+prompt.send_keys("My answer")
+prompt.accept()
+```   
