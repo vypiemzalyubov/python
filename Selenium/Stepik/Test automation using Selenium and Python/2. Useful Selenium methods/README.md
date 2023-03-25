@@ -126,5 +126,6 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 file_name = "file_example.txt"
 # получаем путь к file_example.txt  
 file_path = os.path.join(current_dir, file_name)
+# отправляем файл  
 element.send_keys(file_path)  
 ```  
