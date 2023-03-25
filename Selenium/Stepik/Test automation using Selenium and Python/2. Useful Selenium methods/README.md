@@ -170,6 +170,8 @@ prompt.accept()
 <details>
 <summary><b>Поиск элементов с помощью Selenium</b></summary>
 
+<br>
+  
 ```python
 find_element(By.ID, value)                  #поиск по уникальному атрибуту id элемента
 
@@ -208,6 +210,8 @@ button = browser.find_element(By.ID, "submit_button")
 <details>
 <summary><b>Поиск элементов с помощью XPath</b></summary>
 
+<br>
+  
 **по тегу**
 ```
 //div
@@ -267,6 +271,8 @@ button = browser.find_element(By.ID, "submit_button")
 <details>
 <summary><b>Поиск элементов с помощью CSS селекторов</b></summary>
 
+<br>
+  
 **универсальный** - применяется ко всем эелементам на странице
 ```css
 *
@@ -318,6 +324,8 @@ h1::first-letter
 <details>
 <summary><b>Поиск элементов в консоли DevTools</b></summary>
 
+<br>
+  
 **по тегу**
 ```javascript
 $$ ("body")
