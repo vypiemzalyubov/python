@@ -470,7 +470,6 @@ pytest -s -v --browser_name=firefox test_cmd.py
 Передача параметров через командную строку делается с помощью встроенной функции **pytest_addoption** и фикстуры **request**, которая может получать данные о текущем запущенном тесте.
   
 Сначала добавляем в файле **conftest** обработчик опции в функции **pytest_addoption**, затем напишем фикстуру, которая будет обрабатывать переданные в опции данные. Добавим логику обработки командной строки в **conftest.py**. Для запроса значения параметра можно вызвать команду:
-
 ```python
 browser_name = request.config.getoption("browser_name")
 ```  
@@ -503,8 +502,9 @@ browser_name = request.config.getoption("browser_name")
 >    browser.quit()
 >```
 ></details>  
-  
-><details><summary<b>>test_parser.py</b></summary>
+
+Файл test_parser.py
+><details><summary<b>>testparser</b></summary>
 >
 >```python
 >link = "http://selenium1py.pythonanywhere.com/"
@@ -525,3 +525,5 @@ parser.addoption('--browser_name', action='store', default="chrome",
 ```  
   
 ### Плагины и перезапуск тестов  
+
+  
