@@ -400,7 +400,8 @@ pytest -s -v -m "smoke or regression" test_fixture.py
 ### XFail: помечать тест как ожидаемо падающий
 
 При добавлении маркировки **@pytest.mark.xfail** для падающего теста, результат прогона будет показан как успешный, а отмеченный тест будет помечен как **xfail**.  Когда тест будет проходить, он будет отмечен как **XPASS** ("unexpectedly passing" — неожиданно проходит). После этого маркировку **xfail** для теста можно удалить. К маркировке **xfail** можно добавлять параметр **reason**. Чтобы увидеть это сообщение в консоли, при запуске нужно добавлять параметр pytest **-rx**: `pytest -rx -v test_fixture.py`. Чтобы получить подробную информацию по XPASS-тестам можно добавить параметр X: `pytest -rX -v test_fixture.py`
-
+</details>
+  
 <details><summary><h4>PyTest - параметризация, конфигурирование, плагины</h4></summary>
   
 ### Conftest.py - конфигурация тестов 
@@ -422,6 +423,7 @@ pytest -s -v -m "smoke or regression" test_fixture.py
 >    print("\nquit browser..")
 >    browser.quit()
 >```
+></details>
   
 Фикстура передается в тестовый метод в качестве аргумента. Таким образом можно переиспользовать одни и те же вспомогательные функции в разных частях проекта.
   
@@ -432,6 +434,7 @@ PyTest позволяет запустить один и тот же тест с
 В **@pytest.mark.parametrize()** нужно передать параметр, который должен изменяться, и список значений параметра. В самом тесте параметр тоже нужно передавать в качестве аргумента. Внутри декоратора имя параметра оборачивается в кавычки, а в списке аргументов теста кавычки не нужны.  
 
 ><details><summary><b>Передать в параметрах русский и английский язык</b></summary>
+>
 >```python  
 >import pytest
 >from selenium import webdriver
@@ -450,8 +453,9 @@ PyTest позволяет запустить один и тот же тест с
 >    link = f"http://selenium1py.pythonanywhere.com/{language}/"
 >    browser.get(link)
 >    browser.find_element(By.CSS_SELECTOR, "#login_link")
->```  
-  
+>```
+></details>  
+   
 Можно задавать параметризацию также для всего тестового класса, чтобы все тесты в классе запустились с заданными параметрами. В таком случае отметка о параметризации должна быть перед объявлением класса.
   
 ### Использование других браузеров
@@ -466,11 +470,14 @@ pytest -s -v --browser_name=firefox test_cmd.py
 Передача параметров через командную строку делается с помощью встроенной функции **pytest_addoption** и фикстуры **request**, которая может получать данные о текущем запущенном тесте.
   
 Сначала добавляем в файле **conftest** обработчик опции в функции **pytest_addoption**, затем напишем фикстуру, которая будет обрабатывать переданные в опции данные. Добавим логику обработки командной строки в **conftest.py**. Для запроса значения параметра можно вызвать команду:
+
 ```python
 browser_name = request.config.getoption("browser_name")
 ```  
+  
 ><details><summary><b>conftest.py</b></summary>
 >
+>```python  
 >import pytest
 >from selenium import webdriver
 >
@@ -495,7 +502,10 @@ browser_name = request.config.getoption("browser_name")
 >    print("\nquit browser..")
 >    browser.quit()
 >```
+></details>  
+  
 ><details><summary<b>>test_parser.py</b></summary>
+>
 >```python
 >link = "http://selenium1py.pythonanywhere.com/"
 >
@@ -504,6 +514,8 @@ browser_name = request.config.getoption("browser_name")
 >    browser.get(link)
 >    browser.find_element(By.CSS_SELECTOR, "#login_link")
 >```
+></details>  
+
 Если запустит тесты без параметра - `pytest -s -v test_parser.py`, то произойдет ошибка. 
   
 Также, можно задать значение параметра по умолчанию, чтобы в командной строке не обязательно было указывать параметр `--browser_name`:
