@@ -400,3 +400,116 @@ pytest -s -v -m "smoke or regression" test_fixture.py
 ### XFail: помечать тест как ожидаемо падающий
 
 При добавлении маркировки **@pytest.mark.xfail** для падающего теста, результат прогона будет показан как успешный, а отмеченный тест будет помечен как **xfail**.  Когда тест будет проходить, он будет отмечен как **XPASS** ("unexpectedly passing" — неожиданно проходит). После этого маркировку **xfail** для теста можно удалить. К маркировке **xfail** можно добавлять параметр **reason**. Чтобы увидеть это сообщение в консоли, при запуске нужно добавлять параметр pytest **-rx**: `pytest -rx -v test_fixture.py`. Чтобы получить подробную информацию по XPASS-тестам можно добавить параметр X: `pytest -rX -v test_fixture.py`
+
+<details><summary><h4>PyTest - параметризация, конфигурирование, плагины</h4></summary>
+  
+### Conftest.py - конфигурация тестов 
+  
+Для хранения часто употребимых фикстур и хранения глобальных настроек используется файл **conftest.py**, который должен лежать в директории верхнего уровня в проекте с тестами. Можно создавать дополнительные файлы **conftest.py** в других директориях, но тогда настройки в этих файлах будут применяться только к тестам в под-директориях. PyTest автоматически находит и подгружает файлы **conftest.py**, которые находятся в директории с тестами. 
+  
+><details><summary><b>conftest.py с фикстурой browser</b></summary>
+>  
+>```python
+>import pytest
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>
+>@pytest.fixture(scope="function")
+>def browser():
+>    print("\nstart browser for test..")
+>    browser = webdriver.Chrome()
+>    yield browser
+>    print("\nquit browser..")
+>    browser.quit()
+>```
+  
+Фикстура передается в тестовый метод в качестве аргумента. Таким образом можно переиспользовать одни и те же вспомогательные функции в разных частях проекта.
+  
+### Параметризация тестов
+  
+PyTest позволяет запустить один и тот же тест с разными входными параметрами. Для этого используется декоратор **@pytest.mark.parametrize()**.
+  
+В **@pytest.mark.parametrize()** нужно передать параметр, который должен изменяться, и список значений параметра. В самом тесте параметр тоже нужно передавать в качестве аргумента. Внутри декоратора имя параметра оборачивается в кавычки, а в списке аргументов теста кавычки не нужны.  
+
+><details><summary><b>Передать в параметрах русский и английский язык</b></summary>
+>```python  
+>import pytest
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>
+>@pytest.fixture(scope="function")
+>def browser():
+>    print("\nstart browser for test..")
+>    browser = webdriver.Chrome()
+>    yield browser
+>    print("\nquit browser..")
+>    browser.quit()
+>
+>@pytest.mark.parametrize('language', ["ru", "en-gb"])
+>def test_guest_should_see_login_link(browser, language):
+>    link = f"http://selenium1py.pythonanywhere.com/{language}/"
+>    browser.get(link)
+>    browser.find_element(By.CSS_SELECTOR, "#login_link")
+>```  
+  
+Можно задавать параметризацию также для всего тестового класса, чтобы все тесты в классе запустились с заданными параметрами. В таком случае отметка о параметризации должна быть перед объявлением класса.
+  
+### Использование других браузеров
+  
+Параметр `browser_name` позволяет передавать название браузера, который нужно запустить:
+```python
+pytest -s -v --browser_name=firefox test_cmd.py  
+```  
+  
+### Conftest.py и передача параметров в командной строке
+  
+Передача параметров через командную строку делается с помощью встроенной функции **pytest_addoption** и фикстуры **request**, которая может получать данные о текущем запущенном тесте.
+  
+Сначала добавляем в файле **conftest** обработчик опции в функции **pytest_addoption**, затем напишем фикстуру, которая будет обрабатывать переданные в опции данные. Добавим логику обработки командной строки в **conftest.py**. Для запроса значения параметра можно вызвать команду:
+```python
+browser_name = request.config.getoption("browser_name")
+```  
+><details><summary><b>conftest.py</b></summary>
+>
+>import pytest
+>from selenium import webdriver
+>
+>def pytest_addoption(parser):
+>    parser.addoption('--browser_name', action='store', default=None,
+>                     help="Choose browser: chrome or firefox")
+>
+>
+>@pytest.fixture(scope="function")
+>def browser(request):
+>    browser_name = request.config.getoption("browser_name")
+>    browser = None
+>    if browser_name == "chrome":
+>        print("\nstart chrome browser for test..")
+>        browser = webdriver.Chrome()
+>    elif browser_name == "firefox":
+>        print("\nstart firefox browser for test..")
+>        browser = webdriver.Firefox()
+>    else:
+>        raise pytest.UsageError("--browser_name should be chrome or firefox")
+>    yield browser
+>    print("\nquit browser..")
+>    browser.quit()
+>```
+><details><summary<b>>test_parser.py</b></summary>
+>```python
+>link = "http://selenium1py.pythonanywhere.com/"
+>
+>
+>def test_guest_should_see_login_link(browser):
+>    browser.get(link)
+>    browser.find_element(By.CSS_SELECTOR, "#login_link")
+>```
+Если запустит тесты без параметра - `pytest -s -v test_parser.py`, то произойдет ошибка. 
+  
+Также, можно задать значение параметра по умолчанию, чтобы в командной строке не обязательно было указывать параметр `--browser_name`:
+```python
+parser.addoption('--browser_name', action='store', default="chrome",
+                 help="Choose browser: chrome or firefox")  
+```  
+  
+### Плагины и перезапуск тестов  
