@@ -335,3 +335,68 @@ def browser():
 >```  
   
 </details>  
+
+<details><summary><h4>PyTest - маркировка</h4></summary>
+  
+Для выборочного запуска тестов в PyTest используется маркировка тестов или **метки (marks)**. Для маркировки теста нужно написать декоратор вида **@pytest.mark.mark_name**, где **mark_name** — произвольная строка.
+  
+><details><summary><b>Разделить тесты на smoke и regression</b></summary>
+>  
+>```python
+>import pytest
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>
+>link = "http://selenium1py.pythonanywhere.com/"
+>
+>
+>@pytest.fixture(scope="function")
+>def browser():
+>    print("\nstart browser for test..")
+>    browser = webdriver.Chrome()
+>    yield browser
+>    print("\nquit browser..")
+>    browser.quit()
+>
+>
+>class TestMainPage1():
+>
+>    @pytest.mark.smoke
+>    def test_guest_should_see_login_link(self, browser):
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, "#login_link")
+>
+>    @pytest.mark.regression
+>    def test_guest_should_see_basket_link_on_the_main_page(self, browser):
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+>```
+  
+Чтобы запустить тест с нужной маркировкой, нужно передать в командной строке параметр **-m** и нужную метку: `pytest -s -v -m smoke test_fixture.py`
+  
+Для регистрации меток нужно создать файл **pytest.ini** в корневой директории проекта и добавьте в файл следующие строки:
+```python
+[pytest]
+markers =
+    smoke: marker for smoke tests
+    regression: marker for regression tests
+```  
+Текст после знака ":" является поясняющим - его можно не писать.  
+  
+Чтобы запустить все тесты, не имеющие заданную маркировку, можно использовать **инверсию**. Для запуска всех тестов, не отмеченных как smoke, нужно выполнить команду:
+```python
+pytest -s -v -m "not smoke" test_fixture.py
+```  
+
+Для запуска тестов с разными метками можно использовать логическое ИЛИ. Запустить smoke и regression-тесты:
+```python
+pytest -s -v -m "smoke or regression" test_fixture.py  
+```  
+  
+### Пропуск тестов
+  
+В PyTest есть стандартные метки, которые позволяют пропустить тест при сборе тестов для запуска (то есть не запускать тест) или запустить, но отметить особенным статусом тот тест, который ожидаемо упадёт из-за наличия бага, чтобы он не влиял на результаты прогона всех тестов. Эти метки не требуют дополнительного объявления в pytest.ini. Чтобы пропустить тест, его отмечают в коде как **@pytest.mark.skip**.
+
+### XFail: помечать тест как ожидаемо падающий
+
+При добавлении маркировки **@pytest.mark.xfail** для падающего теста, результат прогона будет показан как успешный, а отмеченный тест будет помечен как **xfail**.  Когда тест будет проходить, он будет отмечен как **XPASS** ("unexpectedly passing" — неожиданно проходит). После этого маркировку **xfail** для теста можно удалить. К маркировке **xfail** можно добавлять параметр **reason**. Чтобы увидеть это сообщение в консоли, при запуске нужно добавлять параметр pytest **-rx**: `pytest -rx -v test_fixture.py`. Чтобы получить подробную информацию по XPASS-тестам можно добавить параметр X: `pytest -rX -v test_fixture.py`
