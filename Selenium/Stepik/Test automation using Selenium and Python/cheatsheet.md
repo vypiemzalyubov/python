@@ -13,7 +13,7 @@ driver.get("https://suninjuly.github.io/text_input_task.html")
 
 Позволяет найти элемент и нажать на него
 ```python
-option1 = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
+button = browser.find_element(By.CSS_SELECTOR, "[value='python']").click()
 ```  
 
 ### Методы find_element и find_elements  
