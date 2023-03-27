@@ -78,6 +78,61 @@ new_window = browser.window_handles[1]
 ```python
 first_window = browser.window_handles[0]
 ```  
+  
+### Настройка ожиданий в Selenium (Selenium Waits)
+
+#### Неявные ожидания (Implicit waits)
+
+Неявное ожидание информирует Selenium WebDriver о необходимости проверять DOM в течение определенного периода времени при попытке найти веб-элемент, который не доступен сразу после загрузки страницы. По умолчанию неявное ожидание равно нулю. Однако, как только мы определяем его, оно устанавливается на время жизни объекта WebDriver.
+
+```python
+# На каждый вызов команды find_element WebDriver будет ждать 10 секунд до появления элемента на странице прежде, 
+# чем выбросить исключение NoSuchElementException
+
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+driver.implicitly_wait(10)
+driver.get("https://www.lambdatest.com/")
+element = driver.find_element_by_id("testing_form")
+```  
+
+#### Явные ожидания (Explicit Waits)
+  
+Используется, когда мы хотим дождаться выполнения определенного условия, прежде чем продолжить работу. **Explicit Waits** позволяют задать специальное ожидание для конкретного элемента. Задание явных ожиданий реализуется с помощью инструментов **WebDriverWait** и **expected_conditions**.  
+ 
+```python
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
+
+browser = webdriver.Chrome()
+browser.get("http://suninjuly.github.io/wait2.html")
+
+# говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
+button = WebDriverWait(browser, 5).until(
+        EC.element_to_be_clickable((By.ID, "verify"))
+    )
+# element_to_be_clickable вернет элемент, когда он станет кликабельным, или вернет False в ином случае.
+button.click()
+message = browser.find_element(By.ID, "verify_message")
+
+assert "successful" in message.text
+```  
+
+В объекте **WebDriverWait** используется функция **until**, в которую передается правило ожидания, элемент, а также значение, по которому мы будем искать элемент. В модуле **expected_conditions** есть много других правил, которые позволяют реализовать необходимые ожидания, посмотреть их можно [здесь](https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions).
+  
+Если мы захотим проверять, что кнопка становится неактивной после отправки данных, то можно задать негативное правило с помощью метода **until_not**  
+  
+```python
+# говорим Selenium проверять в течение 5 секунд пока кнопка станет неактивной
+  
+button = WebDriverWait(browser, 5).until_not(
+        EC.element_to_be_clickable((By.ID, "verify"))
+    )
+```    
+  
 </details>
   
 <details><summary><b>Работа с элементами веб-страницы</b></summary>  
