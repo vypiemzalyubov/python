@@ -238,5 +238,100 @@ assert user_is_authorised(), "User is guest"
 ><img src="https://ucarecdn.com/e4d862f8-8d75-4a59-9387-f967790f8d09/" style="height: 474px; width:984px;"/> 
 >В первом тест-сьюте браузер запустился один раз, а во втором - два раза.
 >
->Данные и кэш, оставшиеся от запуска предыдущего теста, могут влиять на результаты выполнения следующего теста, поэтому лучше всего запускать отдельный >браузер для каждого теста, чтобы тесты были стабильнее. К тому же если вдруг браузер зависнет в одном тесте, то другие тесты не пострадают, если они >запускаются каждый в собственном браузере.
+>Данные и кэш, оставшиеся от запуска предыдущего теста, могут влиять на результаты выполнения следующего теста, поэтому лучше всего запускать отдельный браузер для каждого теста, чтобы тесты были стабильнее. К тому же если вдруг браузер зависнет в одном тесте, то другие тесты не пострадают, если они запускаются каждый в собственном браузере.  
+
+### Фикстуры, возвращающие значение
+  
+Фикстуры могут возвращать значение, которое затем можно использовать в тестах. Можно создадать фикстуру **browser**, которая будет создавать объект WebDriver. Этот объект будет использоваться в тестах для взаимодействия с браузером. Для этого нужно написать метод **browser** и указать, что он является фикстурой с помощью декоратора **@pytest.fixture**. После этого можно вызывать фикстуру в тестах, передав ее как параметр. По умолчанию фикстура будет создаваться для каждого тестового метода, то есть для каждого теста запустится свой экземпляр браузера.  
+  
+><details><summary><b>Пример кода</b></summary>
+>  
+>```python
+>import pytest
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>
+>link = "http://selenium1py.pythonanywhere.com/"
+>
+>
+>@pytest.fixture
+>def browser():
+>    print("\nstart browser for test..")
+>    browser = webdriver.Chrome()
+>    return browser
+>
+>
+>class TestMainPage1():
+>    # вызываем фикстуру в тесте, передав ее как параметр
+>    def test_guest_should_see_login_link(self, browser):
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, "#login_link")
+>
+>    def test_guest_should_see_basket_link_on_the_main_page(self, browser):
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+>```
+  
+### Финализаторы — закрытие браузера
+  
+Финализаторы позволяют явно закрывать браузеры, после каждого теста. Один из вариантов финализатора — использование ключевого слова **yield**. После завершения теста, который вызывал фикстуру, выполнение фикстуры продолжится со строки, следующей за строкой со словом **yield**.
+    
+```python
+@pytest.fixture
+def browser():
+    print("\nstart browser for test..")
+    browser = webdriver.Chrome()
+    yield browser
+    # этот код выполнится после завершения теста
+    print("\nquit browser..")
+    browser.quit()
+```  
+ 
+### Область видимости scope
+  
+Для фикстур можно задавать область покрытия фикстур. Допустимые значения: **"function"**, **"class"**, **"module"**, **"session"**. Соответственно, фикстура будет вызываться один раз для тестового метода, один раз для класса, один раз для модуля или один раз для всех тестов, запущенных в данной сессии. 
+  
+```python
+@pytest.fixture(scope="class")  
+```  
+  
+### Автоиспользование фикстур
+  
+При описании фикстуры можно указать дополнительный параметр **autouse=True**, который укажет, что фикстуру нужно запустить для каждого теста даже без явного вызова.  
+  
+><details><summary><b>Пример кода</b></summary>
+>  
+>```python
+>import pytest
+>from selenium import webdriver
+>from selenium.webdriver.common.by import By
+>
+>link = "http://selenium1py.pythonanywhere.com/"
+>
+>
+>@pytest.fixture
+>def browser():
+>    print("\nstart browser for test..")
+>    browser = webdriver.Chrome()
+>    yield browser
+>    print("\nquit browser..")
+>    browser.quit()
+>
+>@pytest.fixture(autouse=True)
+>def prepare_data():
+>    print()
+>    print("preparing some critical data for every test")
+>
+>
+>class TestMainPage1():
+>    def test_guest_should_see_login_link(self, browser):
+>        # не передаём как параметр фикстуру prepare_data, но она все равно выполняется
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, "#login_link")
+>
+>    def test_guest_should_see_basket_link_on_the_main_page(self, browser):
+>        browser.get(link)
+>        browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
+>```  
+  
 </details>  
