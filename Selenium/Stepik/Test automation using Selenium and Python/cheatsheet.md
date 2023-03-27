@@ -131,6 +131,27 @@ button = WebDriverWait(browser, 5).until_not(
         EC.element_to_be_clickable((By.ID, "verify"))
     )
 ```    
+
+### Класс Options (Настройка параметров Selenium WebDriver)
+  
+Класс **Options** в Selenium обычно используется в сочетании с желаемыми возможностями кастомизации Selenium WebDriver. Так можно выполнять различные операции, такие как открытие браузера (Chrome, Firefox, Safari, IE, Edge и т.д.) в режиме увеличения, включение и отключение расширений браузера, отключение режима GPU, отключение всплывающих окон и многое другое.
+
+```python
+# Для Chrome
+
+# 1. Импорт опций Chrome
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+# 2. Инициализация опций Chrome
+chrome_options = Options()
+
+# 3. Добавление желаемых возможностей
+chrome_options.add_argument("--disable-extensions")
+
+# 4.Добавление желаемых возможностей сессии
+driver = webdriver.Chrome(chrome_options=chrome_options)  
+```  
   
 </details>
   
@@ -162,7 +183,6 @@ Checkboxes могут иметь как одинаковые, так и разн
   <label for="python">Python</label>
 </div>
 ```
-
 
 ### Работа со списками
   
