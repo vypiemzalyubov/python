@@ -1,6 +1,10 @@
-## Тестовые фреймворки
+<details><summary><b>Тестовые фреймворки</b></summary>
 
-<details><summary><h3>unittest</h3></summary>
+<br>
+
+<details><summary><b>unittest</b></summary>
+
+<br>
 
 Общее правило для всех фреймворков: название тестового метода должно начинаться со слова **"test_"**.  Дальше может идти любой текст, который является уникальным названием для теста:
 ```python
@@ -56,9 +60,11 @@ FAILED (failures=1)
 ```  
 </details>
 
-<details><summary><h3>PyTest</h3></summary>
+<details><summary><b>PyTest</b></summary>
 
-<details><summary><h4>Тестирование с помощью PyTest</h4></summary>  
+<br>
+
+<details><summary><b>Тестирование с помощью PyTest</b></summary>  
 
 ### Установка и запуск
   
@@ -169,7 +175,7 @@ assert user_is_authorised(), "User is guest"
 ></details>  
 </details>
 
-<details><summary><h4>Использование фикстур в PyTest</h4></summary>
+<details><summary><b>Использование фикстур в PyTest</b></summary>
 
 ### Классические фикстуры (fixtures)
   
@@ -336,7 +342,7 @@ def browser():
   
 </details>  
 
-<details><summary><h4>PyTest - маркировка</h4></summary>
+<details><summary><b>PyTest - маркировка</b></summary>
   
 Для выборочного запуска тестов в PyTest используется маркировка тестов или **метки (marks)**. Для маркировки теста нужно написать декоратор вида **@pytest.mark.mark_name**, где **mark_name** — произвольная строка.
   
@@ -402,7 +408,7 @@ pytest -s -v -m "smoke or regression" test_fixture.py
 При добавлении маркировки **@pytest.mark.xfail** для падающего теста, результат прогона будет показан как успешный, а отмеченный тест будет помечен как **xfail**.  Когда тест будет проходить, он будет отмечен как **XPASS** ("unexpectedly passing" — неожиданно проходит). После этого маркировку **xfail** для теста можно удалить. К маркировке **xfail** можно добавлять параметр **reason**. Чтобы увидеть это сообщение в консоли, при запуске нужно добавлять параметр pytest **-rx**: `pytest -rx -v test_fixture.py`. Чтобы получить подробную информацию по XPASS-тестам можно добавить параметр X: `pytest -rX -v test_fixture.py`
 </details>
   
-<details><summary><h4>PyTest - параметризация, конфигурирование, плагины</h4></summary>
+<details><summary><b>PyTest - параметризация, конфигурирование, плагины</b></summary>
   
 ### Conftest.py - конфигурация тестов 
   
