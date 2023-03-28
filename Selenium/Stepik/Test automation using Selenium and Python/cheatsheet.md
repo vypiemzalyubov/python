@@ -982,7 +982,7 @@ browser_name = request.config.getoption("browser_name")
 >    browser.quit()
 >```
 ></details>  
-
+  
 ><details><summary<b>testparser</b></summary>
 >
 >```python
