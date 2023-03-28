@@ -983,8 +983,7 @@ browser_name = request.config.getoption("browser_name")
 >```
 ></details>  
 
-Файл test_parser.py
-><details><summary<b>>testparser</b></summary>
+><details><summary<b>testparser</b></summary>
 >
 >```python
 >link = "http://selenium1py.pythonanywhere.com/"
