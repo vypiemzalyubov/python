@@ -532,4 +532,25 @@ parser.addoption('--browser_name', action='store', default="chrome",
   
 ### Плагины и перезапуск тестов  
 
+Плагин **pytest-rerunfailures** - позволяет перезапускать Flaky-тесты (тесты, которые могут падать из-за трудновоспроизводимых багов).
+
+Установка плагина: `pip install pytest-rerunfailures`
   
+Запуск:
+```python
+pytest -v --tb=line --reruns 1 --browser_name=chrome test_rerun.py
+  
+# --reruns n, где n — это количество перезапусков
+# --tb=line - сократить лог с результатми теста   
+```  
+
+### Запуск автотестов для разных языков интерфейса
+  
+Чтобы указать язык браузера с помощью WebDriver, используется класс **Options** и метод **add_experimental_option**.
+```python
+from selenium.webdriver.chrome.options import Options
+
+options = Options()
+options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+browser = webdriver.Chrome(options=options)  
+``` 
