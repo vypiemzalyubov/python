@@ -9,10 +9,10 @@ print(square(x))
 
 # # 4.2. Напишите фукнцию, которая принимает произвольное количество именнованных аргументов и выводит их построчно 
 # #      в формате аргумент: значение. Например:
-# # 	   name: John
-# # 	   last_name: Smith
-# # 	   age: 35 
-# # 	   position: web developer
+# # 	 name: John
+# # 	 last_name: Smith
+# # 	 age: 35 
+# # 	 position: web developer
 
 def file(x):
     dict = {input('Введите аргумент: '):input('Введите значение: ') for _ in range(x)}
