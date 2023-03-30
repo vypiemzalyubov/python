@@ -3,6 +3,7 @@ from .locators import MainPageLocators
 
 
 class LoginPage(BasePage):
+    
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
