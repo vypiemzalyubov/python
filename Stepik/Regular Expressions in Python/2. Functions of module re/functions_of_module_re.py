@@ -17,3 +17,12 @@ print(match.pos)
 print(match.endpos)
 print(match.re)
 print(match.string)
+
+# 70. Многие функции возвращают None в результате своей работы, если ничего не было найдено.
+#     Попробуйте вывести нулевую группу в Match-объекте, если совпадение было найдено. Если его нет - ничего не выводите.
+
+import re
+
+match = re.match(input(), input())
+if match:
+    print(match[0])
