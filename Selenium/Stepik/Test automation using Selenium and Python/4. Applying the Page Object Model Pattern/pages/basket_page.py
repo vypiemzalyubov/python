@@ -4,18 +4,10 @@ from pages.locators import BasketPageLocators
 
 class BasketPage(BasePage):
 
-    def cart_page(self):
-        self.should_be_cart_page()
-        self.cart_is_empty()
-        self.should_not_be_items_in_cart()
-
-    def cart_is_empty(self):
-        cart = self.browser.find_element(*BasketPageLocators.BASKET_EMPTY)
-        assert "Your basket is empty" in cart.text
-
-    def should_be_cart_page(self):
-        assert "/en-gb/basket/" in self.browser.current_url, "May be not 'card/basket' page"
-
-    def should_not_be_items_in_cart(self):
-        assert self.is_not_element_present(*BasketPageLocators.BASKET_ITEMS), \
-            "Item(s) in cart but shouldn't be"
+    def should_be_empty_basket(self):
+        assert self.is_not_element_present(*BasketPageLocators.BASKET_TITLE, timeout=1), "Basket not empty"
+        assert self.is_element_present(*BasketPageLocators.BASKET_INNER), "Wrong basket section"
+        text_in_basket = self.browser.find_element(*BasketPageLocators.BASKET_INNER).text
+        language = self.browser.execute_script(
+            "return window.navigator.userLanguage || window.navigator.language")
+        assert BasketPageLocators.empty_text[language] in text_in_basket, f"{text_in_basket}, {BasketPageLocators.empty_text[language]}"
