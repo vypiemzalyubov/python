@@ -17,3 +17,12 @@ class ProductPage(BasePage):
         alert_price = self.browser.find_elements(*ProductPageLocators.ALERT_LIST)[2].text
         price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         assert alert_price == price, "Invalid product price"
+
+    def should_be_success_message(self):
+        assert self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is not presented" 
+ 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"                
