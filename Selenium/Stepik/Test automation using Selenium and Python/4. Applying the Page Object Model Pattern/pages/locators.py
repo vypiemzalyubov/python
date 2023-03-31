@@ -10,20 +10,38 @@ class BasePageLocators():
     BASKET_LINK = (By.CSS_SELECTOR, "div.basket-mini a.btn")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
-class LoginPageLocators:
-    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
-    REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
-    REGISTER_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
-    REGISTER_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
-    REGISTER_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
-    REGISTER_SUBMIT = (By.CSS_SELECTOR, "button[name='registration_submit']")    
+class LoginPageLocators():
+    PART_URL = "login"
 
-class ProductPageLocators:
-    BUTTON_ADD_TO_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')
-    PRODUCT_PRICE = (By.CSS_SELECTOR, '.product_main .price_color')
-    PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
-    ALERT_LIST = (By.CSS_SELECTOR, '.alertinner strong')
+    LOGIN_FORM = (By.ID, "login_form")
+    LOGIN_EMAIL = (By.CSS_SELECTOR, 'input[name="login-username"]')
+    LOGIN_PASS = (By.CSS_SELECTOR, 'input[name="login-password"]')
+    LOGIN_BTN = (By.CSS_SELECTOR, 'button[name="login_submit"]')
 
-class BasketPageLocators:
-    BASKET_EMPTY = (By.XPATH, "/html/body/div[2]/div/div[3]/div[2]/p")
-    BASKET_ITEMS = (By.XPATH, "/html/body/div[2]/div/div[3]/div[2]/div[1]/div/h2")
+    REGISTER_FORM = (By.ID, "register_form")
+    REGISTER_EMAIL = (By.CSS_SELECTOR, 'input[name="registration-email"]')
+    REGISTER_PASS1 = (By.CSS_SELECTOR, 'input[name="registration-password1"]')
+    REGISTER_PASS2 = (By.CSS_SELECTOR, 'input[name="registration-password2"]')
+    REGISTER_BTN = (By.CSS_SELECTOR, 'button[name="registration_submit"]')    
+
+class ProductPageLocators():
+    ADD_TO_BUCKET_BASKET = (By.CSS_SELECTOR, 'button[class = "btn btn-lg btn-primary btn-add-to-basket"]')
+    CONFIRMING_MESSAGE = (By.CSS_SELECTOR, 'div.alertinner strong')
+    GOODS_NAME = (By.CSS_SELECTOR, 'div[class="col-sm-6 product_main"] h1')
+    GOODS_PRICE = (By.CSS_SELECTOR, 'p[class="price_color"]')
+    BASKET_PRICE = (By.CSS_SELECTOR, 'div.alertinner p strong')
+
+class BasketPageLocators():
+    empty_text = {
+        "en-gb": "Your basket is empty",
+        "en": "Your basket is empty",
+        "ru": "Ваша корзина пуста",
+        "es": "Tu carrito esta vacío",
+        "fr": "Votre panier est vide",
+        "de": "Ihr Warenkorb ist leer",
+        "pl": "Twój koszyk jest pusty"
+    }
+    BASKET_INNER = (By.CSS_SELECTOR, "#content_inner p")
+    # если в корзине есть товар то появляются:
+    BASKET_TITLE = (By.CSS_SELECTOR, "#content_inner div.basket-title")
+    BASKET_ROW = (By.CSS_SELECTOR, "#content_inner div.basket-title div.row")
