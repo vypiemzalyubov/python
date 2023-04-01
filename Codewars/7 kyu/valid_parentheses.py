@@ -36,3 +36,6 @@ def valid_parentheses(array):
         else:
             return False
     return count == 0
+
+def valid_parentheses(s):
+    return [s:= s.replace("()", "") for x in range(len(s))][-1] == "" if s else True
