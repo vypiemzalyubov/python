@@ -7,4 +7,6 @@
 
 **Regular Expressions Cheat Sheet**: [cheat sheet](https://res.cloudinary.com/dyd911kmh/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf)
 
-![image](https://habrastorage.org/web/512/f5c/07c/512f5c07cdd74cd6901611b1d30434b0.png)
+<div id="header" align="center">
+   <img src="https://habrastorage.org/web/512/f5c/07c/512f5c07cdd74cd6901611b1d30434b0.png" width="700"/>
+</div>
