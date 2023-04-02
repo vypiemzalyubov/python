@@ -37,4 +37,3 @@ def alias_gen(f_name: str, l_name: str) -> str:
         return "Your name must start with a letter from A - Z."
 
 alias_gen = lambda f,l:f[0].isalpha()and l[0].isalpha()and'%s %s'%(FIRST_NAME[f[0].upper()],SURNAME[l[0].upper()])or 'Your name must start with a letter from A - Z.'
-
