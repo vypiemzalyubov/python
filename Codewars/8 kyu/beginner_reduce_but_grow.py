@@ -16,21 +16,16 @@ def grow(arr):
 # Best Practices
 
 from functools import reduce
-
 def grow(arr):
     return reduce(lambda x, y: x * y, arr)
 
 
-
 import math
-
 def grow(arr):
     return math.prod(arr)
 
 
-
 from functools import reduce
 from operator import mul
-
 def grow(arr):
     return reduce(mul, arr, 1)
