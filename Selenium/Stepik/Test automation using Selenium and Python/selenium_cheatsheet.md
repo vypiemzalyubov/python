@@ -320,10 +320,10 @@ button = browser.find_element(By.ID, "submit_button")
 //div[text()='text']
 ```
 ```
-//div[contains(text(),'text'])
+//div[contains(text(),'text')]
 ```
 ```
-//span[contains(@class,'LC2Ob'])
+//span[contains(@class,'LC2Ob')]
 ```
 **по номеру элемента**
 ```
