@@ -1,6 +1,3 @@
-## Page Object Model - Final Project
+## Automation Craft
 
-Запуск тестов для ревью
-```python
-pytest -v --tb=line --language=en -m need_review
-```
+Создание фреймворка для тестирования сайта [DEMOQA](https://demoqa.com/)
