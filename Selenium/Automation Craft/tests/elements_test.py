@@ -1,6 +1,6 @@
 import time
 import random
-from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage
+from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage, WebTablePage, ButtonsPage
 
 
 class TestElements:
@@ -59,3 +59,41 @@ class TestElements:
             web_table_page.search_some_person(key_word)
             table_result = web_table_page.check_search_person()
             assert key_word in table_result, "The person was not found in the table"
+
+        def test_web_table_update_person_info(self, driver):
+            web_table_page = WebTablePage(driver, "https://demoqa.com/webtables")
+            web_table_page.open()
+            lastname = web_table_page.add_new_person()[1]
+            web_table_page.search_some_person(lastname)
+            age = web_table_page.update_person_info()
+            row = web_table_page.check_search_person()
+            assert age in row, "The person card has not been changed"
+
+        def test_web_table_delete_person(self, driver):
+            web_table_page = WebTablePage(driver, "https://demoqa.com/webtables")
+            web_table_page.open()            
+            email = web_table_page.add_new_person()[3]
+            web_table_page.search_some_person(email)
+            web_table_page.delete_person()
+            text = web_table_page.check_deleted_person()
+            assert text == 'No rows found'
+
+        def test_web_table_change_count_row(self, driver):
+            web_table_page = WebTablePage(driver, "https://demoqa.com/webtables")
+            web_table_page.open()
+            web_table_page.remove_footer()
+            web_table_page.remove_fixedban()
+            count = web_table_page.select_up_to_some_rows()
+            assert count == [5, 10, 20, 50, 100], "The number of rows in the table has not been changed or has not been chahged incorrectly"
+
+    class TestButtonPage:
+
+        def test_different_click_on_the_buttons(self, driver):
+            button_page = ButtonsPage(driver, "https://demoqa.com/buttons")
+            button_page.open()
+            double = button_page.click_on_different_button('double')
+            right = button_page.click_on_different_button('right')
+            click = button_page.click_on_different_button('click')
+            assert double == 'You have done a double click', "The double click button was not pressed"
+            assert right == 'You have done a right click', "The right click button was not pressed"
+            assert click == 'Click Me', "The dynamic click button was not pressed"

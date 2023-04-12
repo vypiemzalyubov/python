@@ -1,6 +1,7 @@
 import random
 from generator.generator import generated_person
-from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators, WebTablePageLocators
+from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators, WebTablePageLocators, ButtonsPageLocators
+from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
@@ -119,3 +120,62 @@ class WebTablePage(BasePage):
         delete_button = self.element_is_present(self.locators.DELETE_BUTTON)
         row = delete_button.find_element('xpath', self.locators.ROW_PARENT)
         return row.text.splitlines()
+    
+    def update_person_info(self):
+        person_info = next(generated_person())
+        age = person_info.age
+        self.element_is_visible(self.locators.UPDATE_BUTTON).click()
+        self.element_is_visible(self.locators.AGE_INPUT).clear()
+        self.element_is_visible(self.locators.AGE_INPUT).send_keys(age)
+        self.element_is_visible(self.locators.SUBMIT).click()
+        return str(age)
+
+    def delete_person(self):
+        self.element_is_visible(self.locators.DELETE_BUTTON).click()
+
+    def check_deleted_person(self):
+        return self.element_is_present(self.locators.NO_ROWS_FOUND).text
+    
+    def select_up_to_some_rows(self):
+        count = [5, 10, 20, 50, 100]
+        data = []
+        for x in count:
+            count_row_button = self.element_is_visible(self.locators.COUNT_ROW_LIST)
+            self.go_to_element(count_row_button)
+            count_row_button.click()
+            self.element_is_visible((By.CSS_SELECTOR, f'option[value="{x}"]')).click()
+            data.append(self.check_count_rows())
+        return data    
+
+    def check_count_rows(self):
+        list_rows = self.elements_are_present(self.locators.FULL_PEOPLE_LIST)
+        return len(list_rows)
+    
+    def remove_footer(self):
+        self.driver.execute_script("document.getElementsByTagName('footer')[0].remove();")
+        print('\nRemove Footer')
+        
+    def remove_fixedban(self):
+        self.driver.execute_script("document.getElementById('fixedban').style.display = 'none'")
+        print('\nRemove Fixedban')
+
+
+class ButtonsPage(BasePage):
+
+    locators = ButtonsPageLocators()
+
+    def click_on_different_button(self, type_click):
+        if type_click == 'double':
+            self.action_double_click(self.element_is_visible(self.locators.DOUBLE_BUTTON))
+            return self.check_clicked_on_the_button(self.locators.SUCCESS_DOUBLE)
+
+        if type_click == 'right':
+            self.action_right_click(self.element_is_visible(self.locators.RIGHT_CLICK_BUTTON))
+            return self.check_clicked_on_the_button(self.locators.SUCCESS_RIGHT)
+
+        if type_click == 'click':
+            self.element_is_visible(self.locators.DOUBLE_BUTTON).click()
+            return self.check_clicked_on_the_button(self.locators.CLICK_ME_BUTTON)
+
+    def check_clicked_on_the_button(self, element):
+        return self.element_is_present(element).text
