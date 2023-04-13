@@ -22,6 +22,11 @@ class Person():
 
 # Best Practices
 
+class Person:
+    __init__ = lambda s,f,l,a: (setattr(s,'full_name',f'{f} {l}'),setattr(s,'age',a),None)[2]
+
+    
+
 class Person():
 
     def __init__(self, first_name, last_name, age):
