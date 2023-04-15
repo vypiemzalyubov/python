@@ -9,5 +9,5 @@ pip install -r requirements.txt
 
 Запуск тестов
 ```python
-pytest -s test/elements_test.py
+pytest -s tests/elements_test.py
 ```
