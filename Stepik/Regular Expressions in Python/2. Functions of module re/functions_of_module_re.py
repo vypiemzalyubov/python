@@ -26,3 +26,15 @@ import re
 match = re.match(input(), input())
 if match:
     print(match[0])
+
+# 71. Напишите программу, которая найдёт первый хештег в тексте и выведет его в консоль.
+#     Нужно найти первый хештег в тексте:
+#     Начинается с символа #
+#     После # стоит последовательность из латинских букв нижнего регистра
+
+import re
+
+pattern = r'#[a-z]+'
+string = input()
+match = re.search(pattern, string)
+print(match[0] if match else '')
