@@ -198,3 +198,18 @@ import re
 pattern = r'([+-]?\d*(x|x\^\d*)?\b)*'
 match = re.fullmatch(pattern, input())
 print(bool(match))
+
+# 82. Найдите все последовательности, используя \w.
+#     Нужно найти последовательности, подходящие по следующим условиям:
+#     Состоит из \w
+#     Длина - максимально возможная
+#     На вход программе подаётся 1 строка.
+#     Все найденные последовательности, каждая на новой строке.
+
+import re
+
+line = input()
+pattern = r'\w+'
+match = re.finditer(pattern, line)
+for i in match:
+    print(i.group())
