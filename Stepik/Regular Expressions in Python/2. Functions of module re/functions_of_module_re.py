@@ -282,3 +282,8 @@ print(*re.findall(pattern, input()), sep='\n')
 #     На вход программе подаётся 1 строка.
 #     Ваша задача вывести все найденные даты в тексте.
 
+import re
+
+pattern = r'((\d{2}(?P<a>[/.])\d{2}(?P=a)\d{4})|(\d{4}(?P<b>[/.])\d{2}(?P=b)\d{2}))'
+match = re.findall(pattern, input())
+[print(i[0]) for i in match]
