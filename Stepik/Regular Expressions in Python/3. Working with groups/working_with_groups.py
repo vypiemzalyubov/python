@@ -78,7 +78,7 @@ print(re.findall(pattern, input()))
 
 import re
 
-pattern = r'[а-яё\.]+'
+pattern = r'\D*([+:=*/-])\D*'
 print(re.split(pattern, input()))
 
 # 106. Разделите строку по символам ? и &.
