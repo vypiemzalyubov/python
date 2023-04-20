@@ -166,3 +166,16 @@ import re
 match = re.search(r'(?P<price>\d+)(?P<currency>(₽|\$))', input())
 if match:
     print(match.expand(r'Цена данного товара \1\2'))
+
+# 113. Найдите все числа в тексте и возведите их в квадрат.
+#      Нужно найти все числовые последовательности и заменить на их квадрат.
+#      На вход программе подаётся 1 строка.
+#      Строка с числами, возведёнными в квадрат.
+
+import re
+
+def square_numbers(text):
+    return re.sub(r'\d+', lambda match: str(int(match.group(0)) ** 2), text)
+
+text = input()
+print(square_numbers(text))
