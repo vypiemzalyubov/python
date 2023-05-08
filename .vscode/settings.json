@@ -1,7 +1,0 @@
-{
-    "python.testing.pytestArgs": [
-        "RedRover.school"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
-}
