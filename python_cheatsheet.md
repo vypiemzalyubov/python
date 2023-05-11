@@ -23,3 +23,9 @@
 
 - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
 - [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
+
+<details><summary>Полезные материалы</summary>
+- [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
+- [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
+  
+</details>  
