@@ -26,6 +26,7 @@
 
 <details><summary>Полезные материалы</summary>
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
+  
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
   
 </details>  
