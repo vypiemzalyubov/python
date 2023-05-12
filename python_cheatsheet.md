@@ -28,8 +28,10 @@
 - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Stepik/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
 
 <details><summary>Полезные материалы</summary>
+<br>
   
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
-- [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)  
+- [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
+- [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)  
 </details>  
