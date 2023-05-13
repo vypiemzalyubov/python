@@ -33,5 +33,6 @@
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
-- [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)  
+- [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)
+- [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)  
 </details>  
