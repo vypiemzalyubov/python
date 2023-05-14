@@ -23,19 +23,18 @@
 21. [Графический интерфейс на Tkinter
 ](https://github.com/vypiemzalyubov/python/wiki/21.-%D0%93%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%BD%D0%B0-Tkinter)
 
-- [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
-- [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
-
-<details><summary>Python Automation Testing</summary>
-<br>
+## Python Automation Testing
 
 - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
-- [Pytest](https://github.com/vypiemzalyubov/python/wiki/Pytest)  
-</details> 
+- [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
+- [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
+- [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)   
 
 <details><summary>Полезные материалы</summary>
 <br>
-  
+
+- [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
+- [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)  
 - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Stepik/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md) 
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
