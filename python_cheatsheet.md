@@ -24,8 +24,14 @@
 ](https://github.com/vypiemzalyubov/python/wiki/21.-%D0%93%D1%80%D0%B0%D1%84%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81-%D0%BD%D0%B0-Tkinter)
 
 - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
-- [Pytest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
 - [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
+
+<details><summary>Python Automation Testing</summary>
+<br>
+
+- [Pytest](https://github.com/vypiemzalyubov/python/wiki/Pytest)  
+</details> 
+
 <details><summary>Полезные материалы</summary>
 <br>
   
@@ -35,4 +41,4 @@
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)  
-</details>  
+</details> 
