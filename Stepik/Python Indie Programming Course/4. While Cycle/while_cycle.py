@@ -96,6 +96,6 @@ print(d)
 (n, m), d = map(int, input().split()), 0
 while n:
     d += 1
-    if d % m == 0: d += 1
     n -= 1
+    if d % m == 0: n += 1
 print(d)
