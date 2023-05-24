@@ -220,3 +220,13 @@ print(*result)
 #                      Аналогично, третья строка содержит целое m (1 ≤ m ≤ 100) – количество девушек. 
 #                      В четвертой строке содержится последовательность b1, b2, ..., bm (1 ≤ bj ≤ 100), где bj — умение танцевать j-й девушки.
 #      Выходные данные: Выведите единственное число — искомое максимальное возможное количество пар.
+
+n, skill_n = int(input()), list(map(int, input().split()))
+m, skill_m = int(input()), list(map(int, input().split()))
+i = j = c = 0
+skill_n.sort(), skill_m.sort()
+while i < n and j < m:
+    if abs(skill_n[i] - skill_m[j]) <= 1: c += 1; i += 1; j += 1
+    elif skill_n[i] < skill_m[j]: i += 1
+    else: j += 1
+print(c)
