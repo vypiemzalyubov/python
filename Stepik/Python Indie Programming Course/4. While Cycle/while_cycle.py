@@ -307,4 +307,10 @@ while b > 0:
     a, b = b, a % b
 print(a)
 
-# 205. 
+# 205. Даны два натуральных числа A и B. Требуется найти их наименьшее общее кратное (НОК).
+
+a, b = map(int, input().split())
+c = a * b
+while b > 0:
+    a, b = b, a % b
+print(int(c / a) if a > b else int(c / b))
