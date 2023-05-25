@@ -304,5 +304,7 @@ print(a)
 
 a, b = map(int, input().split())
 while b > 0:
-    if a > b: a, b = b, a % b
+    a, b = b, a % b
 print(a)
+
+# 205. 
