@@ -139,7 +139,7 @@ print(', '.join(s for s in (input() for _ in range(int(input()))) if s.find('с�
 l = [input() for _ in range(int(input()))]
 [print(f'{s[0]}{str(len(s[1:-1]))}{s[-1]}' if len(s) > 10 else s) for s in l]
 
-# 229. Перед вами список numbers, состоящий из 100 целых чисел. Ваша задачи пройтись в цикле по элементам списка и вывести на экран каждый элемент на отдельной строке
+# 229. Перед вами список numbers, состоящий из 100 целых чисел. Ваша задачи пройтись в цикле по элементам списка и вывести на экран каждый элемент на отдельной строке.
 
 numbers = [99, 50, -16, 9, 47, -62, 5, -64, -68, 85, 11, -20, 16, 96, -43, 46, -25, 33, 81, -30, 64, 66, -11, 60, 3, -5, -1,
  -80, 49, -12, -86, -40, -98, -92, -91, -71, 56, -76, -30, -82, 17, -2, -64, 47, 22, -28, 40, 55, 54, -3, -58, -10,
@@ -147,3 +147,19 @@ numbers = [99, 50, -16, 9, 47, -62, 5, -64, -68, 85, 11, -20, 16, 96, -43, 46, -
  -35, 41, 94, 1, -90, 29, 23, 39, -3, 11, -65, -64, 52, -69, 32, -14, -49, -28, -11, 85, -75, -6, 15]
 for n in numbers:
     print(n)
+
+# 230. Перед вами список words, состоящий из 100 строк. Ваша задачи пройтись в цикле по элементам списка и вывести на экран только те элементы, длина которых больше 6.
+#      Выводить каждый элемент нужно на отдельной строке в том же порядке, в котором слова расположены в списке words.
+
+words = ['require', 'build', 'head', 'land', 'dark', 'seat', 'have', 'five', 'particularly', 'focus', 'moment',
+           'visit', 'past', 'turn', 'bad', 'modern', 'once', 'future', 'pay', 'assume', 'himself', 'physical', 'chance',
+           'remember', 'better', 'former', 'believe', 'explain', 'reduce', 'whatever', 'theory', 'during', 'enough',
+           'wall', 'commercial', 'challenge', 'tell', 'actually', 'include', 'somebody', 'decade', 'by', 'better',
+           'would', 'five', 'cost', 'kitchen', 'our', 'affect', 'board', 'practice', 'full', 'instead', 'apply', 'good',
+           'past', 'clearly', 'special', 'both', 'analysis', 'peace', 'truth', 'cultural', 'light', 'answer', 'build',
+           'each', 'watch', 'buy', 'theory', 'pretty', 'expect', 'account', 'music', 'sell', 'newspaper', 'reach',
+           'fish', 'tax', 'employee', 'start', 'most', 'during', 'citizen', 'develop', 'carry', 'only', 'certainly',
+           'rock', 'economy', 'risk', 'later', 'one', 'body', 'star', 'they', 'choice', 'appear', 'return', 'sometimes']
+print(*[w for w in words if len(w) > 6], sep='\n')
+
+# 231.
