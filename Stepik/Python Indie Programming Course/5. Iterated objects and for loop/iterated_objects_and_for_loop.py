@@ -291,4 +291,11 @@ for i in range(201):
     if tmp[i] > 0:
         print(tmp[i] * (str(i - 100) + ' '), end='')
 
-# 244.  
+# 244. Ваша задача найти сумму всех четырехзначных натуральных чисел, сумма цифр которых равна 20.
+
+result = 0
+for i in range(1000, 10000):
+    s, x = 0, i
+    while x > 0: s += x % 10; x //= 10
+    if s == 20: result += i
+print(result) 
