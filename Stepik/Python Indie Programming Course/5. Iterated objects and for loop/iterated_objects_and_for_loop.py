@@ -460,4 +460,4 @@ l = [list(map(int, input().split())) for i in range(n)]
 for i in range(n):
     for j in range(n):
         if l[i][j] != l[j][i]: c += 1
-print('No' if c > 1 else 'Yes')
+print('No' if c > 0 else 'Yes')
