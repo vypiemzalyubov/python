@@ -511,4 +511,4 @@ print(res.index(max(res)))
 n, m = map(int, input().split())
 l = [list(map(int, input().split())) for i in range(n)]
 maximum = [max(i) for i in l]
-print(maximum.count(max([max(i) for i in l])))
+print(maximum.count(max(maximum)))
