@@ -34,7 +34,7 @@
 - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
 - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)   
 
-<details><summary>Полезные материалы</summary>
+<details><summary><b>Полезные материалы</b></summary>
 <br>
 
 - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
