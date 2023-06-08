@@ -594,7 +594,6 @@ for i in range(n):
         if i == j: l[i][j] = c
         elif i < j: l[i][j] = a
         else: l[i][j] = b
-for i in l:
-    print(*i)
+[print(*i) for i in l]
 
 # 268. 
