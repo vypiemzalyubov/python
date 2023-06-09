@@ -674,3 +674,8 @@ print((lambda n: [i for i in range(n, n ** 2 + 1) if i % 2])(int(input())))
 
 a, b = map(int, input().split())
 print([i ** 2 for i in range(a, b + 1)] if a < b else [i ** 3 for i in range(a, b - 1, -1)]) 
+
+# 281. Создайте список первых букв каждого слова из строки st и выведите его на экран.
+
+st = 'Create a list of the first letters of every word in this string'
+print([i[0] for i in st.split()])
