@@ -56,4 +56,4 @@ print(tuple([*range(int(input()), int(input()) + 1)]))
 #      Формат ввода: Вводится натуральное число n.
 #      Формат вывода: Вывести кортеж, содержащий нечетные натуральные числа в интервале [n;n**2].
 
-print((lambda n: tuple([i for i in range(n, n ** 2 + 1) if i % 2]))(int(input())))
+print((lambda n: tuple(i for i in range(n, n ** 2 + 1) if i % 2))(int(input())))
