@@ -379,3 +379,28 @@ for k, v in countries.items():
         break
 else:
     print(f'ERROR: Country for {city} not found')
+    
+# 316. Перед вами словарь user. При помощи метода pop переименуйте в нем следующие ключи:
+#      - ключ password в ключ secret
+#      - ключ last_name в ключ surname
+#      Выводить ничего не нужно, только изменить ключи словаря.
+
+user = {
+    "id": 4170,
+    "uid": "5e941db5-9e0f-4f94-9fc5-734110c6be14",
+    "password": "SyUpfo1ljm",
+    "first_name": "Teresa",
+    "last_name": "Wehner",
+    "username": "teresa.wehner",
+    "email": "teresa.wehner@email.com",
+    "gender": "Non-binary",
+    "phone_number": "+674 424.561.2776",
+    "social_insurance_number": "637316241",
+    "date_of_birth": "1993-08-17"
+}
+user['secret'] = user.pop('password')
+user['surname'] = user.pop('last_name')
+
+# 317. Напишите код для преобразования списка из целых чисел произвольной длины в словарь, вложенность которого зависит от длины списка.
+#      Например, если перед вами был бы такой список [100, 55, 77, 55, 89], то он должен превратиться в такой словарь {100: {55: {77: {55: 89}}}}.
+#      На вход программе поступают числа для списка в одну строку, гарантируется, что в списке будет как минимум два элемента. Ваша задача вывести полученный словарь.
