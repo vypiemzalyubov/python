@@ -203,3 +203,52 @@ print({i: i ** 2 for i in range(1, int(input()) + 1)})
 from string import ascii_lowercase
 alphabet = {ascii_lowercase[i-1]: i for i in range(1, 27)}
 print(alphabet)
+
+# 308. Найдите «длину» словаря account.
+
+account = {
+  "id": 5681,
+  "uid": "45f17b56-bcad-4933-8c73-a37aaa6863b9",
+  "account_number": "6733198878",
+  "iban": "GB79PNXF20678598570754",
+  "bank_name": "AAC CAPITAL PARTNERS LIMITED",
+  "routing_number": "007398728",
+  "swift_bic": "AACCGB21"
+}
+print(len(account))
+
+# 309. Перед вами располагается словарь address. Давайте проверим наличие следующих ключей:
+#      - zip_code
+#      - longitude
+#      - post_code
+#      - street_name
+#      - number_house
+#      Программа должна проверить наличие ключей и вывести True, если ключ имеется,  или False, если ключ отсутствует.
+#      Проверки ключей должны выполняться в отдельной строчке в порядке перечисления ключей в задании.
+
+address = {
+  "id": 7973,
+  "uid": "42f2ce1d-90ab-4345-9595-0d9f42e6c085",
+  "city": "East Monteland",
+  "street_name": "Gusikowski Land",
+  "street_address": "3230 Daugherty Centers",
+  "secondary_address": "Apt. 562",
+  "building_number": "58671",
+  "mail_box": "PO Box 5313",
+  "community": "Paradise Square",
+  "zip_code": "58611",
+  "zip": "01667",
+  "postcode": "00563",
+  "time_zone": "America/New_York",
+  "street_suffix": "Burg",
+  "city_suffix": "mouth",
+  "city_prefix": "West",
+  "state": "Wisconsin",
+  "state_abbr": "NY",
+  "country": "Mali",
+  "country_code": "MH",
+  "latitude": -56.97457993706476,
+  "longitude": -104.29509072140858,
+  "full_address": "Apt. 982 4820 Leena Rest, Lake Giannaville, MN 09265-3715"
+}
+print('zip_code' in address, 'longitude' in address, 'post_code' in address, 'street_name' in address, 'number_house' in address, sep='\n')
