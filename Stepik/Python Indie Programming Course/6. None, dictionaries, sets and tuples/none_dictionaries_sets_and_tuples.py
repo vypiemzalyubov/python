@@ -251,4 +251,4 @@ address = {
   "longitude": -104.29509072140858,
   "full_address": "Apt. 982 4820 Leena Rest, Lake Giannaville, MN 09265-3715"
 }
-print('zip_code' in address, 'longitude' in address, 'post_code' in address, 'street_name' in address, 'number_house' in address, sep='\n')
+[print(key in address) for key in ('zip_code', 'longitude', 'post_code', 'street_name', 'number_house')]
