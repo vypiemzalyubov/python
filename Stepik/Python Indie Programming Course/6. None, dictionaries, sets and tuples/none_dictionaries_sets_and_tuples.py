@@ -698,4 +698,4 @@ print('IGNORE HIM!' if len(s := set(input())) % 2 else 'CHAT WITH HER!')
 #      Считайте, что все возможные цвета пронумерованы целыми числами.
 #      Выходные данные: Выведите единственное целое число — минимальное количество подков, которое нужно купить.
 
-print(len(n := list(map(int, input().split()))) - len(set(n)))
+print(len(n := input().split()) - len(set(n)))
