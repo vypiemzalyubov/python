@@ -34,17 +34,16 @@
 - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
 - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)   
 
-<details><summary><b>Полезные материалы</b></summary>
-<br>
+## Полезные материалы
 
-- [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
+- [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
 - [20 важных концепций в Python, которые помогут вам стать более эффективным разработчиком](https://github.com/vypiemzalyubov/python/wiki/20-%D0%B2%D0%B0%D0%B6%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D0%B8%D0%B9-%D0%B2-Python,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%B2%D0%B0%D0%BC-%D1%81%D1%82%D0%B0%D1%82%D1%8C-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%BC-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC)   
 - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Stepik/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md) 
+- [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)  
 - [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)
-- [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)  
-</details> 
+- [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/) 
