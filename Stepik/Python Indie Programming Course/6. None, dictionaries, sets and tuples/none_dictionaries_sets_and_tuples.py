@@ -657,5 +657,4 @@ phone_book = {i[1]: i[0] for i in people}
 
 colors = ['White', 'Blue', 'Yellow', 'Purple', 'Black', 'Green']
 sizes = ['S', 'M', 'L', 'XL', 'XLL']
-l = [(j, i) for j in colors for i in sizes]
-print(l)
+print([(j, i) for j in colors for i in sizes])
