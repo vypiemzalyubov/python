@@ -658,3 +658,8 @@ phone_book = {i[1]: i[0] for i in people}
 colors = ['White', 'Blue', 'Yellow', 'Purple', 'Black', 'Green']
 sizes = ['S', 'M', 'L', 'XL', 'XLL']
 print([(j, i) for j in colors for i in sizes])
+
+# 327. В вашем распоряжении есть двумерный список vector. Ваша задача при помощи генератора-списка сделать на основании vector линейный (одномерный) список и вывести его.
+
+vector = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]]
+print([j for i in vector for j in i])
