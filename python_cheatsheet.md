@@ -34,8 +34,7 @@
 - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
 - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)   
 
-<details><summary><b>Полезные материалы</b></summary>
-<br>
+## Полезные материалы
 
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
@@ -47,5 +46,4 @@
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)  
 - [Понимание схемы JSON](https://infostart.ru/1c/articles/1543922/)
-- [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)  
-</details> 
+- [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/) 
