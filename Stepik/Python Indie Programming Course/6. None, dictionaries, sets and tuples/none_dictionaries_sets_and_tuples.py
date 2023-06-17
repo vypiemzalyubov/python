@@ -781,3 +781,14 @@ print(sum([1 for word in set(words) if len(word) > 6]))
 #      Выходные данные: Вывести на отдельной строке количество различных чисел каждого введенного списка в том же порядке, в котором вводились списки.
 
 [print(len(set(input().split()))) for _ in range(int(input()))]
+
+# 341. Перед вами располагается множество  my_set. Ваша задача добавить в него 4 строковых элемента: 
+#      - concert
+#      - brown
+#      - jacket
+#      - value
+#      Выводить ничего не нужно, только добавьте элементы выше.
+
+my_set = {'government', 'control', 'winter', 'few', 'generation',
+          'service', 'national', 'tradition', 'government'}
+my_set.update(('concert', 'brown', 'jacket', 'value'))
