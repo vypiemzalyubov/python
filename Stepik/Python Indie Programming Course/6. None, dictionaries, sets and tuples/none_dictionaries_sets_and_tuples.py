@@ -762,3 +762,22 @@ set_a = {31, 37, 39, 41, 47, 58, 60, 62, 70, 75,
 set_b = {0, 1, 8, 16, 17, 18, 22, 24, 29, 31,
          33, 34, 36, 42, 46, 47, 51, 53, 62, 64, 65, 66, 67}
 print(len(set_a ^ set_b))
+
+# 339. Перед вами располагается список words, состоящий из 55 слов, которые могут повторяться. Ваша задача вывести на экран количество уникальных слов, длина которых больше 6.
+#      Под уникальностью здесь подразумевается то, что в случае возникновения дублирующих слов, в подсчете вы не должны учитывать дубли.
+
+words = ['mention', 'soup', 'pneumonia', 'tradition', 'concert', 'tease', 'generation',
+         'winter', 'national', 'jacket', 'winter', 'wrestle', 'proposal', 'error', 
+         'pneumonia', 'concert', 'value', 'value', 'disclose', 'glasses', 'tank',
+         'national', 'soup', 'feel', 'few', 'concert', 'wrestle', 'proposal', 'soup',
+         'sail', 'brown', 'service', 'proposal', 'winter', 'jacket', 'mention', 'tradition',
+         'value', 'feel', 'bear', 'few', 'value', 'winter', 'proposal', 'government', 
+         'control', 'value', 'few', 'generation', 'service', 'national',
+         'tradition', 'government', 'mention', 'proposal']
+print(sum([1 for word in set(words) if len(word) > 6]))
+
+# 340. Вашей программе будут поступать на вход N списков, содержащих целые числа. Для каждого введенного списка определите, сколько в нем встречается различных чисел.
+#      Входные данные: Сперва поступает натуральное число N - количество списков. В следующих N строк вводятся значения каждого списка, разделенные через пробел.
+#      Выходные данные: Вывести на отдельной строке количество различных чисел каждого введенного списка в том же порядке, в котором вводились списки.
+
+[print(len(set(input().split()))) for _ in range(int(input()))]
