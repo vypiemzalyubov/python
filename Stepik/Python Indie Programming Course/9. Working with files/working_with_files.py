@@ -15,7 +15,6 @@ print(json_data)
 #      В качестве ответа нужно через пробел указать сперва его имя, затем фамилию и после общую сумму его продаж.
 
 import json
-from pprint import pprint
 
 max_sum = 0
 max_f_name = ''
@@ -37,7 +36,31 @@ with open('manager_sales.json') as file:
 
 print(f'{max_f_name} {max_l_name} {max_sum}')
 
-# 779. Перед вами имеется программа, которая десериализует JSON строку к питоновскому значению.
+# 779. В json-файле group_people содержится информация о нескольких групп людей, при этом у каждой группы есть свой идентификатор. 
+#      Ваша задача скачать файлик и самостоятельно найти идентификатор группы, в которой находится самое большое количество женщин, рожденных после 1977 года. 
+#      В качестве ответа необходимо указать через пробел идентификатор найденной группы и сколько в ней было женщин, рожденных после 1977 года.
+
+import json
+
+max_count = 0
+max_group = 0
+
+with open('group_people.json') as file:
+    data = json.load(file)
+
+    for elem in data:
+        id = elem["id_group"]
+        count = 0
+        for people in elem["people"]:
+            if people["gender"] == 'Female' and people["year"] > 1977:
+                count += 1
+            if count > max_count:
+                max_count = count
+                max_group = id
+
+print(f'{max_group} {max_count}')
+
+# 780. Перед вами имеется программа, которая десериализует JSON строку к питоновскому значению.
 #      Сама JSON строка оформлена неправильно, поэтому в программе возникает ошибка json.decoder.JSONDecodeError.
 #      Ваша задача найти и исправить ошибки в оформлении  JSON строки. Остальную часть программы не нужно менять.
 
