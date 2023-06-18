@@ -4,5 +4,7 @@
 import requests
 
 response = requests.get("https://playground.learnqa.ru/api/long_redirect", allow_redirects=True)
+length_response = len(response.history)
+final_url = response.history[-1].url
 
-print(f"Количество редиректов: {len(response.history)}\nИтоговый URL: {response.url}")
+print(f"Количество редиректов: {length_response}\nИтоговый URL: {final_url}")
