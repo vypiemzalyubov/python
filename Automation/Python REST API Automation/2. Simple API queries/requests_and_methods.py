@@ -15,12 +15,19 @@
 
 import requests
 
-response_1 = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type")
-print(f"Ответ сервера, если не указывать параметр method в запросе: {response_1.text}, статус код {response_1.status_code}")
+# response_1 = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type")
+# print(f"Ответ сервера, если не указывать параметр method в запросе: {response_1.text}, статус код {response_1.status_code}")
 
-response_2 = requests.head("https://playground.learnqa.ru/ajax/api/compare_query_type")
-print(f"Статус код ответа сервера на http-запрос типа HEAD, которого нет в списке доступных: {response_2.status_code}")
+# response_2 = requests.head("https://playground.learnqa.ru/ajax/api/compare_query_type")
+# print(f"Статус код ответа сервера на http-запрос типа HEAD, которого нет в списке доступных: {response_2.status_code}")
 
-payload_3 = {"method": "GET"}
-response_3 = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params=payload_3)
-print(f"Ответ сервера на GET запрос с правильным параметром method: {response_3.text}, статус код {response_3.status_code}")
+# payload_3 = {"method": "GET"}
+# response_3 = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params=payload_3)
+# print(f"Ответ сервера на GET запрос с правильным параметром method: {response_3.text}, статус код {response_3.status_code}")
+
+
+
+get_request = ["GET", "POST", "PUT", "DELETE"]
+for r in get_request:
+    response_get = requests.get("https://playground.learnqa.ru/ajax/api/compare_query_type", params={"method": {r}})
+    print(f"Ответ сервера: {response_get.text}\nСтатус код ответа: {response_get.status_code}")
