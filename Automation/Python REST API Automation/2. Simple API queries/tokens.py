@@ -21,14 +21,29 @@ import time
 import json
 import requests
 
+print(f"Создаем новую задачу...")
 response1 = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job")
-json_data = json.loads(response1.text)
-token = json_data.get("token")
-seconds = json_data.get("seconds")
+json_data1 = json.loads(response1.text)
+token = json_data1.get("token")
+seconds = json_data1.get("seconds")
 
-time.sleep({seconds})
 
+print(f"Делаем запрос с token до того, как задача готова...")
 response2 = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job", params={"token": {token}})
+json_data2 = json.loads(response2.text)
+status_before = json_data2.get("status")
+print(f"Проверяем значение поля status в ответе до создания задачи...")
+assert status_before == "Job is NOT ready", 'В поле "status" неверное значение, должно быть "Job is NOT ready"'
+print(f"Значение поля status верное...")
 
-print(response2.text)
-print(response2.status_code)
+print(f"Ждем {seconds} секунд, пока задача не будет готова...")
+time.sleep(seconds)
+
+print(f"Делаем запрос с token по истечению {seconds} секунд...")
+response3 = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job", params={"token": {token}})
+json_data3 = json.loads(response3.text)
+status_after = json_data3.get("status")
+print(f"Проверяем значение поля status в ответе после создания задачи и наличие поля result...")
+assert status_after == "Job is ready", 'В поле "status" неверное значение, должно быть "Job is ready"'
+assert "result" in json_data3, 'В ответе отсутвует поле "result"'
+print(f"Значение поля status верное, поле result присутствует")
