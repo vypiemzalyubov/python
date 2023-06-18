@@ -850,3 +850,11 @@ st = set()
 for i in input().lower().split(','):
     if i not in st: st.add(i); print('НЕТ')
     else: print('ДА')
+
+# 346. Даны два списка чисел. Выведите все числа, которые входят как в первый, так и во второй список в порядке возрастания.
+
+print(*sorted(set(map(int, input().split())).intersection(set(map(int, input().split())))))
+
+# 347. Даны два списка чисел. Выведите все числа в порядке возрастания, которые входят в первый список, но при этом отсутствуют во втором.
+
+print(*sorted(set(input().split()).difference(set(input().split())), key=int))
