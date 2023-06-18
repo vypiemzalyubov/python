@@ -21,12 +21,14 @@ import time
 import json
 import requests
 
-response = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job")
-json_data = json.loads(response.text)
-token = json_data["token"]
-seconds = json_data["seconds"]
+response1 = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job")
+json_data = json.loads(response1.text)
+token = json_data.get("token")
+seconds = json_data.get("seconds")
 
-response = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job", params={"token": {token}})
+time.sleep({seconds})
 
-print(response.text)
-print(response.status_code)
+response2 = requests.get("https://playground.learnqa.ru/ajax/api/longtime_job", params={"token": {token}})
+
+print(response2.text)
+print(response2.status_code)
