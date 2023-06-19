@@ -8,7 +8,5 @@ import requests
 def test_check_cookie():
     response = requests.get("https://playground.learnqa.ru/api/homework_cookie")
     cookie = dict(response.cookies)
-    print(f"Cookie в ответе: {cookie}")
-
     assert response.status_code == 200, "Wrong response status code"
     assert cookie["HomeWork"] == "hw_value", "Wrong cookie in answer"
