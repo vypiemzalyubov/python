@@ -54,16 +54,16 @@ class TestUserAgent:
             assert response2.json()["platform"] == 'Mobile' and response2.json()["browser"] == 'Chrome' and response2.json()["device"] == 'iOS', f"Wrong answer to request with user-agent {response2.request.headers}"
 
         if user_agent == "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)":
-            response2 = requests.get(url, headers=headers)
-            assert response2.status_code == 200, "Wrong response status code"
-            assert response2.json()["platform"] == 'Googlebot' and response2.json()["browser"] == 'Unknown' and response2.json()["device"] == 'Unknown', f"Wrong answer to request with user-agent {response2.request.headers}"            
+            response3 = requests.get(url, headers=headers)
+            assert response3.status_code == 200, "Wrong response status code"
+            assert response3.json()["platform"] == 'Googlebot' and response3.json()["browser"] == 'Unknown' and response3.json()["device"] == 'Unknown', f"Wrong answer to request with user-agent {response3.request.headers}"            
 
         if user_agent == "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36 Edg/91.0.100.0":
-            response2 = requests.get(url, headers=headers)
-            assert response2.status_code == 200, "Wrong response status code"
-            assert response2.json()["platform"] == 'Web' and response2.json()["browser"] == 'Chrome' and response2.json()["device"] == 'No', f"Wrong answer to request with user-agent {response2.request.headers}"
+            response4 = requests.get(url, headers=headers)
+            assert response4.status_code == 200, "Wrong response status code"
+            assert response4.json()["platform"] == 'Web' and response4.json()["browser"] == 'Chrome' and response4.json()["device"] == 'No', f"Wrong answer to request with user-agent {response4.request.headers}"
 
         if user_agent == "Mozilla/5.0 (iPad; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1":
-            response2 = requests.get(url, headers=headers)
-            assert response2.status_code == 200, "Wrong response status code"
-            assert response2.json()["platform"] == 'Mobile' and response2.json()["browser"] == 'No' and response2.json()["device"] == 'iPhone', f"Wrong answer to request with user-agent {response2.request.headers}"            
+            response5 = requests.get(url, headers=headers)
+            assert response5.status_code == 200, "Wrong response status code"
+            assert response5.json()["platform"] == 'Mobile' and response5.json()["browser"] == 'No' and response5.json()["device"] == 'iPhone', f"Wrong answer to request with user-agent {response5.request.headers}"            
