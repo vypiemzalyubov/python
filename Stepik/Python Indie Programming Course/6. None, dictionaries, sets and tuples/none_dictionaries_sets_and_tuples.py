@@ -888,3 +888,57 @@ print(my_frozen := frozenset())
 #      Выводить ничего не нужно, только создать переменную my_frozen и правильно ее заполнить.
 
 my_frozen = frozenset([int(i * '7') for i in range(1, 78)])
+
+# 352. Перед вами имеется список words.
+#      Ваша задача на основании списка words создать список кортежей words_with_position, каждый элемент-кортеж должен содержать два значения: само слово и его порядковый номер в списке words.
+#      Порядковый номер слов необходимо считать с единицы. Вот к примеру, если бы список words был таким:
+#      words = ['variation', 'random', 'electronics', 'competence', 'collapse']
+#      то на выходите вы должны были получить такой ответ:
+#      words_with_position = [('variation', 1),
+#                             ('random', 2), 
+#                             ('electronics', 3), 
+#                             ('competence', 4), 
+#                             ('collapse', 5)]
+#      В качестве ответа необходимо вывести words_with_position.
+
+words = ['feel', 'graduate', 'movie', 'fashionable', 'bacon', 
+         'drop', 'produce', 'acquisition', 'cheap', 'strength', 
+         'master', 'perception', 'noise', 'strange', 'am']
+print(words_with_position := [para[::-1] for para in enumerate(words, 1)])
+
+# 353. Перед вами кортеж english_words. 
+#      При помощи enumerate обойдите слова этой коллекции и для каждого элемента выведите строку вида:
+#      Word № {number} = {word}
+#      Например, для кортежа english_words = ('hi', 'World') ответ был бы таким:
+#      Word № 1 = hi
+#      Word № 2 = World
+
+english_words = ('attack', 'bless', 'look', 'reckless', 'short', 'monster', 'trolley', 'sound',
+                 'ambiguity', 'researcher', 'trunk', 'coat', 'quantity', 'question', 'tenant',
+                 'miner', 'definite', 'kit', 'spectrum', 'satisfied', 'selection', 'carve',
+                 'ask', 'go', 'suggest')
+[print(f'Word № {i} = {v}') for i, v in enumerate(english_words, 1)]
+
+# 354. А вы знали, что цифры на банковской карте выбираются не просто случайным образом? Сумма определенных цифр на карте должны проходить условия алгоритма Луна.
+#      Алгоритм Луна
+#      Упрощенная версия алгоритма выглядит так:
+#      - Цифры проверяемой последовательности нумеруются справа налево.
+#      - Цифры, оказавшиеся на нечётных местах, остаются без изменений.
+#      - Цифры, стоящие на чётных местах, умножаются на 2.
+#      - Если в результате такого умножения возникает число больше 9, оно уменьшается на значение 9
+#      - Все полученные в результате преобразования 16 цифр складываются. Если сумма кратна 10, то исходные данные верны.
+#      Ваша задача проверить является ли введенный номер карты валидным в соответствии с алгоритмом Луны.
+#      Входные данные: На вход программе поступает 16 цифр без пробелов и знаков разделителя.
+#      Выходные данные: Если номер карты валидный, выведите True, в противном случае - False.
+
+l = list(map(int, input()))
+total = 0
+for i, v in sorted(enumerate(l), reverse=True):
+    if i % 2:
+        total += v
+    else:
+        if v * 2 > 9:
+            total += v * 2 - 9
+        else:
+            total += v * 2
+print(total % 10 == 0)
