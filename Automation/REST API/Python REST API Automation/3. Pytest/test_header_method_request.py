@@ -9,4 +9,6 @@ def test_check_cookie():
     response = requests.get("https://playground.learnqa.ru/api/homework_header")
     header = response.headers
     print(f"Header в ответе: {header}")
-    assert header["x-secret-homework-header"] == "Some secret value", "Wrong header"
+
+    assert response.status_code == 200, "Wrong response status code"
+    assert header["x-secret-homework-header"] == "Some secret value", "Wrong header in answer"
