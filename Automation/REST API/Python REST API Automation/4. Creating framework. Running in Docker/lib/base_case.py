@@ -1,6 +1,7 @@
 from requests import Response
 import json.decoder
 
+
 class BaseCase:
 
     def get_cookie(self, response: Response, cookie_name):
