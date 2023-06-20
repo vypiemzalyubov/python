@@ -46,7 +46,7 @@ class TestUserAgent:
     def test_check_user_agent(self, user_agent, expected_results):
 
         url = "https://playground.learnqa.ru/ajax/api/user_agent_check"
-        headers={"User-Agent": user_agent}
+        headers = {"User-Agent": user_agent}
 
         response = requests.get(url, headers=headers)
         
