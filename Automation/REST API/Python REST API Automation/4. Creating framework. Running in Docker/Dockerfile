@@ -1,6 +1,6 @@
 FROM python
 
-WORKDIR /4.\ Creating\ framework.\ Running\ in\ Docker/
+WORKDIR /4. Creating framework. Running in Docker/
 
 COPY requirements.txt .
 

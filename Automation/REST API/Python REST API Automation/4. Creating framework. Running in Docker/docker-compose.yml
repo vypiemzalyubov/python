@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  test_runner:
+    build: .
+    image: pytest_runner
+    container_name: pytest_runner_works
+    environment:
+      - ENV=dev
+    volumes:
+      - .:/4. Creating framework. Running in Docker/  
