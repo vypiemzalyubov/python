@@ -7,8 +7,8 @@ class Environment:
     PROD = "prod"
 
     URLS = {
-        DEV: "https://playground.learnqa.ru/api_dev",
-        PROD: "https://playground.learnqa.ru/api"
+        DEV: "https://playground.learnqa.ru/ajax/api_dev",
+        PROD: "https://playground.learnqa.ru/ajax/api"
     }
 
     def __init__(self):
@@ -27,3 +27,4 @@ ENV_OBJECT = Environment()
 
 # export MY_VAR="123"
 # set MY_VAR="123"
+# echo %ENV%
