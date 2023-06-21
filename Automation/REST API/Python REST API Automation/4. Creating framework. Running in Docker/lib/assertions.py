@@ -1,5 +1,5 @@
-from requests import Response
 import json
+from requests import Response
 
 
 class Assertions:
