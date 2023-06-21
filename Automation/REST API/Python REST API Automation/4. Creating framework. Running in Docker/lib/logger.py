@@ -3,7 +3,7 @@ import datetime
 from requests import Response
 
 
-class Loger:
+class Logger:
     
     file_name = f"logs/log_" + str(datetime.datetime.now()) + ".log"
 
