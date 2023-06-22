@@ -1,4 +1,4 @@
-FROM python3.11-alpine
+FROM python
 
 ARG run_env
 ENV env $run_env
