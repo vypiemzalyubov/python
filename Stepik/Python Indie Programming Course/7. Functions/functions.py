@@ -43,3 +43,23 @@ def sum_num(s):
 def get_body_mass_index(weight, height):
     index = weight / ((height / 100)) ** 2
     print('Недостаточная масса тела' if index < 18.5 else 'Избыточная масса тела' if index > 25 else 'Норма')
+
+# 361. Напишите функцию check_password, которая проверяет переданный ей пароль на сложность и печатает на экран результат проверки.
+#      Сложным паролем будет считаться комбинация символов, в которой:
+#      - Есть хотя бы 3 цифры
+#      - Есть хотя бы одна заглавная буква 
+#      - Есть хотя бы один символ из следующего набора "!@#$%*"
+#      - Общая длина не менее 10 символов
+#      Если пароль прошел все проверки, функция должна вывести на экран фразу "Perfect password", в противном случае - "Easy peasy".
+#      Вам необходимо написать только определение функции check_password.
+
+def check_password(password):
+    len_digit = title_char = spec_char = 0
+    for i in password:
+        if i.isdigit():
+            len_digit +=1
+        if i.isupper():
+            title_char += 1
+        if i in '!@#$%*':
+            spec_char += 1
+    print('Perfect password' if len_digit >= 3 and title_char and spec_char and len(password) >= 10 else 'Easy peasy')
