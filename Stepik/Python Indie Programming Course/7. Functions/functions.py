@@ -63,3 +63,16 @@ def check_password(password):
         if i in '!@#$%*':
             spec_char += 1
     print('Perfect password' if len_digit >= 3 and title_char and spec_char and len(password) >= 10 else 'Easy peasy')
+    
+# 362. Создайте функцию count_letters, которая принимает на вход фразу и подсчитывает, какое количество в ней строчных(K) и заглавных (N) букв, 
+#      все остальные символы игнорируются. Функция должна вывести на экран информацию о найденных буквах в определенном формате:
+#      Количество заглавных символов: N
+#      Количество строчных символов: K
+#      Вам необходимо написать только определение функции count_letters.
+
+def count_letters(s):
+    n = k = 0
+    for char in s:
+        n += char.isupper()
+        k += char.islower() 
+    print(f'Количество заглавных символов: {n}\nКоличество строчных символов: {k}')
