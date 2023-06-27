@@ -84,3 +84,14 @@ def count_letters(s):
 def repeat_please_n_times(n):
     for i in range(n):
         print('Just do it')
+
+# 364. Напишите функцию is_between, которая принимает три аргумента и печатает True, если первое число находится между двумя вторыми включительно, и False в противном случае.
+#      Ваша задача дописать только тело функции is_between.
+
+def is_between(name, surname, middlename):
+    print(b <= a <= c or c <= a <= b)
+
+a, b, c = map(int, input().split())
+
+is_between(a, b, c)
+
