@@ -163,3 +163,18 @@ print(factorial(n))
 
 def generate_fizz_buzz_list(n):
     return ["FizzBuzz" if not i % 3 and not i % 5 else "Fizz" if not i % 3 else "Buzz" if not i % 5 else i for i in range(1, n + 1)]
+
+# 371. В этой задаче вам необходимо воспользоваться уже готовой функцией gcd(a, b), которая принимает два числа и находит наибольших общий делитель для них.
+#      Ваша задача при помощи функции gcd определить НОД произвольного количества чисел.
+#      Входные данные: На первой строке вводится натуральное число n – количество чисел. Далее идут n строк, в каждой из которых натуральное число.
+#      Выходные данные: НОД введенных чисел.
+
+from functools import reduce
+
+def gcd(a, b):
+    while b > 0:
+        a, b = b, a%b
+    return a
+
+l = [int(input()) for _  in range(int(input()))]
+print(reduce(gcd, l))
