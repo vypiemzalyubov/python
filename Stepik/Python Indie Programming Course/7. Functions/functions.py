@@ -125,3 +125,11 @@ surname = input()
 middlename = input()
 
 print_initials(name, surname, middlename)
+
+# 367. Ниже в коде представлено несколько проверок. Ваша задача исправить код так, чтобы все проверки прошли.
+
+assert 200 > 100                             
+assert [100] * 4 < [100, 100, 100, 10000]    
+assert sum([1, 3, 5]) == sum([6, 3])             
+assert max(3, -1, 9) != -1                   
+print('Проверки пройдены')
