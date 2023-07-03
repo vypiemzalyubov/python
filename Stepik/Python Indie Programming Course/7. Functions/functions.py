@@ -193,3 +193,16 @@ def find_duplicate(lst):
         if lst.count(i) > 1 and i not in l:
             l.append(i)
     return l
+
+# 373. Напишите функцию first_unique_char, которая принимает строку символов и возвращает целое число: позицию первого уникального символа в строке. 
+#      В случае, если уникальных символов в переданной строке нет, верните -1. Регистр символов не учитывайте.
+#      Ваша задача написать только определение функции first_unique_char.
+
+def first_unique_char(s):
+    for i, n in enumerate(s):
+        if s.count(n) == 1:
+            return i
+    return -1
+
+s = input()
+print(first_unique_char(s))
