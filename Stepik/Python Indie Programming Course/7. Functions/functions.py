@@ -194,6 +194,12 @@ def find_duplicate(lst):
             l.append(i)
     return l
 
+assert find_duplicate([1, 1, 1, 1, 1, 2, 2, 2, 2]) == [1, 2]
+assert find_duplicate([2, 1, 1, 1, 1, 1, 2, 2, 2, 2]) == [2, 1]
+assert find_duplicate([1, 2, 3, 4]) == []
+assert find_duplicate([8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8]) == [8, 7, 6, 5, 4]
+print('Все успешно')
+
 # 373. Напишите функцию first_unique_char, которая принимает строку символов и возвращает целое число: позицию первого уникального символа в строке. 
 #      В случае, если уникальных символов в переданной строке нет, верните -1. Регистр символов не учитывайте.
 #      Ваша задача написать только определение функции first_unique_char.
@@ -225,6 +231,16 @@ def format_name_list(names: list):
     s = ', '.join(tmp[0:-1])
     return f'{s} и {tmp[-1]}'
 
+assert format_name_list([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}, {'name': 'Homer'}, {'name': 'Marge'}]) == 'Bart, Lisa, Maggie, Homer и Marge'
+assert format_name_list([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]) == 'Bart, Lisa и Maggie'
+assert format_name_list([{'name': 'Bart'}, {'name': 'Lisa'}]) == 'Bart и Lisa'
+assert format_name_list([{'name': 'Bart'}]) == 'Bart'
+assert format_name_list([]) == ''
+assert format_name_list([{'name': 'Maggie'}, {'name': 'Lisa'}, {'name': 'Barney'}, {'name': 'Homer'}, {'name': 'Bart'}, {'name': 'Moe'}]) == 'Maggie, Lisa, Barney, Homer, Bart и Moe'
+assert format_name_list([{'name': 'Marge'}, {'name': 'Maggie'}, {'name': 'Seymour'}]) == 'Marge, Maggie и Seymour'
+assert format_name_list([{'name': 'Maude'}, {'name': 'Bart'}]) == 'Maude и Bart'
+print('Проверки пройдены')
+
 # 375. Ваша задача написать функцию get_domain_name, которая принимает строку url, извлекает из нее доменное имя и возвращает его в качестве строки.
 #      get_domain_name("http://google.com") => "google"
 #      get_domain_name("http://google.co.jp") => "google"
@@ -238,6 +254,17 @@ def format_name_list(names: list):
 def get_domain_name(url):
     s = url.replace('http://', '').replace('https://', '').replace('www.', '', 1)
     return s.split('.')[0]
+
+assert get_domain_name("http://google.com") == "google"
+assert get_domain_name("http://google.co.jp") == "google"
+assert get_domain_name("www.xakep.ru") == "xakep"
+assert get_domain_name("https://youtube.com") == "youtube"
+assert get_domain_name("http://github.com/carbonfive/raygun") =='github'
+assert get_domain_name("http://www.zombie-bites.com") == 'zombie-bites'
+assert get_domain_name("https://www.siemens.com") == 'siemens'
+assert get_domain_name("https://www.whatsapp.com") == 'whatsapp'
+assert get_domain_name("https://www.mywww.com") == 'mywww'
+print('Проверки пройдены')
 
 # 376. В этой задаче вам необходимо воспользоваться уже готовой функцией factorial, которая принимает неотрицательное число, и возвращает значение факториала данного числа.
 #      Ваша задача создать функцию trailing_zeros, которая принимает неотрицательное число, находит его факториал и возвращает сколько нулей на конце этого факториала.
@@ -259,3 +286,30 @@ def trailing_zeros(n):
         count += 1
         x //= 10
     return count 
+
+assert trailing_zeros(0) == 0
+assert trailing_zeros(6) == 1
+assert trailing_zeros(30) == 7
+assert trailing_zeros(12) == 2      
+print('Проверки пройдены')
+
+# 377. К азотистым основаниям относят аденин (A), гуанин (G), цитозин (C) и тимин (T), который входит в состав только ДНК. Они обладают схожими структурами и химическими свойствами. 
+#      Это гетероциклические органические соединения, производные пиримидина и пурина, входящие в состав нуклеотидов. 
+#      Аденин и гуанин — производные пурина, а цитозин и тимин — производные пиримидина.
+#      В этой задаче вам необходимо создать функцию count_AGTC, которая принимает на вход строку - последовательность ДНК, состоящая только из символов A, G, T, C. 
+#      Функция count_AGTC должна подсчитать количество каждого элемента в переданной последовательности и вернуть кортеж из найденных четырех количеств. 
+#      Порядок элементов в кортеже должен быть именно таким A, G, T, C
+#      count_AGTC('AGGTC') => (1, 2, 1, 1)
+#      count_AGTC('AAAATTT') => (4, 0, 3, 0)
+#      count_AGTC('AGTTTTT') => (1, 1, 5, 0)
+#      count_AGTC('CCT') => (0, 0, 1, 2)
+#      Нужно написать только определение функции count_AGTC.
+
+def count_AGTC(dna):
+    return dna.count('A'), dna.count('G'), dna.count('T'), dna.count('C')
+
+assert count_AGTC('AGGTC') == (1, 2, 1, 1)
+assert count_AGTC('AAAATTT') == (4, 0, 3, 0)
+assert count_AGTC('AGTTTTT') == (1, 1, 5, 0)
+assert count_AGTC('CCT') == (0, 0, 1, 2)     
+print('Проверки пройдены')
