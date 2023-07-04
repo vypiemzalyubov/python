@@ -238,3 +238,24 @@ def format_name_list(names: list):
 def get_domain_name(url):
     s = url.replace('http://', '').replace('https://', '').replace('www.', '', 1)
     return s.split('.')[0]
+
+# 376. В этой задаче вам необходимо воспользоваться уже готовой функцией factorial, которая принимает неотрицательное число, и возвращает значение факториала данного числа.
+#      Ваша задача создать функцию trailing_zeros, которая принимает неотрицательное число, находит его факториал и возвращает сколько нулей на конце этого факториала.
+#      trailing_zeros(6) =>  1, потому что 6! = 1 * 2 * 3 * 4 * 5 * 6 = 720
+#      trailing_zeros(10) => 2, потому что 10! = 3 628 800
+#      trailing_zeros(20) => 4, потому что 20! = 2 432 902 008 176 640 000
+#      Нужно написать только определение функций trailing_zeros и factorial.
+
+def factorial(n):
+    fact = 1
+    for num in range(2, n + 1):
+        fact *= num
+    return fact
+
+def trailing_zeros(n):
+    x = factorial(n)
+    count = 0
+    while x % 10 == 0:
+        count += 1
+        x //= 10
+    return count 
