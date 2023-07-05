@@ -371,14 +371,14 @@ def shift_letter(letter: str, shift: int) -> str:
 #      Аннотации, мой друг, не забываем прописывать. И еще нужно сделать док-строку для функции caesar_cipher со значением «Шифр цезаря».
 #      Нужно написать только определение функций shift_letter и caesar_cipher.
 
-def shift_letter(letter: str, shift: int) -> str:
+def shift_letter(letter: str, shift_1: int) -> str:
     '''Функция сдвигает символ letter на shift позиций'''
-    return chr((ord(letter) - 97 + shift) % 26 + 97)
+    return chr((ord(letter) - 97 + shift_1) % 26 + 97)
 
-def caesar_cipher(text: str, shift: int) -> str:
+def caesar_cipher(text: str, shift_2: int) -> str:
     """Шифр цезаря"""
     answer = ''
     for symbol in text:
-        if symbol.isalpha(): answer += shift_letter(symbol, shift)
+        if symbol.isalpha(): answer += shift_letter(symbol, shift_2)
         else: answer += symbol
     return answer
