@@ -337,3 +337,48 @@ def first_repeated_word(s: str, st = set()) -> str|None:
     for i in s.split():
         if i not in st: st.add(i)
         else: return i
+
+# 380. Напишите функцию shift_letter , которая принимает два аргумента:
+#      - letter одна английская буква в нижнем регистре
+#      - shift целое число - значение сдвига буквы (может быть как положительным, так и отрицательным)
+#      Функция shift_letter  сдвигает символ letter вперед или назад на заданное значение shift .Сдвиг может быть цикличным в пределах от a до z. Ниже примеры:
+#      shift_letter('b', 2)=> 'd'
+#      shift_letter('d', 1) => 'e'
+#      shift_letter('z', 1) => 'a'
+#      shift_letter('d', -2) => 'b'
+#      shift_letter('d', 26) => 'd'
+#      shift_letter('b', -3) => 'y'
+#      Не забудьте проаннотировать аргументы и также добавьте doc-строку «Функция сдвигает символ letter на shift позиций».
+#      Функция shift_letter должна вернуть новый символ. Вот вам в помощь ascii коды английских буквы, вам нужны только символы в нижнем регистре.
+#      Нужно написать только определение функции shift_letter.
+
+def shift_letter(letter: str, shift: int) -> str:
+    '''Функция сдвигает символ letter на shift позиций'''
+    char = ord(letter) + shift
+    while char not in range(97, 123):
+        if char < 97: char += 26
+        else: char -= 26
+    return chr(char)
+
+# 381. На основании предыдущей задачи мы с вами можем реализовать знаменитый шифр Цезаря. Этот шифр брал каждую букву исходной фразы и смещал ее на значение ключа, это так раз был на сдвиг. 
+#      В пределах кодирования одной фразы значение сдвига всегда постоянно. И так, ваша задача создать функцию caesar_cipher , которая принимает на вход текст и значение сдвига.
+#      Внутри функции caesar_cipher  необходимо последовательно пройтись по каждому символу и преобразовать его по следующим правилам:
+#      - если символ является знаком пунктуации, оставляем его как есть
+#      - если это буква, то сместить ее при помощи ранее написанной функции shift_letter 
+#      Закодированный текст необходимо вернуть в качестве ответа. Вот пример работы:
+#      caesar_cipher('leave out all the rest', -1) => 'kdzud nts zkk sgd qdrs'
+#      caesar_cipher('one more light', 3) => 'rqh pruh oljkw'
+#      Аннотации, мой друг, не забываем прописывать. И еще нужно сделать док-строку для функции caesar_cipher со значением «Шифр цезаря».
+#      Нужно написать только определение функций shift_letter и caesar_cipher.
+
+def shift_letter(letter: str, shift: int) -> str:
+    '''Функция сдвигает символ letter на shift позиций'''
+    return chr((ord(letter) - 97 + shift) % 26 + 97)
+
+def caesar_cipher(text: str, shift: int) -> str:
+    """Шифр цезаря"""
+    answer = ''
+    for symbol in text:
+        if symbol.isalpha(): answer += shift_letter(symbol, shift)
+        else: answer += symbol
+    return answer
