@@ -382,3 +382,15 @@ def caesar_cipher(text: str, shift_2: int) -> str:
         if symbol.isalpha(): answer += shift_letter(symbol, shift_2)
         else: answer += symbol
     return answer
+
+# 382. Напишите функцию, которая принимает имя и возраст водителя. Функция должна распечатать на экран заключение, может ли данный водитель управлять транспортом
+#      и определять она должна это по возрасту водителя: он должен быть больше или равен MIN_DRIVING_AGE.
+#      Если водитель может управлять, выведите фразу "<name> может водить" , в противном случае "<name> еще рано садиться за руль".
+#      MIN_DRIVING_AGE = 18
+#      allowed_driving('tim', 17) # выведет "tim еще рано садиться за руль"
+#      allowed_driving('bob', 18) # выведет "bob может водить"
+
+MIN_DRIVING_AGE = 18
+
+def allowed_driving(name: str, age: int) -> None:
+    print(f'{name} может водить' if age >= MIN_DRIVING_AGE else f'{name} еще рано садиться за руль')
