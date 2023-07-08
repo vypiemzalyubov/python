@@ -394,3 +394,29 @@ MIN_DRIVING_AGE = 18
 
 def allowed_driving(name: str, age: int) -> None:
     print(f'{name} может водить' if age >= MIN_DRIVING_AGE else f'{name} еще рано садиться за руль')
+
+# 383. В этой задаче вам необходимо создать функцию get_word_indices, которая принимает список строк и возвращает словарь, 
+#      где ключи - это уникальные слова из списка строк в нижнем регистре, а значения - это списки индексов строк, в которых эти слова встречаются.
+#      assert get_word_indices(['This is a string',
+#                               'test String',
+#                               'test',
+#                               'string']) => {'this': [0], 'is': [0], 'a': [0],
+#                                             'string': [0, 1, 3], 'test': [1, 2]}
+#      get_word_indices(['Look at my horse',
+#                         'my horse',
+#                         'is amazing']) => {'look': [0], 'at': [0], 'my': [0, 1],
+#                                            'horse': [0, 1], 'is': [2], 'amazing': [2]}
+#      get_word_indices([]) => {}
+#      get_word_indices(['Avada Kedavra',
+#                        'avada kedavra',
+#                        'AVADA KEDAVRA']) => {'avada': [0, 1, 2],
+#                                              'kedavra': [0, 1, 2]}
+# Регистр букв не учитывается поэтому слова «String» и «STRING» считаются одинаковыми.
+# Нужно написать только определение функции get_word_indices.
+
+def get_word_indices(strings: list[str]) -> dict:
+    d = {}
+    for i, v in enumerate(strings):
+        for j in v.lower().split():
+            d[j] = d.get(j, []) + [i]
+    return d
