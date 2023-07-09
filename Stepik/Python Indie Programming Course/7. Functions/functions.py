@@ -494,3 +494,22 @@ def create_matrix(size: int = 3, up_fill: int = 0, down_fill: int = 0) -> list[l
 
 def count_args(*args):
     return(len(args))
+
+# 387. Напишите функцию check_sum, которая принимает произвольное количество аргументов типа int.
+#      Данная функция должна выводить not enough, если сумма всех элементов меньше 50, в противном случае выводить verification passed.
+#      Вам необходимо написать только определение функции check_sum.
+
+def check_sum(*args: int) -> str:
+    print('not enough' if sum(args) < 50 else 'verification passed')
+
+# 388. Напишите функцию multiply, которая принимает произвольное количество числовых аргументов. 
+#      Данная функция должна находить произведение всех переданных значений и возвращать его в качестве результата.
+#      multiply(1, 2, 3) => 6
+#      multiply(1, 3) => 3
+#      multiply(2) => 2
+#      multiply() => 1
+#      Вам необходимо написать только определение функции multiply.
+
+from math import prod
+def multiply(*args: int) -> int:
+    return prod(args)
