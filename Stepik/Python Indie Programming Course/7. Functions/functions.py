@@ -623,3 +623,15 @@ def rev(n: int) -> None:
 n = int(input())
 l = list(map(int, input().split()))
 rev(n)
+
+# 396. Описать рекурсивную функцию double_fact, которая принимает на вход целое число и вычисляет значение двойного факториала по формуле.
+#      double_fact(7) => 105
+#      double_fact(4) => 8
+#      double_fact(1) => 1
+#      double_fact(10) => 3840
+#      Ваша задача только написать определение функции double_fact.
+
+def double_fact(n):
+    if n < 3:
+        return n
+    return double_fact(n - 2) * n
