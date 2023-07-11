@@ -646,3 +646,20 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 
 print(fib(int(input())))
+
+# 398. Описать рекурсивную функцию tribonacci, которая принимает на вход целое число n - порядковый номер чисел Трибоначчи. 
+#      Функция по параметру n должна вычислить и вернуть значение, стоящее на n-м месте в ряде чисел Трибоначчи.
+#      Вот примере вызовов:
+#      tribonacci(0) => 0
+#      tribonacci(2) => 1
+#      tribonacci(4) => 2
+#      tribonacci(6) => 7
+#      tribonacci(7) => > 13
+#      Ваша задача только написать определение функции tribonacci.
+
+def tribonacci(n: int) -> int:
+    if n < 1:
+        return 0
+    if n == 2:
+        return 1
+    return tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3)
