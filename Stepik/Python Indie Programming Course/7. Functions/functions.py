@@ -694,3 +694,13 @@ def ackermann(m, n):
         return ackermann(m - 1, 1)
     if m > 0 and n > 0:
         return ackermann(m - 1, ackermann(m, n - 1))
+    
+# 401. Напишите функцию list_sum_recursive, которая принимает на вход список из целых чисел и возвращает сумму элементов переданного списка. 
+#      Не забывайте, что реализовать это нужно при помощи рекурсии. Ваша задача только написать определение функции list_sum_recursive.
+
+def list_sum_recursive(l):
+    if not l:
+        return 0
+    if len(l) == 1:
+        return l[0]
+    return l[0] + list_sum_recursive(l[1:])
