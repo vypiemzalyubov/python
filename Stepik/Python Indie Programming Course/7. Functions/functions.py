@@ -791,3 +791,12 @@ def quick_sort(s):
     center = [i for i in s if i == elem]
     right = list(filter(lambda x: x > elem, s))
     return quick_sort(left) + center + quick_sort(right)
+
+# 406. В переменную adding_10 присвойте lambda функцию, которая принимает одно число и увеличивает его на 10. Ничего кроме создания переменной adding_10 делать не нужно.
+
+adding_10 = lambda x: x + 10
+
+# 407. В переменную starts_with присвойте lambda функцию, которая принимает строку и возвращает True, когда переданная строка начинается с буквы W. 
+#      Во всех остальных случаях нужно возвращать False. Ничего кроме создания переменной starts_with делать не нужно.
+
+starts_with = lambda s: s.startswith('W')
