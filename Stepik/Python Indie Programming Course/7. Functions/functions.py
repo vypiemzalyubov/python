@@ -829,3 +829,18 @@ average = lambda *args: sum(args) / len(args)
 subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Physics', 93),('History', 82)]
 for i in sorted(subject_marks, key=lambda x: x[1]):
     print(*i)
+
+# 413. Напишите программу, которая отсортирует список subject_marks по убыванию оценок. Затем распечатайте предметы и оценки, каждую пару на новой строке через пробел.
+
+subject_marks = [('English', 88), ('Science', 90), ('Maths', 97),
+                 ('Physics', 93), ('History', 82), ('French', 78),
+                 ('Art', 58), ('Chemistry', 76), ('Programming', 91)]
+[print(*_) for _ in sorted(subject_marks, key=lambda x: x[1], reverse=True)]
+
+# 414. Напишите программу, которая отсортирует список subject_marks по убыванию оценок. Предметы, имеющие одинаковые оценки, должны быть отсортированы в алфавитном порядке.
+#      Затем распечатайте предметы и оценки, каждую пару на новой строке через пробел.
+
+subject_marks = [('English', 88), ('Science', 90), ('Maths', 88),
+                 ('Physics', 93), ('History', 78), ('French', 78),
+                 ('Art', 78), ('Chemistry', 88), ('Programming', 91)]
+[print(*_) for _ in sorted(subject_marks, key=lambda x: (-x[1], x[0]))]
