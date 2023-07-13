@@ -823,3 +823,9 @@ sq = lambda x, y: x ** 2 + y ** 2
 #      Для проверки решения присвойте вашу lambda функцию переменной average. Вводить и выводить ничего не нужно, только определить переменную average.
 
 average = lambda *args: sum(args) / len(args)
+
+# 412. Напишите программу, которая отсортирует список subject_marks по возрастанию оценок. Затем распечатайте предметы и оценки, каждую пару на новой строке через пробел.
+
+subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Physics', 93),('History', 82)]
+for i in sorted(subject_marks, key=lambda x: x[1]):
+    print(*i)
