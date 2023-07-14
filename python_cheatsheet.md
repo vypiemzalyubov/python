@@ -35,7 +35,7 @@
 - [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
 - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
 - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
-- [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Stepik/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md) 
+- [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md) 
 - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
