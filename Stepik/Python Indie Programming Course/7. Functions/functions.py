@@ -1144,21 +1144,17 @@ def double_it(func):
         return func(*args, **kwargs) * 2
     return wrapper
 
-
 @double_it
 def multiply(num1, num2):
     return num1 * num2
-
 
 @double_it
 def some_func_return(a, b, c):
     return a ** b + c
 
-
 @double_it
 def get_sum(*args):
     return sum(args)
-
 
 assert multiply(9, 4) == 72
 assert multiply(100, 4) == 800
@@ -1175,13 +1171,11 @@ print('Good')
 
 from functools import wraps
 
-def add_args(func):
-    
+def add_args(func):    
     @wraps(func)
     def wrapper(*args):
         return func('begin', *args, 'end')
     return wrapper
-
    
 @add_args
 def concatenate(*args):
@@ -1190,14 +1184,12 @@ def concatenate(*args):
     """
     return ', '.join(args)
 
-
 @add_args
 def find_max_word(*args):
     """
     Возвращает слово максимальной длины
     """
     return max(args, key=len)
-
 
 print(concatenate('hello', 'world', 'my', 'name is', 'Artem'))
 assert concatenate('hello', 'world', 'my', 'name is', 'Artem') == 'begin, hello, world, my, name is, Artem, end'
@@ -1237,7 +1229,6 @@ def add_numbers(x, y):
     """Return sum of x and y"""
     return x + y
 
-
 assert add_numbers(4, 5) == 9
 assert add_numbers(4) == 'Not enough arguments'
 assert add_numbers() == 'Not enough arguments'
@@ -1250,4 +1241,53 @@ assert add_numbers(9, 'hello') == 'Wrong types'
 assert add_numbers([1, 3], {}) == 'Wrong types'
 assert add_numbers.__name__ == 'add_numbers'
 assert add_numbers.__doc__.strip() == 'Return sum of x and y'
+print('Good')
+
+# 433. Давайте вспомним рекурсивную функцию Фибоначчи
+#      def fibonacci(n):
+#          if n < 2:
+#              return n
+#          return fibonacci(n - 1) + fibonacci(n - 2)
+#      Проблема работы этой функции в том, что она постоянно будет вызывать одни и те же значения, что будет сказываться на скорости работы. Если вызвать ее от десяти: print(fibonacci(10)),
+#      то она быстро завершит работу и вернет результат. Но попробуйте дождаться завершения если вызовете от сорока: print(fibonacci(40)).
+#      Дождаться пока функция найдет сотое число Фибоначчи будет нереально. Но мы можем придумать декоратор, который будет запоминать в себе аргументы функции и возвращаемые значения. 
+#      Для этого нужно воспользоваться мемоизацией.
+#      Мемоизация — это метод сохранения результатов ресурсоемких вызовов функций и возврата ранее вычисленного (кэшированного) результата при повторении одних и тех же входных данных. 
+#      Это может значительно повысить производительность рекурсивных функций, которые в противном случае могут привести к многократному выполнению одних и тех же вычислений.
+#      В этом задании вам нужно определить декоратор memoize, который принимает функцию в качестве аргумента и возвращает функцию-оболочку. 
+#      Функция-оболочка проверяет, были ли входные данные для функции просмотрены ранее и сохранены ли они в кеше. Если это так, функция просто возвращает кэшированный результат. 
+#      Если нет, она вызывает исходную функцию и сохраняет результат в кеше для использования в будущем. Кеш представляет собой хранилище ранее вычиленных значений, 
+#      в нашем случае можно использовать словарь. Затем мы применяем этот декоратор к рекурсивной функции fibonacci. Когда функция fibonacci вызывается с определенным входным значением, 
+#      логика мемоизации проверяет, был ли результат уже рассчитан и сохранен в кеше. Если был, кэшированный результат возвращается немедленно. 
+#      Если нет, то будет вызвана функция fibonacci для вычисления результата, и результат будет сохранен в кеше для использования в будущем.
+#      Ваша задача реализовать декоратор memoize, который помимо выше описанного еще и должен сохранить первоначальное имя декорируемой функцию и ее строку документации.
+
+from functools import wraps
+
+def memoize(func):
+    cache = {}
+    @wraps(func)
+    def wrapper(n):
+        if n not in cache:
+            cache[n] = func(n)
+        return cache[n]    
+    return wrapper
+
+@memoize
+def fibonacci(n):
+    """
+    Возвращает n-ое число Фибоначчи
+    """
+    if n < 2:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+assert fibonacci(50) == 12586269025
+assert fibonacci(60) == 1548008755920
+assert fibonacci(70) == 190392490709135
+assert fibonacci(80) == 23416728348467685
+assert fibonacci(90) == 2880067194370816120
+assert fibonacci(100) == 354224848179261915075
+assert fibonacci.__name__ == 'fibonacci'
+assert fibonacci.__doc__.strip() == 'Возвращает n-ое число Фибоначчи'
 print('Good')
