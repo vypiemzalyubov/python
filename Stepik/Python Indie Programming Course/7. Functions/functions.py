@@ -948,3 +948,27 @@ for s in iter(input, 'конец'):
     network[name].add(celeb) 
 for k, v in sorted(network.items(), key=lambda x: -len(x[1])):
     print(f'Количество уникальных комментаторов у {k} - {len(v)}')
+
+# 423. Исправьте код с предыдущего задания так, чтобы на экран вывело bye и hello
+#      Код с предыдущего задания:
+#      def outer() -> None:
+#           def say_hello() -> None:
+#               print('hello')
+# 
+#           def say_bye() -> None:
+#               print('bye')
+# 
+#      say_hello()
+#      say_bye()
+
+def outer() -> None:
+    def say_hello() -> None:
+        print('hello')
+
+    def say_bye() -> None:
+        print('bye')
+        
+    say_bye()
+    say_hello()
+    
+outer()
