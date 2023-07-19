@@ -949,7 +949,7 @@ for s in iter(input, 'конец'):
 for k, v in sorted(network.items(), key=lambda x: -len(x[1])):
     print(f'Количество уникальных комментаторов у {k} - {len(v)}')
 
-# 423. Исправьте код с предыдущего задания так, чтобы на экран вывело bye и hello
+# 422. Исправьте код с предыдущего задания так, чтобы на экран вывело bye и hello
 #      Код с предыдущего задания:
 #      def outer() -> None:
 #           def say_hello() -> None:
@@ -973,7 +973,7 @@ def outer() -> None:
     
 outer()
 
-# 424. Пользуясь вложенными функциями, реализуйте простой калькулятор.
+# 423. Пользуясь вложенными функциями, реализуйте простой калькулятор.
 #      Необходимо реализовать функцию calculate , которая принимает три параметра:
 #      - обязательный числовой параметр x
 #      - обязательный числовой параметр y
@@ -1005,3 +1005,24 @@ def calculate(x:float, y:float, operation:str='a') -> None:
         case 'm': multiplication = lambda x, y: x * y; print(multiplication(x, y))
         case 'd': division = lambda x, y: x / y; print(division(x, y) if y != 0 else 'На ноль делить нельзя!')
         case   _: print('Ошибка. Данной операции не существует')
+
+# 424. Ваша задача создать функцию-замыкание create_accumulator, она должна накапливать(суммировать) в себе все значения, которые ей будут переданы, при создании сумма должна быть равна нулю. 
+#      Посмотрите пример ниже:
+#      summator_1 = create_accumulator()
+#      print(summator_1(1)) # печатает 1
+#      print(summator_1(5)) # печатает 6
+#      print(summator_1(2)) # печатает 8
+#      summator_2 = create_accumulator()
+#      print(summator_2(3)) # печатает 3
+#      print(summator_2(4)) # печатает 7
+#      При каждом вызове должна возвращаться накопленная сумма, которая хранится в замыкании.
+#      Обратите внимание, что объекты из примера summator_1 и summator_2 хранят и накапливают свои собственные суммы.
+#      Необходимо только определить функцию-замыкание create_accumulator, остальное мы сделаем за вас.
+
+def create_accumulator():
+    s = 0
+    def summator(n):
+        nonlocal s
+        s += n
+        return s
+    return summator
