@@ -57,7 +57,19 @@ def longest_word_in_file(file_name):
             longest_word = word
     return longest_word
 
+# 443. В этой задаче вам необходимо скачать файл numbers.txt, в котором записаны натуральные числа. Ваша задача найти:
+#      - количество трехзначных чисел;
+#      - сумму двухзначных чисел
+#      В качестве ответа укажите найденные два числа через запятую без других знаков и пробелов. Сперва количество, потом сумма
 
+file = open('numbers.txt')
+count = sum = 0
+for i in file:
+    if 99 < int(i) <= 999:
+        count += 1
+    elif 9 < int(i) <= 99:
+        sum += int(i)
+print(f'{count},{sum}') 
 
 
 
