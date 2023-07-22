@@ -61,3 +61,85 @@ for _ in range(77):
 def gen_squares(n: int):
     for i in range(1, n + 1):
         yield i ** 2
+
+# 458. Ваша задача создать функцию-генератор gen_fibonacci_numbers, которая принимает аргумент n и генерирует n-ое количество чисел Фибоначчи.
+#      Будем считать, что последовательность Фибоначчи такая: 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+#      Ниже несколько вариантов использования:
+#      for i in gen_fibonacci_numbers(5):
+#            print(i)
+#      # Будет напечатано
+#      # 1
+#      # 1
+#      # 2
+#      # 3
+#      # 5
+#      Ваша задача написать только определение функции gen_fibonacci_numbers.
+
+def gen_fibonacci_numbers(n: int):
+    a = b = 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# 459. Ваша задача создать функцию-генератор my_range_gen, которая копирует работу range. 
+#      1. my_range_gen можно запускать, передав ей один параметр stop:
+#         my_range_gen(stop)
+#         и она должна генерировать последовательность от 0 до stop не включительно:
+#         for i in my_range_gen(5):
+#               print(i)
+#         # Будет напечатано
+#         # 0
+#         # 1
+#         # 2
+#         # 3
+#         # 4
+#      2. my_range_gen можно запускать, передав ей два параметра start и stop:
+#         my_range_gen(start, stop)
+#         и она должна генерировать последовательность от start включительно до stop не включительно:
+#         for i in my_range_gen(4, 8):
+#               print(i)
+#         # Будет напечатано
+#         # 4
+#         # 5
+#         # 6
+#         # 7
+#      3. my_range_gen можно запускать, передав ей три параметра start, stop и step:
+#         my_range_gen(start, stop, step)
+#         и она должна генерировать последовательность от start включительно до stop не включительно c шагом step:
+#         for i in my_range_gen(4, 8, 2):
+#               print(i)
+#         # Будет напечатано
+#         # 4
+#         # 6
+#      4. предусмотрите вариант запуска my_range_gen со значением step=0. При таком варианте вызова, функция не должна генерировать ни одной последовательности и закончить свою работу. 
+#         Такое же поведение должно быть если переданы нелогичные значения start, stop и step (см. примеры):
+#         for i in my_range_gen(4, 8, 0):
+#               print(i)
+#         # Ничего не печатает
+#         for i in my_range_gen(20, 10, 3):
+#               print(i)
+#         # Ничего не печатает, потому что нельзя пройти от 20 до 10 с шагом 3
+#         Ваша задача написать только определение функции my_range_gen. И да, функцией range пользоваться нельзя, можете конечно попробовать, но у вас ничего не получится. 
+
+def my_range_gen(*args):
+    if len(args) == 1:
+        start = args[0]
+        count = 0
+        while count < start:
+            yield count
+            count += 1
+    elif len(args) == 2:
+        start, stop = args[0], args[1]
+        while start < stop:
+            yield start
+            start += 1
+    else:
+        start, stop, step = args[0], args[1], args[2]
+        if start < stop and step > 0:
+            while start < stop:
+                yield start
+                start += (step)
+        elif start > stop and step < 0:
+             while start > stop:
+                yield start
+                start += (step)
