@@ -46,3 +46,18 @@ day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sund
 days = ((i + 1, day[(5 + i) % 7]) for i in range(77))
 for _ in range(77):
     print(next(days))
+
+# 457. Ваша задача создать функцию-генератор gen_squares, которая принимает аргумент n и генерирует квадраты чисел от 1 до n включительно. Ниже несколько вариантов использования:
+#      for i in gen_squares(5):
+#           print(i)
+#      # Будет напечатано
+#      # 1
+#      # 4
+#      # 9
+#      # 16
+#      # 25
+#      Ваша задача написать только определение функции gen_squares.
+
+def gen_squares(n: int):
+    for i in range(1, n + 1):
+        yield i ** 2
