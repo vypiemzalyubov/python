@@ -439,3 +439,8 @@ def count_strings(*args):
 def find_keys(**kwargs):
     keys = [k for k, v in kwargs.items() if isinstance(v, list|tuple)]
     return sorted(keys, key=lambda x: x.lower())
+
+# 476. Программе на вход поступают слова, разделенные пробелом. Ваша задача проверить, во всех ли словах есть английская буква A вне зависимости от регистра. 
+#      В качестве ответа программа должна вывести True или False.
+
+print(all(['A' in c for c in input().upper().split()]))
