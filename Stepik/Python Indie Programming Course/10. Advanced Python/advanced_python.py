@@ -357,3 +357,10 @@ print(*[len(list(filter(func, numbers))) for func in [lambda x: x < 0, lambda x:
 
 days = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve']
 print(*sorted(list(filter(lambda x: len(x) == 4 or x[0] == 'S', days))), sep='\n')
+
+# 471. Перед вами два списка одинаковой длины keys и values.
+#      Ваша задача создать словарь result, в котором пара ключ-значение берется из значений списков, стоящих на одинаковых индексах. В качестве ответа выведите словарь result.
+
+keys = ['Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety', 'One hundred']
+values = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+print(result := {k: v for k, v in zip(keys, values)})
