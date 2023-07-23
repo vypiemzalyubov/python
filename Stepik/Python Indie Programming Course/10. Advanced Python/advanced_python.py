@@ -414,3 +414,15 @@ assert zip_with_function([[10, 20], [30, 0]], get_sum_two_numbers) == [40, 20]
 assert zip_with_function([[2, 5, 8], [3, 4, 7], [5, 6, 5]], get_sum_three_numbers) == [10, 15, 20]
 assert zip_with_function([[1, 2, 3], [4, 5, 6], [7, 8, 9]], get_sum_three_numbers) == [12, 15, 18]
 assert zip_with_function([["a", "b"], ["1", "2"]], combine_strings) == ['a1', 'b2']
+
+# 474. Ваша задача написать функцию count_strings, которая принимает произвольное количество аргументов. 
+#      Функция должна среди всех переданных значений найти только строки, найти их количество и вернуть в качестве результата.
+#      Ниже представлены примеры:
+#      count_strings(1, 2, 'hello', [2, 3, 4], True) => 1
+#      count_strings('am', 'world', 'hello', 'is') => 4
+#      count_strings() => 0 
+#      count_strings(True, False) => 0
+#      Ваша задача написать только определение функции count_strings.
+
+def count_strings(*args):
+    return sum(1 for c in args if isinstance(c, str))
