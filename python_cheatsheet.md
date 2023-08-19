@@ -45,6 +45,7 @@
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
+- [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 
 ## Полезные материалы
 
