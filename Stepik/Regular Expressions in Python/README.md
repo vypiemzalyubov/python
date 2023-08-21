@@ -10,3 +10,5 @@
 - Компиляция регулярных выражений
 - Работа с группами
 - Флаги
+
+[**Regular Expressions CheatSheet**](https://res.cloudinary.com/dyd911kmh/image/upload/v1665049611/Marketing/Blog/Regular_Expressions_Cheat_Sheet.pdf)
