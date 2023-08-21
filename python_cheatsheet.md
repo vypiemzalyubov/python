@@ -55,5 +55,8 @@
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
-- [Изучаем Python с Марком Лутцем](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
+
+## YouTube
+- [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
 - [Собеседование Python. Разбор вопросов](https://www.youtube.com/watch?v=BoazgBZ4D7k)
+- [Изучаем Python с Марком Лутцем](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
