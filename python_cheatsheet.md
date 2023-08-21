@@ -58,5 +58,8 @@
 
 ## YouTube
 - [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
-- [Собеседование Python. Разбор вопросов](https://www.youtube.com/watch?v=BoazgBZ4D7k)
-- [Изучаем Python с Марком Лутцем](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
+- [Изучаем Python с Марком Лутцем. Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
+- [ARTVLAD | Automation Craft](https://www.youtube.com/@AutomationCraft)
+- [SolveMe](https://www.youtube.com/@SolveMeChannel)
+- [Python Hub Studio](https://www.youtube.com/@PythonHubStudio)
+- [Собеседование Python. Разбор вопросов. Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
