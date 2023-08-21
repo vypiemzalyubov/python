@@ -1,4 +1,6 @@
-## Page Object Model - Final Project
+## Применение паттерна Page Object Model
+
+### Page Object Model - Final Project
 
 Запуск тестов для ревью
 ```python
