@@ -41,6 +41,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Crash Override](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/crash_override.py)
 - [Even or Odd](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/even_or_odd.py)
 - [Find the smallest integer in the array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find%20the_smallest_integer_in_the_array.py)
+- [Find Maximum and Minimum Values of a List](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_maximum_and_minimum_values_of_a_list.py)
 - [Find Nearest square number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_nearest_square_number.py)
 - [Grasshopper - Summation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_summation.py)
 - [Grasshopper - Variable Assignment Debug](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_variable_assignment_debug.py)
