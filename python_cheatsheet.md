@@ -46,6 +46,8 @@
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
+- [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
+- [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
 
 ## Полезные материалы
 
@@ -55,5 +57,12 @@
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
-- [Изучаем Python с Марком Лутцем](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
-- [Собеседование Python. Разбор вопросов](https://www.youtube.com/watch?v=BoazgBZ4D7k)
+
+## YouTube
+- [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
+- [Изучаем Python с Марком Лутцем. Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
+- [ARTVLAD | Automation Craft](https://www.youtube.com/@AutomationCraft)
+- [SolveMe](https://www.youtube.com/@SolveMeChannel)
+- [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
+- [Python Hub Studio](https://www.youtube.com/@PythonHubStudio)
+- [Собеседование Python. Разбор вопросов. Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
