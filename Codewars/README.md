@@ -56,6 +56,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Grasshopper - Summation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_summation.py)
 - [Grasshopper - Variable Assignment Debug](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_variable_assignment_debug.py)
 - [How good are you really?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
+- [Jenny's secret message](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
 - [OOP: Object Oriented Piracy](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/oop_object_oriented_piracy.py)
 - [Opposite number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposite_number.py)
 - [Opposites Attract](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposites_attract.py)
