@@ -69,6 +69,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Opposites Attract](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposites_attract.py)
 - [Power](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/power.py)
 - [Returning Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/returning_strings.py)
+- [Reverse List Order](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/reverse_list_order.py)
 - [Reversed Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/reversed_strings.py)
 - [Rock Paper Scissors!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/rock_paper_scissors.py)
 - [Sentence Smash](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/sentence_smash.py)
