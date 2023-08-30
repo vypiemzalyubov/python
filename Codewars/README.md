@@ -63,6 +63,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Jenny's secret message](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
 - [Job Matching #1](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/job_matching_1.py)
 - [Lario and Muigi Pipe Problem](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/lario_and_muigi_pipe_problem.py)
+- [MakeUpperCase](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/makeuppercase.py)
 - [Miles per gallon to kilometers per liter](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/miles_per_gallon_to_kilometers_per_liter.py)
 - [OOP: Object Oriented Piracy](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/oop_object_oriented_piracy.py)
 - [Opposite number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposite_number.py)
