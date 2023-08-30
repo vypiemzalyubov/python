@@ -65,6 +65,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Returning Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/returning_strings.py)
 - [Reversed Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/reversed_strings.py)
 - [Rock Paper Scissors!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/rock_paper_scissors.py)
+- [Sentence Smash](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/sentence_smash.py)
 - [Simple multiplication](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/simple_multiplication.py)
 - [String repeat](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/string_repeat.py)
 - [Stringy Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/stringy_strings.py)
