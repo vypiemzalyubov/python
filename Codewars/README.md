@@ -55,6 +55,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [How good are you really?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
 - [OOP: Object Oriented Piracy](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/oop_object_oriented_piracy.py)
 - [Opposite number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposite_number.py)
+- [Opposites Attract](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/opposites_attract.py)
 - [Power](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/power.py)
 - [Returning Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/returning_strings.py)
 - [Reversed Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/reversed_strings.py)
