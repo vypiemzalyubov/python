@@ -74,6 +74,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [String repeat](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/string_repeat.py)
 - [Stringy Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/stringy_strings.py)
 - [Sum Mixed Array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/sum_mixed_array.py)
+- [Sum of Multiples](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/sum_of_multiples.py)
 - [Switch it Up!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/switch_it_up.py)
 - [Template Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/template_strings.py)
 - [Training JS #18: Methods of String object--concat() split() and its good friend join()](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/training%20js_18_methods_of_string_object_concat_split_and_its_good_friend_join.py)
