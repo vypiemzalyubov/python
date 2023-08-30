@@ -14,6 +14,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 
 **7 kyu**
 - [Building blocks](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/building_blocks.py)
+- [Descending Order](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/descending_order.py)
 - [Divide and Conquer](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/divide_and_conquer.py)
 - [Double value every next call](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/double_value_every_next_call.py)
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
