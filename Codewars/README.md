@@ -57,6 +57,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Find the smallest integer in the array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find%20the_smallest_integer_in_the_array.py)
 - [Find Maximum and Minimum Values of a List](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_maximum_and_minimum_values_of_a_list.py)
 - [Find Nearest square number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_nearest_square_number.py)
+- [Find the position!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_the_position.py)
 - [Grasshopper - Summation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_summation.py)
 - [Grasshopper - Variable Assignment Debug](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_variable_assignment_debug.py)
 - [How good are you really?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
