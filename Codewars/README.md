@@ -80,5 +80,6 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Template Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/template_strings.py)
 - [Training JS #18: Methods of String object--concat() split() and its good friend join()](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/training%20js_18_methods_of_string_object_concat_split_and_its_good_friend_join.py)
 - [Unexpected parsing](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/unexpected_parsing.py)
+- [Volume of a Cuboid](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/volume_of_a_cuboid.py)
 - [Welcome to the City](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/welcome_to_the_city.py)
 - [You Can't Code Under Pressure #1](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/you_can't_code_under_pressure_1.py)
