@@ -31,6 +31,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Shortest Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/shortest_word.py)
 - [Sum a list but ignore any duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_a_list_but_ignore_any_duplicates.py)
 - [Valid Parentheses](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/valid_parentheses.py)
+- [Vowel Count](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/vowel_count.py)
 
 **8 kyu**
 - [Are You Playing Banjo?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/are_you_playing_banjo.py)
