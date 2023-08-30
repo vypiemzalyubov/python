@@ -54,6 +54,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Convert boolean values to strings 'Yes' or 'No'.](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_boolean_values_to_strings_yes_or_no.py)
 - [Crash Override](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/crash_override.py)
 - [Even or Odd](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/even_or_odd.py)
+- [Fake Binary](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/fake_binary.py)
 - [Find the smallest integer in the array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find%20the_smallest_integer_in_the_array.py)
 - [Find Maximum and Minimum Values of a List](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_maximum_and_minimum_values_of_a_list.py)
 - [Find Nearest square number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_nearest_square_number.py)
