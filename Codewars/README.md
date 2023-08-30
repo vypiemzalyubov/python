@@ -44,6 +44,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Color Ghost](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/color_ghost.py)
 - [Convert a Boolean to a String](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_a_boolean_to_a_string.py)
 - [Convert a Number to a String!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_a_number_to_a_string.py)
+- [Convert boolean values to strings 'Yes' or 'No'.](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_boolean_values_to_strings_yes_or_no.py)
 - [Crash Override](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/crash_override.py)
 - [Even or Odd](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/even_or_odd.py)
 - [Find the smallest integer in the array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find%20the_smallest_integer_in_the_array.py)
