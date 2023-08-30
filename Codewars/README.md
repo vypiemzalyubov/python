@@ -31,6 +31,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Product Array (Array Series #5)](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/product_array_array_series_5.py)
 - [Remove consecutive duplicate words](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/remove_consecutive_duplicate_words.py)
 - [Shortest Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/shortest_word.py)
+- [String ends with?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/string_ends_with.py)
 - [Sum a list but ignore any duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_a_list_but_ignore_any_duplicates.py)
 - [Sum of two lowest positive integers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_of_two_lowest_positive_integers.py)
 - [Two to One](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/two_to_one.py)
