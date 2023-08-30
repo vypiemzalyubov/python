@@ -69,4 +69,5 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Switch it Up!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/switch_it_up.py)
 - [Template Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/template_strings.py)
 - [Unexpected parsing](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/unexpected_parsing.py)
+- [Welcome to the City](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/welcome_to_the_city.py)
 - [You Can't Code Under Pressure #1](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/you_can't_code_under_pressure_1.py)
