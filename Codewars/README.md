@@ -66,6 +66,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Rock Paper Scissors!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/rock_paper_scissors.py)
 - [Simple multiplication](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/simple_multiplication.py)
 - [String repeat](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/string_repeat.py)
+- [Stringy Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/stringy_strings.py)
 - [Sum Mixed Array](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/sum_mixed_array.py)
 - [Switch it Up!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/switch_it_up.py)
 - [Template Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/template_strings.py)
