@@ -40,6 +40,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Vowel Count](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/vowel_count.py)
 
 **8 kyu**
+- [Abbreviate a Two Word Name](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/abbreviate_a_two_word_name.py)
 - [Are You Playing Banjo?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/are_you_playing_banjo.py)
 - [Basic Mathematical Operations](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/basic_mathematical_operations.py)
 - [Basic variable assignment](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/basic_variable_assignment.py)
