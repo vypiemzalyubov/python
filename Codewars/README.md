@@ -32,6 +32,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Remove consecutive duplicate words](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/remove_consecutive_duplicate_words.py)
 - [Remove the minimum](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/remove_the_minimum.py)
 - [Shortest Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/shortest_word.py)
+- [Square Every Digit](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/square_every_digit.py)
 - [String ends with?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/string_ends_with.py)
 - [Sum a list but ignore any duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_a_list_but_ignore_any_duplicates.py)
 - [Sum of two lowest positive integers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_of_two_lowest_positive_integers.py)
