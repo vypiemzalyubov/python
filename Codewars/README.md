@@ -40,6 +40,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 
 **8 kyu**
 - [Are You Playing Banjo?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/are_you_playing_banjo.py)
+- [Basic Mathematical Operations](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/basic_mathematical_operations.py)
 - [Basic variable assignment](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/basic_variable_assignment.py)
 - [Be Concise I - The Ternary Operator](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/be_concise_I_the_ternary_operator.py)
 - [Beginner - Reduce but Grow](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/beginner_reduce_but_grow.py)
