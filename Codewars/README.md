@@ -34,6 +34,7 @@
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
 - [Filter the number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/filter_the_number.py)
 - [Friend or Foe?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/friend_or_foe.py)
+- [Highest and Lowest](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/highest_and_lowest.py)
 - [How Many Unique Consonants?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/how_many_unique_consonants.py)
 - [Isograms](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/isograms.py)
 - [Jaden Casing Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/jaden_casing_strings.py)
