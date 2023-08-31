@@ -19,6 +19,7 @@
 - [Create Phone Number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/create_phone_number.py)
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
 - [Duplicate Encoder](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/duplicate_encoder.py)
+- [Encrypt this!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/encrypt_this.py)
 - [Find the missing letter](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_missing_letter.py)
 - [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Highest Scoring Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/highest_scoring_word.py)
