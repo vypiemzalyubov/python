@@ -62,6 +62,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Find the position!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/find_the_position.py)
 - [Grasshopper - Summation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_summation.py)
 - [Grasshopper - Variable Assignment Debug](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/grasshopper_variable_assignment_debug.py)
+- [Gravity Flip](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/gravity_flip.py)
 - [How good are you really?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
 - [Jenny's secret message](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/how_good_are_you_really.py)
 - [Job Matching #1](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/job_matching_1.py)
