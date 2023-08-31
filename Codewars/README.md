@@ -22,6 +22,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Disemvowel Trolls](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/disemvowel_trolls.py)
 - [Divide and Conquer](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/divide_and_conquer.py)
 - [Double value every next call](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/double_value_every_next_call.py)
+- [Dropcaps](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/dropcaps.py)
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
 - [Friend or Foe?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/friend_or_foe.py)
 - [How Many Unique Consonants?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/how_many_unique_consonants.py)
