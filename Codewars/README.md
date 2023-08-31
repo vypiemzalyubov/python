@@ -13,6 +13,7 @@
 [6 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#6-kyu) | [7 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#7-kyu) | [8 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#8-kyu)
 
 ### 6 kyu:
+- [Array.diff](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/array_diff.py)
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
 - [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
