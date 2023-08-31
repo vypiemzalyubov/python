@@ -38,6 +38,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [String ends with?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/string_ends_with.py)
 - [Sum a list but ignore any duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_a_list_but_ignore_any_duplicates.py)
 - [Sum of two lowest positive integers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_of_two_lowest_positive_integers.py)
+- [Testing 1-2-3](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/testing_1_2_3.py)
 - [Two to One](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/two_to_one.py)
 - [Valid Parentheses](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/valid_parentheses.py)
 - [Vowel Count](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/vowel_count.py)
