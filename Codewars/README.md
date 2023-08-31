@@ -11,6 +11,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 **6 kyu**
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
+- [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
 - [Your order, please](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/your_order_please.py)
 
 **7 kyu**
