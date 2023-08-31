@@ -14,6 +14,7 @@
 
 ### 6 kyu:
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
+- [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
