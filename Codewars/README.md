@@ -24,6 +24,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Double value every next call](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/double_value_every_next_call.py)
 - [Dropcaps](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/dropcaps.py)
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
+- [Filter the number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/filter_the_number.py)
 - [Friend or Foe?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/friend_or_foe.py)
 - [How Many Unique Consonants?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/how_many_unique_consonants.py)
 - [Isograms](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/isograms.py)
