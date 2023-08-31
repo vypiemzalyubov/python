@@ -36,6 +36,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Remove consecutive duplicate words](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/remove_consecutive_duplicate_words.py)
 - [Remove the minimum](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/remove_the_minimum.py)
 - [Reverse words](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/reverse_words.py)
+- [Selective fear of numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/selective_fear_of_numbers.py)
 - [Shortest Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/shortest_word.py)
 - [Square Every Digit](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/square_every_digit.py)
 - [String ends with?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/string_ends_with.py)
