@@ -4,9 +4,13 @@
   <img src="https://docs.codewars.com/logo.svg" width="100"/>
 </div>
 
-My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
+**My profile on** [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 
 [![codewars](https://www.codewars.com/users/vypiemzalyubov/badges/large)](https://www.codewars.com/users/username)   
+
+**Navigation:**
+
+[6 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/6%20kyu) | [7 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/7%20kyu) | [8 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/8%20kyu)
 
 **6 kyu**
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
