@@ -17,6 +17,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 **7 kyu**
 - [Beginner Series #3 Sum of Numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/beginner_series_3_sum_of_numbers.py)
 - [Building blocks](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/building_blocks.py)
+- [Converting 12-hour time to 24-hour time](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/converting_12_hour_time_to_24_hour_time.py)
 - [Descending Order](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/descending_order.py)
 - [Disemvowel Trolls](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/disemvowel_trolls.py)
 - [Divide and Conquer](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/divide_and_conquer.py)
