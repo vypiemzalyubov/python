@@ -24,6 +24,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Isograms](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/isograms.py)
 - [Jaden Casing Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/jaden_casing_strings.py)
 - [Jenny the youngest detective](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/jenny_theyoungest_detective.py)
+- [List Filtering](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/list_filtering.py)
 - [MinMaxMin: Bounded Nums](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/minmaxmin_bounded_nums.py)
 - [Mysterious Singularity Numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/mysterious_singularity_numbers.py)
 - [Odd-Even String Sort](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/odd_even_string_sort.py)
