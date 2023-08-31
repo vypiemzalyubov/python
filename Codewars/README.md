@@ -10,15 +10,15 @@
 
 **Navigation:**
 
-[6 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/6%20kyu) | [7 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/7%20kyu) | [8 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/8%20kyu)
+[6 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/6-kyu) | [7 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/7-kyu) | [8 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars/8-kyu)
 
-**6 kyu**
+#### 6 kyu
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
 - [Your order, please](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/your_order_please.py)
 
-**7 kyu**
+#### 7 kyu
 - [Beginner Series #3 Sum of Numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/beginner_series_3_sum_of_numbers.py)
 - [Building blocks](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/building_blocks.py)
 - [Converting 12-hour time to 24-hour time](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/converting_12_hour_time_to_24_hour_time.py)
@@ -57,7 +57,7 @@
 - [Valid Parentheses](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/valid_parentheses.py)
 - [Vowel Count](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/vowel_count.py)
 
-**8 kyu**
+#### 8 kyu
 - [A Needle in the Haystack](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/a_needle_in_the_haystack.py)
 - [Abbreviate a Two Word Name](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/abbreviate_a_two_word_name.py)
 - [Are You Playing Banjo?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/are_you_playing_banjo.py)
