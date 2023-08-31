@@ -18,6 +18,7 @@
 - [Counting Duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/counting_duplicates.py)
 - [Create Phone Number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/create_phone_number.py)
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
+- [Duplicate Encoder](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/duplicate_encoder.py)
 - [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
