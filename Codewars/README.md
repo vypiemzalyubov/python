@@ -14,6 +14,7 @@
 
 ### 6 kyu:
 - [Array.diff](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/array_diff.py)
+- [Create Phone Number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/create_phone_number.py)
 - [Detect Pangram](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/detect_pangram.py)
 - [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
