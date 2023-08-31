@@ -21,6 +21,7 @@ My profile on [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 - [Double value every next call](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/double_value_every_next_call.py)
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
 - [How Many Unique Consonants?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/how_many_unique_consonants.py)
+- [Isograms](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/isograms.py)
 - [Jaden Casing Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/jaden_casing_strings.py)
 - [Jenny the youngest detective](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/jenny_theyoungest_detective.py)
 - [MinMaxMin: Bounded Nums](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/minmaxmin_bounded_nums.py)
