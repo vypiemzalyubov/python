@@ -83,6 +83,7 @@
 - [Be Concise I - The Ternary Operator](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/be_concise_I_the_ternary_operator.py)
 - [Beginner - Reduce but Grow](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/beginner_reduce_but_grow.py)
 - [Beginner Series #1 School Paperwork](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/beginner_series_1_school_paperwork.py)
+- [Classy Extentions](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/classy_extentions.py)
 - [Color Ghost](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/color_ghost.py)
 - [Convert a Boolean to a String](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_a_boolean_to_a_string.py)
 - [Convert a Number to a String!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/convert_a_number_to_a_string.py)
