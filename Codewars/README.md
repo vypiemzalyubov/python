@@ -27,6 +27,7 @@
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
+- [Which are in?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/which_are_in.py)
 - [Who likes it?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/who_likes_it.py)
 - [Your order, please](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/your_order_please.py)
 
