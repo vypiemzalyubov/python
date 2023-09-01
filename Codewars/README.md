@@ -16,6 +16,7 @@
 - [Array.diff](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/array_diff.py)
 - [Bit Counting](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/bit_counting.py)
 - [Break camelCase](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/break_camelcase.py)
+- [CamelCase Method](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/camelcase_method.py)
 - [Count characters in your string](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/count_characters_in_your_string.py)
 - [Counting Duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/counting_duplicates.py)
 - [Create Phone Number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/create_phone_number.py)
