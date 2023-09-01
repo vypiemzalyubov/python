@@ -24,6 +24,7 @@
 - [Find the missing letter](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_missing_letter.py)
 - [Find the odd int](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/find_the_odd_int.py)
 - [Highest Scoring Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/highest_scoring_word.py)
+- [Mexican Wave](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/mexican_wave.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
