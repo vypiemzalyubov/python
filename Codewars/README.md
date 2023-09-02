@@ -13,6 +13,7 @@
 [5 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#5-kyu) | [6 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#6-kyu) | [7 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#7-kyu) | [8 kyu](https://github.com/vypiemzalyubov/python/tree/main/Codewars#8-kyu)
 
 ### 5 kyu:
+ - [Convert PascalCase string into snake_case](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/convert_pascalcase_string_into_snake_case.py)
  - [Extract the domain name from a URL](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/extract_the_domain_name_from_a_url.py)
  - [ISBN-10 Validation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/isbn_10_validation.py)
  - [Moving Zeros To The End](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/moving_zeros_to_the_end.py)
