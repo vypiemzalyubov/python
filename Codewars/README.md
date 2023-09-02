@@ -14,6 +14,7 @@
 
 ### 5 kyu:
  - [Extract the domain name from a URL](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/extract_the_domain_name_from_a_url.py)
+ - [ISBN-10 Validation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/isbn_10_validation.py)
  - [Moving Zeros To The End](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/moving_zeros_to_the_end.py)
  - [RGB To Hex Conversion](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rgb_to_hex_conversion.py)
  - [Rot13](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rot13.py)
