@@ -14,6 +14,7 @@
 
 ### 5 kyu:
  - [Moving Zeros To The End](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/moving_zeros_to_the_end.py)
+ - [RGB To Hex Conversion](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rgb_to_hex_conversion.py)
  - [Simple Pig Latin](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/simple_pig_latin.py)
 
 ### 6 kyu:
