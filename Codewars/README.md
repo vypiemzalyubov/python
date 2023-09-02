@@ -17,6 +17,7 @@
  - [RGB To Hex Conversion](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rgb_to_hex_conversion.py)
  - [Rot13](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rot13.py)
  - [Simple Pig Latin](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/simple_pig_latin.py)
+ - [The Hashtag Generator](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/the_hashtag_generator.py)
 
 ### 6 kyu:
 - [Array.diff](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/array_diff.py)
