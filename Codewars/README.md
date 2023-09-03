@@ -20,6 +20,7 @@
  - [Not very secure](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/not_very_secure.py)
  - [RGB To Hex Conversion](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rgb_to_hex_conversion.py)
  - [Rot13](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rot13.py)
+ - [Scramblies](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/scramblies.py)
  - [Simple Pig Latin](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/simple_pig_latin.py)
  - [The Hashtag Generator](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/the_hashtag_generator.py)
 
