@@ -84,6 +84,7 @@
 - [Sum of two lowest positive integers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_of_two_lowest_positive_integers.py)
 - [Testing 1-2-3](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/testing_1_2_3.py)
 - [The mean of two means](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/the_mean_of_two_means.py)
+- [The old switcheroo](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/the_old_switcheroo.py)
 - [Two to One](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/two_to_one.py)
 - [Valid Parentheses](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/valid_parentheses.py)
 - [Vowel Count](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/vowel_count.py)
