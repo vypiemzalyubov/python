@@ -16,6 +16,7 @@
  - [Convert PascalCase string into snake_case](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/convert_pascalcase_string_into_snake_case.py)
  - [Extract the domain name from a URL](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/extract_the_domain_name_from_a_url.py)
  - [ISBN-10 Validation](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/isbn_10_validation.py)
+ - [Mean Square Error](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/mean_square_error.py)
  - [Moving Zeros To The End](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/moving_zeros_to_the_end.py)
  - [Not very secure](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/not_very_secure.py)
  - [RGB To Hex Conversion](https://github.com/vypiemzalyubov/python/blob/main/Codewars/5%20kyu/rgb_to_hex_conversion.py)
