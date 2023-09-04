@@ -69,6 +69,7 @@
 - [MinMaxMin: Bounded Nums](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/minmaxmin_bounded_nums.py)
 - [Mysterious Singularity Numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/mysterious_singularity_numbers.py)
 - [NATO Phonetic Alphabet](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/nato_phonetic_alphabet.py)
+- [Naughty or Nice](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/naughty_or_nice.py)
 - [Odd-Even String Sort](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/odd_even_string_sort.py)
 - [Odd or Even?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/odd_or_even.py)
 - [Person Class Bug](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/person_class_bug.py)
