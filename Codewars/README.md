@@ -60,6 +60,7 @@
 - [Dropcaps](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/dropcaps.py)
 - [Exes and Ohs](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/exes_and_ohs.py)
 - [Filter the number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/filter_the_number.py)
+- [Find the capitals](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/find_the_capitals.py)
 - [Friend or Foe?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/friend_or_foe.py)
 - [Highest and Lowest](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/highest_and_lowest.py)
 - [How Many Unique Consonants?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/how_many_unique_consonants.py)
