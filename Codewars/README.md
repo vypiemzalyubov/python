@@ -81,6 +81,7 @@
 - [Reverse words](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/reverse_words.py)
 - [Selective fear of numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/selective_fear_of_numbers.py)
 - [Shortest Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/shortest_word.py)
+- [Sort Numbers](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sort_numbers.py)
 - [Square Every Digit](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/square_every_digit.py)
 - [String ends with?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/string_ends_with.py)
 - [Sum a list but ignore any duplicates](https://github.com/vypiemzalyubov/python/blob/main/Codewars/7%20kyu/sum_a_list_but_ignore_any_duplicates.py)
