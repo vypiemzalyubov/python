@@ -29,6 +29,7 @@
 
 ## Python Automation Testing
 
+- [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
 - [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
 - [Venv, Poetry и управление зависимостями проекта](https://github.com/vypiemzalyubov/python/wiki/Venv,-Poetry-%D0%B8-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
@@ -43,7 +44,6 @@
 - [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)  
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
-- [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
