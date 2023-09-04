@@ -41,6 +41,7 @@
 - [Highest Scoring Word](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/highest_scoring_word.py)
 - [Matrix Addition](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/matrix_addition.py)
 - [Mexican Wave](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/mexican_wave.py)
+- [Multiples of 3 or 5](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/multiples_of_3_or_5.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
