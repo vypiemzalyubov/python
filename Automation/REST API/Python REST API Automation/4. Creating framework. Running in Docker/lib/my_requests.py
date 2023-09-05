@@ -4,7 +4,7 @@ from lib.logger import Logger
 from environment import ENV_OBJECT
 
 
-class MyRequests():
+class MyRequests:
 
     @staticmethod
     def post(url: str, data: dict = None, headers: dict = None, cookies: dict = None):
