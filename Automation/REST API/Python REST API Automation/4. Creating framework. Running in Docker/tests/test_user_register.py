@@ -33,3 +33,21 @@ class TestUserRegister(BaseCase):
 
         Assertions.assert_code_status(response, 400)
         assert response.content.decode("utf-8") == f"Invalid email format", f"Unexpected email {email}. Missing @"
+
+    # user_data = [
+    #     ("no_cookie"),
+    #     ("no_token")
+    # ]   
+
+    # @pytest.mark.parametrize("input, expected_results", user_data)
+    def test_create_user_without_specifying_one_of_fields(self):
+        """Создание пользователя без указания одного из полей"""
+        data =  {
+            "password": "1234",
+            "username": "learnqa",
+            "firstName": "learnqa",
+            "lastName": "learnqa",
+        }
+        
+        response = MyRequests.post("/user/", data=data)
+        print(response.content)
