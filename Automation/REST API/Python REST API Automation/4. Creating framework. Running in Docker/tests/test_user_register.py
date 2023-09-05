@@ -42,12 +42,35 @@ class TestUserRegister(BaseCase):
     # @pytest.mark.parametrize("input, expected_results", user_data)
     def test_create_user_without_specifying_one_of_fields(self):
         """Создание пользователя без указания одного из полей"""
-        data =  {
-            "password": "1234",
+        data1 =  {
             "username": "learnqa",
             "firstName": "learnqa",
             "lastName": "learnqa",
+            "email": "test@example.com"
         }
-        
-        response = MyRequests.post("/user/", data=data)
+        data2 =  {
+            "password": "1234",
+            "firstName": "learnqa",
+            "lastName": "learnqa",
+            "email": "test@example.com"
+        }
+        data3 =  {
+            "password": "1234",
+            "username": "learnqa",
+            "lastName": "learnqa",
+            "email": "test@example.com"
+        }
+        data4 =  {
+            "password": "1234",
+            "username": "learnqa",
+            "firstName": "learnqa",
+            "email": "test@example.com"
+        }
+        data5 =  {
+            "password": "1234",
+            "username": "learnqa",
+            "firstName": "learnqa",
+            "lastName": "learnqa"
+        }        
+        response = MyRequests.post("/user/", data=data2)
         print(response.content)
