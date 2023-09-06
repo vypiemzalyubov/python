@@ -55,6 +55,7 @@ class TestUserRegister(BaseCase):
             "email": email            
         }
         response = MyRequests.post("/user/", data=data)
+        missing_param = next(key for key, value in data.items() if value == None)
         
         Assertions.assert_code_status(response, 400)
-        Assertions.assert_response_text_value(response, f"The following required params are missed: {next(key for key, value in data.items() if value == None)}", f"Missing required param: {next(key for key, value in data.items() if value == None)}")
+        Assertions.assert_response_text_value(response, f"The following required params are missed: {missing_param}", f"Missing required param: {missing_param}")
