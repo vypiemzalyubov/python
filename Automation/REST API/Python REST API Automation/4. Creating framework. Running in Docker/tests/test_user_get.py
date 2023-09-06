@@ -1,11 +1,11 @@
 import pytest
-import allure
+# import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
 
 
-@allure.epic("User getting cases")
+# @allure.epic("User getting cases")
 class TestUserGet(BaseCase):
 
     def test_get_user_details_not_auth(self):
