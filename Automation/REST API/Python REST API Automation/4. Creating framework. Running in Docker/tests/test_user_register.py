@@ -8,6 +8,13 @@ from lib.my_requests import MyRequests
 @allure.epic("Registrations cases")
 class TestUserRegister(BaseCase):
 
+    user_data = [
+        (None, "bot", "bot_fname", "bot_lname", "bot@example.com"),
+        ("1234", None, "bot_fname", "bot_lname", "bot@example.com"),
+        ("1234", "bot", None, "bot_lname", "bot@example.com"),
+        ("1234", "bot", "bot_fname", None, "bot@example.com"),
+        ("1234", "bot", "bot_fname", "bot_lname", None)
+    ]
 
     def test_create_user_successfully(self):
         """Создание нового пользователя"""
@@ -38,13 +45,7 @@ class TestUserRegister(BaseCase):
         Assertions.assert_response_text_value(response, f"Invalid email format")
 
 
-    @pytest.mark.parametrize("password, username, firstname, lastname, email", [
-        (None, "bot", "bot_fname", "bot_lname", "bot@example.com"),
-        ("1234", None, "bot_fname", "bot_lname", "bot@example.com"),
-        ("1234", "bot", None, "bot_lname", "bot@example.com"),
-        ("1234", "bot", "bot_fname", None, "bot@example.com"),
-        ("1234", "bot", "bot_fname", "bot_lname", None)
-    ])
+    @pytest.mark.parametrize("password, username, firstname, lastname, email", user_data)
     def test_create_user_without_specifying_one_of_fields(self, password, username, firstname, lastname, email):
         """Создание пользователя без указания одного из полей"""
         data = {
