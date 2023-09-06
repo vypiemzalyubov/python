@@ -23,7 +23,7 @@ class TestUserRegister(BaseCase):
         email = "vinkotov@example.com"
         data = self.prepare_registration_data(email=email)
         response = MyRequests.post("/user/", data=data)
-        print(data)
+
         Assertions.assert_code_status(response, 400)
         Assertions.assert_response_text_value(response, f"Users with email '{email}' already exists")
 
@@ -33,7 +33,7 @@ class TestUserRegister(BaseCase):
         email = "testexample.com"
         data = self.prepare_registration_data(email=email)
         response = MyRequests.post("/user/", data=data)
-        print(data)
+
         Assertions.assert_code_status(response, 400)
         Assertions.assert_response_text_value(response, f"Invalid email format")
 
