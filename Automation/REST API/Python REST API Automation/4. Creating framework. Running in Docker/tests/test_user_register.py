@@ -25,7 +25,7 @@ class TestUserRegister(BaseCase):
         response = MyRequests.post("/user/", data=data)
 
         Assertions.assert_code_status(response, 400)
-        assert response.content.decode("utf-8") == f"Users with email '{email}' already exists", f"Unexpected response content {response.content}"
+        Assertions.assert_response_text_value(response, f"Users with email '{email}' already exists", f"Unexpected response content {response.content}")
 
 
     def test_create_user_with_invalid_email(self):
@@ -35,7 +35,7 @@ class TestUserRegister(BaseCase):
         response = MyRequests.post("/user/", data=data)
 
         Assertions.assert_code_status(response, 400)
-        assert response.content.decode("utf-8") == f"Invalid email format", f"Unexpected email {email}. Missing @"
+        Assertions.assert_response_text_value(response, f"Invalid email format", f"Unexpected email {email}. Missing @")
 
 
     @pytest.mark.parametrize("password, username, firstname, lastname, email", [
@@ -57,4 +57,4 @@ class TestUserRegister(BaseCase):
         response = MyRequests.post("/user/", data=data)
         
         Assertions.assert_code_status(response, 400)
-        assert response.content.decode("utf-8") == f"The following required params are missed: {next(key for key, value in data.items() if value == None)}", f"Missing required param: {next(key for key, value in data.items() if value == None)}"
+        Assertions.assert_response_text_value(response, f"The following required params are missed: {next(key for key, value in data.items() if value == None)}", f"Missing required param: {next(key for key, value in data.items() if value == None)}")
