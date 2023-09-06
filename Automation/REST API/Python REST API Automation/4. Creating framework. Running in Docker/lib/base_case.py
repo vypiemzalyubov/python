@@ -23,7 +23,7 @@ class BaseCase:
     
     def prepare_registration_data(self, username=None, email=None):
         if username is None: 
-            username = "learnqa"        
+            username = "learnqa"
         if email is None:
                 base_part = "learnqa"
                 domain = "example.com"
