@@ -51,6 +51,6 @@ class Assertions:
 
     @staticmethod
     @allure.step("Проверка значения в текстовом ответе")
-    def assert_response_text_value(response: Response, expexted_value, error_message):
+    def assert_response_text_value(response: Response, expexted_value):
         response_text = response.content.decode("utf-8")
-        assert response_text == expexted_value, error_message
+        assert response_text == expexted_value, f"Unexpected response content: {response.content}"
