@@ -1,11 +1,11 @@
 import pytest
-# import allure
+import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
 
 
-# @allure.epic("Registrations cases")
+@allure.epic("Registrations cases")
 class TestUserRegister(BaseCase):
 
 
