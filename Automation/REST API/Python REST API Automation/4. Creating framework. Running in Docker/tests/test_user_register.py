@@ -59,3 +59,18 @@ class TestUserRegister(BaseCase):
         
         Assertions.assert_code_status(response, 400)
         Assertions.assert_response_text_value(response, f"The following required params are missed: {missing_param}", f"Missing required param: {missing_param}")
+
+
+    def test_create_user_with_short_name(self):
+        """Создание пользователя с очень коротким именем в один символ"""
+        data = {
+            "password": "1234",
+            "username": "x",
+            "firstName": "learnqa",
+            "lastName": "learnqa",
+            "email": "test1@email.com"
+        }        
+        response = MyRequests.post("/user/", data=data)
+
+        Assertions.assert_code_status(response, 400)
+        Assertions.assert_response_text_value(response, f"The value of 'username' field is too short", f"Too short username: {data['username']}")
