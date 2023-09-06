@@ -21,21 +21,6 @@ class BaseCase:
         assert name in response_as_dict, f"Response JSON doesn't key '{name}'"
         return response_as_dict[name]
     
-    # def prepare_registration_data(self, email=None):
-    #     if email is None:
-    #             base_part = "learnqa"
-    #             domain = "example.com"
-    #             random_part = datetime.now().strftime("%m%d%Y%H%M%S")
-    #             email = f"{base_part}{random_part}@{domain}"
-    #     data = {
-    #         "password": "1234",
-    #         "username": "learnqa",
-    #         "firstName": "learnqa",
-    #         "lastName": "learnqa",
-    #         "email": email
-    #     }
-    #     return data
-    
     def prepare_registration_data(self, username=None, email=None):
         if username is None: 
             username = "learnqa"        
