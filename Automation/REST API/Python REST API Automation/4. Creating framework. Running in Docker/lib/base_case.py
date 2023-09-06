@@ -27,10 +27,11 @@ class BaseCase:
                 domain = "example.com"
                 random_part = datetime.now().strftime("%m%d%Y%H%M%S")
                 email = f"{base_part}{random_part}@{domain}"
-        return {
+        data = {
             "password": "1234",
             "username": "learnqa",
             "firstName": "learnqa",
             "lastName": "learnqa",
             "email": email
         }
+        return data
