@@ -74,3 +74,17 @@ class TestUserRegister(BaseCase):
 
         Assertions.assert_code_status(response, 400)
         Assertions.assert_response_text_value(response, f"The value of 'username' field is too short", f"Too short username: {data['username']}")
+
+    def test_create_user_with_long_name(self):
+        """Создание пользователя с очень длинным именем - длиннее 250 символов"""
+        data = {
+            "password": "1234",
+            "username": f"{''.join(__import__('random').choice(__import__('string').ascii_letters) for _ in range(251))}",
+            "firstName": "learnqa",
+            "lastName": "learnqa",
+            "email": "test1@email.com"
+        }        
+        response = MyRequests.post("/user/", data=data)
+
+        Assertions.assert_code_status(response, 400)
+        Assertions.assert_response_text_value(response, f"The value of 'username' field is too long", f"Too long username: {data['username']}")        
