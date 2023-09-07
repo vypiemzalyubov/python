@@ -155,11 +155,11 @@ class TestUserEdit(BaseCase):
     #     print(response4.content)
 
 
-    def test_edit_email_just_created_user(self):
+    def test_edit_email_to_invalid_just_created_user(self):
         """Создание нового пользователя
            Авторизация созданного пользователя
            Редактирование емэйла созданного пользователя без @ в названии емэйла
-           Проверяем, что данные пользователя не изменились"""
+           Проверяем, что емэйл пользователя не изменился"""
         
         # REGISTER
         register_data = self.prepare_registration_data()
@@ -200,3 +200,51 @@ class TestUserEdit(BaseCase):
                                  )
 
         Assertions.assert_json_value_by_name(response4, "email", email, "Email was changed, but shouldn't have been")
+
+
+    def test_edit_first_name_to_invalid_just_created_user(self):
+        """Создание нового пользователя
+           Авторизация созданного пользователя
+           Редактирование имени созданного пользователя на невалидное - длиной в один символ
+           Проверяем, что имя пользователя не изменилось"""
+        
+        # REGISTER
+        register_data = self.prepare_registration_data()
+        response1 = MyRequests.post("/user/", data=register_data)
+
+        Assertions.assert_code_status(response1, 200)
+        Assertions.assert_json_has_key(response1, "id")
+
+        first_name = register_data["firstName"]
+        email = register_data["email"]
+        password = register_data["password"]
+        user_id = self.get_json_value(response1, "id")
+
+        # LOGIN
+        login_data = {
+            "email": email,
+            "password": password
+        }
+        response2 = MyRequests.post("/user/login", data=login_data)
+
+        auth_sid = self.get_cookie(response2, "auth_sid")
+        token = self.get_header(response2, "x-csrf-token")
+
+        # EDIT
+        new_first_name = "x"
+        response3 = MyRequests.put(f"/user/{user_id}", 
+                                 headers={"x-csrf-token": token},
+                                 cookies={"auth_sid": auth_sid},
+                                 data={"firstName": new_first_name}
+                                 )
+
+        Assertions.assert_code_status(response3, 400)
+        Assertions.assert_json_value_by_name(response3, "error", "Too short value for field firstName", "Unexpected response!")
+
+        # GET
+        response4 = MyRequests.get(f"/user/{user_id}", 
+                                 headers={"x-csrf-token": token},
+                                 cookies={"auth_sid": auth_sid}
+                                 )
+
+        Assertions.assert_json_value_by_name(response4, "firstName", first_name, "First name was changed, but shouldn't have been")
