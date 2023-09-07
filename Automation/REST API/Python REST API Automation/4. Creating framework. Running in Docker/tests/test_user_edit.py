@@ -1,17 +1,20 @@
-import pytest
-# import allure
+import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
 
 
-# @allure.epic("User editing cases")
+@allure.epic("User editing cases")
 class TestUserEdit(BaseCase):
 
+
     def test_edit_just_created_user(self):
+        """Создание нового пользователя
+           Редактирование созданного пользователя
+           Проверка успешного редактирования пользователя"""
+        
         # REGISTER
         register_data = self.prepare_registration_data()
-
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)

@@ -25,6 +25,7 @@ class BaseCase:
         assert name in response_as_dict, f"Response JSON doesn't key '{name}'"
         return response_as_dict[name]
     
+    @allure.step("Подготавливаем регистрационные данные")
     def prepare_registration_data(self, username=None, email=None):
         if username is None: 
             username = "learnqa"
