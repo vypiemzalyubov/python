@@ -8,6 +8,7 @@ from lib.my_requests import MyRequests
 @allure.epic("Registration cases")
 class TestUserRegister(BaseCase):
 
+
     user_data = [
         (None, "bot", "bot_fname", "bot_lname", "bot@example.com"),
         ("1234", None, "bot_fname", "bot_lname", "bot@example.com"),
@@ -15,6 +16,7 @@ class TestUserRegister(BaseCase):
         ("1234", "bot", "bot_fname", None, "bot@example.com"),
         ("1234", "bot", "bot_fname", "bot_lname", None)
     ]
+
 
     def test_create_user_successfully(self):
         """Создание нового пользователя"""
