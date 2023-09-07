@@ -62,4 +62,4 @@ class TestUserGet(BaseCase):
         Assertions.assert_json_has_key(response2, "username")
         Assertions.assert_json_has_not_key(response2, "email")
         Assertions.assert_json_has_not_key(response2, "firstName")
-        Assertions.assert_json_has_not_key(response2, "lastName")        
+        Assertions.assert_json_has_not_key(response2, "lastName")
