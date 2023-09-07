@@ -17,6 +17,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+*.log
 
 # Django stuff:
 *.log
