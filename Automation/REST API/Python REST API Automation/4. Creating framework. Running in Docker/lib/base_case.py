@@ -26,18 +26,18 @@ class BaseCase:
         return response_as_dict[name]
     
     @allure.step("Подготавливаем регистрационные данные")
-    def prepare_registration_data(self, username=None, email=None):
-        if username is None: 
-            username = "learnqa"
+    def prepare_registration_data(self, firstName=None, email=None):
+        if firstName is None: 
+            firstName = "learnqa"
         if email is None:
                 base_part = "learnqa"
                 domain = "example.com"
                 random_part = datetime.now().strftime("%m%d%Y%H%M%S")
-                email = f"{base_part}{random_part}@{domain}"                
+                email = f"{base_part}{random_part}@{domain}"
         data = {
             "password": "1234",
-            "username": username,
-            "firstName": "learnqa",
+            "username": "learnqa",
+            "firstName": firstName,
             "lastName": "learnqa",
             "email": email
         }
