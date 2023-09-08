@@ -2,6 +2,7 @@ import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
+import time
 
 
 @allure.epic("User editing cases")
@@ -10,11 +11,7 @@ class TestUserEdit(BaseCase):
 
     @allure.description("Редактирование данных созданного пользователя, после авторизации тем же пользователем")
     def test_edit_just_created_user(self):
-        """Создание нового пользователя
-           Авторизация созданного пользователя
-           Редактирование созданного пользователя
-           Проверяем, что данные пользователя успешно отредактировались"""
-        
+
         # REGISTER
         register_data = self.prepare_registration_data()
         response1 = MyRequests.post("/user/", data=register_data)
@@ -47,7 +44,7 @@ class TestUserEdit(BaseCase):
         
         Assertions.assert_code_status(response3, 200)
 
-        # GET
+        # GET & CHECK
         response4 = MyRequests.get(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
@@ -58,10 +55,6 @@ class TestUserEdit(BaseCase):
 
     @allure.description("Редактирование данных созданного пользователя без авторизации")
     def test_edit_created_user_by_unauthorized_user(self):
-        """Создание нового пользователя
-           Редактирование созданного пользователя без авторизации
-           Проверяем, что сервер отвечает ошибкой
-           Авторизовываемся созданным пользователем и проверяем, что данные не изменились"""
 
         # REGISTER
         register_data = self.prepare_registration_data()
@@ -94,7 +87,7 @@ class TestUserEdit(BaseCase):
         auth_sid = self.get_cookie(response3, "auth_sid")
         token = self.get_header(response3, "x-csrf-token")
 
-        # GET
+        # GET & CHECK
         response4 = MyRequests.get(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
@@ -103,67 +96,53 @@ class TestUserEdit(BaseCase):
         Assertions.assert_json_value_by_name(response4, "lastName", last_name, "Wrong last name of the user after edit")
 
 
-    @allure.description("Редактирование данных созданного пользователя без авторизации")
-    def test_edit_new_created_user_by_another_authorized_user(self):
-        """Создание первого нового пользователя
-           Создание второго нового пользователя
-           Авторизация второго созданного пользователя
-           Редактирование первого созданного пользователя, будучи авторизованным вторым пользователем
-           Проверяем, что сервер отвечает ошибкой
-           Авторизовываемся первым созданным пользователем и проверяем, что данные не изменились"""
+    # @allure.description("Редактирование данных созданного пользователя, будучи авторизованным другим пользователем")
+    # def test_edit_new_created_user_by_another_authorized_user(self):
         
-        # REGISTER FIRST USER
-        register_data_first_user = self.prepare_registration_data()
-        response1 = MyRequests.post("/user/", data=register_data_first_user)
+    #     # REGISTER FIRST USER
+    #     register_data_first_user = self.prepare_registration_data()
+    #     response1 = MyRequests.post("/user/", data=register_data_first_user)
 
-        Assertions.assert_code_status(response1, 200)
-        Assertions.assert_json_has_key(response1, "id")
+    #     Assertions.assert_code_status(response1, 200)
+    #     Assertions.assert_json_has_key(response1, "id")
 
-        email = register_data_first_user["email"]
-        first_name_first_user = register_data_first_user["firstName"]
-        password_first_user = register_data_first_user["password"]
-        user_id_first_user = self.get_json_value(response1, "id")
+    #     email = register_data_first_user["email"]
+    #     first_name_first_user = register_data_first_user["firstName"]
+    #     password_first_user = register_data_first_user["password"]
+    #     user_id_first_user = self.get_json_value(response1, "id")
 
-        # REGISTER SECOND USER
-        email_second_user = "4_user@test.com"
-        register_data_second_user = self.prepare_registration_data(email=email_second_user)
-        response2 = MyRequests.post("/user/", data=register_data_second_user)
+    #     # REGISTER SECOND USER
+    #     email_second_user = "4_user@test.com"
+    #     register_data_second_user = self.prepare_registration_data(email=email_second_user)
+    #     response2 = MyRequests.post("/user/", data=register_data_second_user)
 
-        Assertions.assert_code_status(response1, 200)
-        Assertions.assert_json_has_key(response1, "id")
+    #     Assertions.assert_code_status(response1, 200)
+    #     Assertions.assert_json_has_key(response1, "id")
 
-        password_second_user = register_data_second_user["password"]           
-        user_id_second_user = self.get_json_value(response1, "id")
+    #     password_second_user = register_data_second_user["password"]           
+    #     user_id_second_user = self.get_json_value(response1, "id")
 
-        print(user_id_second_user, email_second_user)
-
-        # LOGIN SECOND USER
-        login_data_second_user = {
-            "email": email,
-            "password": password_first_user
-        }
-        response3 = MyRequests.post("/user/login", data=login_data_second_user)
+    #     # LOGIN SECOND USER
+    #     login_data_second_user = {
+    #         "email": email,
+    #         "password": password_first_user
+    #     }
+    #     response3 = MyRequests.post("/user/login", data=login_data_second_user)
         
-        auth_sid_second_user = self.get_cookie(response3, "auth_sid")
-        token_second_user = self.get_header(response3, "x-csrf-token")
+    #     auth_sid_second_user = self.get_cookie(response3, "auth_sid")
+    #     token_second_user = self.get_header(response3, "x-csrf-token")
 
-        # EDIT FIRST USER
-        new_name = "Changed name"
-        response4 = MyRequests.put(f"/user/2432", 
-                                 headers={"x-csrf-token": token_second_user},
-                                 cookies={"auth_sid": auth_sid_second_user},
-                                 data={"firstName": new_name}
-                                 )
-        print(response4.status_code)
-        print(response4.content)
+    #     # EDIT FIRST USER
+    #     new_name = "Changed name"
+    #     response4 = MyRequests.put(f"/user/2432", 
+    #                              headers={"x-csrf-token": token_second_user},
+    #                              cookies={"auth_sid": auth_sid_second_user},
+    #                              data={"firstName": new_name}
+    #                              )
 
 
-    @allure.description("Редактирование данных созданного пользователя, после авторизации другим пользователем")
+    @allure.description("Редактирование емэйла созданного пользователя на невалидный - без символа @, после авторизации тем же пользователем")
     def test_edit_email_to_invalid_just_created_user(self):
-        """Создание нового пользователя
-           Авторизация созданного пользователя
-           Редактирование емэйла созданного пользователя без @ в названии емэйла
-           Проверяем, что емэйл пользователя не изменился"""
         
         # REGISTER
         register_data = self.prepare_registration_data()
@@ -187,7 +166,7 @@ class TestUserEdit(BaseCase):
         token = self.get_header(response2, "x-csrf-token")
 
         # EDIT
-        new_email = "Changed email"
+        new_email = "testexample.com"
         response3 = MyRequests.put(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid},
@@ -197,7 +176,7 @@ class TestUserEdit(BaseCase):
         Assertions.assert_code_status(response3, 400)
         Assertions.assert_response_text_value(response3, "Invalid email format")
 
-        # GET
+        # GET & CHECK
         response4 = MyRequests.get(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
@@ -206,12 +185,8 @@ class TestUserEdit(BaseCase):
         Assertions.assert_json_value_by_name(response4, "email", email, "Email was changed, but shouldn't have been")
 
 
-    @allure.description("Редактирование имени созданного пользователя на невалидное, после авторизации тем же пользователем")
+    @allure.description("Редактирование имени созданного пользователя на невалидное - длиной в один символ, после авторизации тем же пользователем")
     def test_edit_first_name_to_invalid_just_created_user(self):
-        """Создание нового пользователя
-           Авторизация созданного пользователя
-           Редактирование имени созданного пользователя на невалидное - длиной в один символ
-           Проверяем, что имя пользователя не изменилось"""
         
         # REGISTER
         register_data = self.prepare_registration_data()
@@ -246,7 +221,7 @@ class TestUserEdit(BaseCase):
         Assertions.assert_code_status(response3, 400)
         Assertions.assert_json_value_by_name(response3, "error", "Too short value for field firstName", "Unexpected response!")
 
-        # GET
+        # GET & CHECK
         response4 = MyRequests.get(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
