@@ -8,4 +8,4 @@ services:
     environment:
       - ENV=dev
     volumes:
-      - .:/4. Creating framework. Running in Docker/  
+      - .:/4. Creating framework. Running in Docker/
