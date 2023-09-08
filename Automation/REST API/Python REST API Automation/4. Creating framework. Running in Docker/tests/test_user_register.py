@@ -19,6 +19,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание нового пользователя")
+    @pytest.mark.positive
     def test_create_user_successfully(self):
         data = self.prepare_registration_data()
         response = MyRequests.post("/user/", data=data)
@@ -28,6 +29,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание пользователя с существующим емэйлом")
+    @pytest.mark.negative
     def test_create_user_with_existing_email(self):
         email = "vinkotov@example.com"
         data = self.prepare_registration_data(email=email)
@@ -38,6 +40,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание пользователя с невалидным email - без символа @")
+    @pytest.mark.negative
     def test_create_user_with_invalid_email(self):
         email = "testexample.com"
         data = self.prepare_registration_data(email=email)
@@ -48,6 +51,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание пользователя без указания одного из полей")
+    @pytest.mark.negative
     @pytest.mark.parametrize("password, username, firstname, lastname, email", user_data)
     def test_create_user_without_specifying_one_of_fields(self, password, username, firstname, lastname, email):
         data = {
@@ -65,6 +69,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание пользователя с очень коротким именем в один символ")
+    @pytest.mark.negative
     def test_create_user_with_short_name(self):
         firstName = "x"
         data = self.prepare_registration_data(firstName=firstName)
@@ -75,6 +80,7 @@ class TestUserRegister(BaseCase):
 
 
     @allure.description("Создание пользователя с очень длинным именем - длиннее 250 символов")
+    @pytest.mark.negative
     def test_create_user_with_long_name(self):
         firstName = f"{''.join(__import__('random').choice(__import__('string').ascii_letters) for _ in range(251))}"
         data= self.prepare_registration_data(firstName=firstName)
