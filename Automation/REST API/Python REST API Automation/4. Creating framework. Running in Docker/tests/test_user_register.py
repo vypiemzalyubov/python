@@ -18,8 +18,8 @@ class TestUserRegister(BaseCase):
     ]
 
 
+    @allure.description("Создание нового пользователя")
     def test_create_user_successfully(self):
-        """Создание нового пользователя"""
         data = self.prepare_registration_data()
         response = MyRequests.post("/user/", data=data)
 
@@ -27,8 +27,8 @@ class TestUserRegister(BaseCase):
         Assertions.assert_json_has_key(response, "id")
 
 
+    @allure.description("Создание пользователя с существующим емэйлом")
     def test_create_user_with_existing_email(self):
-        """Создание пользователя с существующим емэйлом"""
         email = "vinkotov@example.com"
         data = self.prepare_registration_data(email=email)
         response = MyRequests.post("/user/", data=data)
@@ -37,8 +37,8 @@ class TestUserRegister(BaseCase):
         Assertions.assert_response_text_value(response, f"Users with email '{email}' already exists")
 
 
+    @allure.description("Создание пользователя с невалидным email - без символа @")
     def test_create_user_with_invalid_email(self):
-        """Создание пользователя с некорректным email - без символа @"""
         email = "testexample.com"
         data = self.prepare_registration_data(email=email)
         response = MyRequests.post("/user/", data=data)
@@ -47,9 +47,9 @@ class TestUserRegister(BaseCase):
         Assertions.assert_response_text_value(response, f"Invalid email format")
 
 
+    @allure.description("Создание пользователя без указания одного из полей")
     @pytest.mark.parametrize("password, username, firstname, lastname, email", user_data)
     def test_create_user_without_specifying_one_of_fields(self, password, username, firstname, lastname, email):
-        """Создание пользователя без указания одного из полей"""
         data = {
             "password": password,
             "username": username,
@@ -64,8 +64,8 @@ class TestUserRegister(BaseCase):
         Assertions.assert_response_text_value(response, f"The following required params are missed: {missing_param}")
 
 
+    @allure.description("Создание пользователя с очень коротким именем в один символ")
     def test_create_user_with_short_name(self):
-        """Создание пользователя с очень коротким именем в один символ"""
         firstName = "x"
         data = self.prepare_registration_data(firstName=firstName)
         response = MyRequests.post("/user/", data=data)
@@ -73,8 +73,9 @@ class TestUserRegister(BaseCase):
         Assertions.assert_code_status(response, 400)
         Assertions.assert_response_text_value(response, f"The value of 'firstName' field is too short")
 
+
+    @allure.description("Создание пользователя с очень длинным именем - длиннее 250 символов")
     def test_create_user_with_long_name(self):
-        """Создание пользователя с очень длинным именем - длиннее 250 символов"""
         firstName = f"{''.join(__import__('random').choice(__import__('string').ascii_letters) for _ in range(251))}"
         data= self.prepare_registration_data(firstName=firstName)
         response = MyRequests.post("/user/", data=data)
