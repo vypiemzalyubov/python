@@ -1,3 +1,4 @@
+import pytest
 import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
@@ -8,9 +9,9 @@ from lib.my_requests import MyRequests
 class TestUserGet(BaseCase):
 
 
+    @allure.description("Получение данных пользователя без авторизации. Получаем только username")
+    @pytest.mark.positive
     def test_get_user_details_not_auth(self):
-        """Получение данных пользователя без предварительной авторизации
-           Получаем только username"""
         response = MyRequests.get("/user/2")
         
         Assertions.assert_json_has_key(response, "username")
@@ -19,10 +20,9 @@ class TestUserGet(BaseCase):
         Assertions.assert_json_has_not_key(response, "lastName")
 
 
+    @allure.description("Получение данных авторизованного пользователя после авторизации этого пользователя. Получаем все поля")
+    @pytest.mark.positive
     def test_get_user_details_auth_as_same_user(self):
-        """Авторизация и получение данных авторизованного пользователя
-           Авторизовываемся пользователем с ID 2 и делаем запрос для получения данных того же пользователя 
-           Получаем все поля"""
         data = {
             "email": "vinkotov@example.com",
             "password": "1234"
@@ -40,11 +40,10 @@ class TestUserGet(BaseCase):
         
         Assertions.assert_json_has_keys(response2, expected_fields)
 
-    
+
+    @allure.description("Получение данных неавторизованного пользователя авторизованным пользователем. Получаем только username")
+    @pytest.mark.positive    
     def test_get_user_details_auth_as_another_user(self):
-        """Получение данных неавторизованного пользователя авторизованным пользователем
-           Авторизовываемся пользователем с ID 2 и делаем запрос для получения данных неавторизованного пользователя
-           Получаем только username"""
         data = {
             "email": "vinkotov@example.com",
             "password": "1234"
