@@ -1,8 +1,8 @@
+import pytest
 import allure
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
-import time
 
 
 @allure.epic("User editing cases")
@@ -10,6 +10,7 @@ class TestUserEdit(BaseCase):
 
 
     @allure.description("Редактирование данных созданного пользователя, после авторизации тем же пользователем")
+    @pytest.mark.positive
     def test_edit_just_created_user(self):
 
         # REGISTER
@@ -54,6 +55,7 @@ class TestUserEdit(BaseCase):
 
 
     @allure.description("Редактирование данных созданного пользователя без авторизации")
+    @pytest.mark.negative
     def test_edit_created_user_by_unauthorized_user(self):
 
         # REGISTER
@@ -97,6 +99,7 @@ class TestUserEdit(BaseCase):
 
 
     @allure.description("Редактирование данных созданного пользователя, будучи авторизованным другим пользователем")
+    @pytest.mark.negative
     def test_edit_new_created_user_by_another_authorized_user(self):
         
         # REGISTER FIRST USER
@@ -161,6 +164,7 @@ class TestUserEdit(BaseCase):
 
 
     @allure.description("Редактирование емэйла созданного пользователя на невалидный - без символа @, после авторизации тем же пользователем")
+    @pytest.mark.negative
     def test_edit_email_to_invalid_just_created_user(self):
         
         # REGISTER
@@ -205,6 +209,7 @@ class TestUserEdit(BaseCase):
 
 
     @allure.description("Редактирование имени созданного пользователя на невалидное - длиной в один символ, после авторизации тем же пользователем")
+    @pytest.mark.negative
     def test_edit_first_name_to_invalid_just_created_user(self):
         
         # REGISTER
