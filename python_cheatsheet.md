@@ -68,3 +68,7 @@
 - [Собеседование Python. Разбор вопросов. Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
 - [Пошаговая настройка запуска автотестов в Github Actions. Python, Pytest, Selenium. Senior Tester | Евгений Окулик](https://youtu.be/E0nbcCZSI7g?si=kXLJc6736wDnkUQk)
 - [Публикация Allure отчетов на GitHub pages с сохранением истории запусков и трендом. Senior Tester | Евгений Окулик](https://youtu.be/HLbSSVBu5qI?si=syLr-tI_bVqT-TgM)
+
+## Test API
+- [Swagger Petstore](https://petstore.swagger.io/)
+- [Send Request](https://send-request.me/)
