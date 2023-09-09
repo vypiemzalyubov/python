@@ -30,14 +30,6 @@
 ## Python Automation Testing
 
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
-- [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
-- [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
-- [Venv, Poetry и управление зависимостями проекта](https://github.com/vypiemzalyubov/python/wiki/Venv,-Poetry-%D0%B8-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
-- [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
-- [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
-- [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
-- [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md) 
-- [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
@@ -48,6 +40,15 @@
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
 - [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
+- Wiki
+  - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
+  - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
+  - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
+  - [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
+  - [Venv, Poetry и управление зависимостями проекта](https://github.com/vypiemzalyubov/python/wiki/Venv,-Poetry-%D0%B8-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
+  - [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
+  - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
+  - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)  
 
 ## Полезные материалы
 
@@ -68,3 +69,8 @@
 - [Собеседование Python. Разбор вопросов. Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
 - [Пошаговая настройка запуска автотестов в Github Actions. Python, Pytest, Selenium. Senior Tester | Евгений Окулик](https://youtu.be/E0nbcCZSI7g?si=kXLJc6736wDnkUQk)
 - [Публикация Allure отчетов на GitHub pages с сохранением истории запусков и трендом. Senior Tester | Евгений Окулик](https://youtu.be/HLbSSVBu5qI?si=syLr-tI_bVqT-TgM)
+
+## Test API
+- [Swagger Petstore](https://petstore.swagger.io/)
+- [Send Request](https://send-request.me/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
