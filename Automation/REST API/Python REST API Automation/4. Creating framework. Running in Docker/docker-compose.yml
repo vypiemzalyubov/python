@@ -9,3 +9,6 @@ services:
       - ENV=dev
     volumes:
       - .:/4. Creating framework. Running in Docker/
+
+
+# docker-compose up --build

@@ -5,7 +5,7 @@ from lib.assertions import Assertions
 from lib.my_requests import MyRequests
 
 
-@allure.epic("Authorization cases")
+@allure.epic("User authorization cases")
 class TestUserAuth(BaseCase):
 
 

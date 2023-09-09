@@ -5,7 +5,7 @@ from lib.assertions import Assertions
 from lib.my_requests import MyRequests
 
 
-@allure.epic("Registration cases")
+@allure.epic("User registration cases")
 class TestUserRegister(BaseCase):
 
 

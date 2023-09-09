@@ -4,3 +4,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 ENV ENV=dev
 CMD python -m pytest -s --alluredir=allure_results/ tests/*
+
+
+# docker build -t pytest-runner .
+# docker run pytest-runner
