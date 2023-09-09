@@ -72,3 +72,4 @@
 ## Test API
 - [Swagger Petstore](https://petstore.swagger.io/)
 - [Send Request](https://send-request.me/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
