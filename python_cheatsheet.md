@@ -40,7 +40,7 @@
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
 - [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
-- xWiki
+- Wiki
   - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
   - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
   - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
