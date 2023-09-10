@@ -38,7 +38,7 @@
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - Wiki
-  - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
+  - [Python и API: превосходное комбо для автоматизации работы с публичными данными](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API:-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B1%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8)
   - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
   - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
   - [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
