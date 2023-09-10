@@ -9,7 +9,6 @@
 - [**Automation**](https://github.com/vypiemzalyubov/python/tree/main/Automation)
   - [**REST API**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API)
     - [**Python REST API Automation / Автоматизация REST API на Python**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation)
-    - [**SolveMe**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/SolveMe)
   - [**Selenium**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium)
     - [**Automation Craft**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium/Automation%20Craft)
     - [**Test automation using Selenium and Python / Автоматизация тестирования с помощью Selenium и Python**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python)
