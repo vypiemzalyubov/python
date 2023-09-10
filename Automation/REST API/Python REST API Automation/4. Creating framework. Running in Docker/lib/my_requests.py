@@ -55,6 +55,6 @@ class MyRequests:
             
             return response
         except requests.exceptions.Timeout:
-            raise Exception("Request timed out. The server is not responding")        
+            raise Exception("Request timed out. The server is not responding")
         except requests.exceptions.RequestException as e:
-            return e.response
+            raise Exception(f"Request error: {e}")
