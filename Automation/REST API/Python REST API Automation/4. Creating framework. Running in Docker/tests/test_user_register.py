@@ -1,5 +1,6 @@
 import pytest
 import allure
+from lib.schema import schema_user_register
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
@@ -25,6 +26,7 @@ class TestUserRegister(BaseCase):
         response = MyRequests.post("/user/", data=data)
 
         Assertions.assert_code_status(response, 200)
+        Assertions.assert_validate_json_schema(response, schema_user_register)
         Assertions.assert_json_has_key(response, "id")
 
 

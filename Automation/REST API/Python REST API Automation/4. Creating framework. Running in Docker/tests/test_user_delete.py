@@ -1,5 +1,6 @@
 import pytest
 import allure
+from lib.schema import schema_user_register, schema_user_info
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
@@ -44,8 +45,9 @@ class TestUserDelete(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
-
+        
         user_id = self.get_json_value(response1, "id")
 
         # LOGIN
@@ -54,7 +56,7 @@ class TestUserDelete(BaseCase):
             "password": register_data["password"]
         }        
         response2 = MyRequests.post("/user/login", data=login_data)
-
+        
         auth_sid = self.get_cookie(response2, "auth_sid")
         token = self.get_header(response2, "x-csrf-token")
 
@@ -87,6 +89,7 @@ class TestUserDelete(BaseCase):
         response_register1 = MyRequests.post("/user/", data=register_data1)
 
         Assertions.assert_code_status(response_register1, 200)
+        Assertions.assert_validate_json_schema(response_register1, schema_user_register)
         Assertions.assert_json_has_key(response_register1, "id")
 
         first_name1 = register_data1["firstName"]
@@ -99,6 +102,7 @@ class TestUserDelete(BaseCase):
         response_register2 = MyRequests.post("/user/", data=register_data2)
 
         Assertions.assert_code_status(response_register2, 200)
+        Assertions.assert_validate_json_schema(response_register2, schema_user_register)
         Assertions.assert_json_has_key(response_register2, "id")
 
         password2 = register_data2["password"]
@@ -137,5 +141,6 @@ class TestUserDelete(BaseCase):
                                  headers={"x-csrf-token": token2},
                                  cookies={"auth_sid": auth_sid2}
                                  )
-
+        
+        Assertions.assert_validate_json_schema(response_check, schema_user_info)
         Assertions.assert_json_value_by_name(response_check, "id", user_id1, "User was deleted, but shouldn't have been")

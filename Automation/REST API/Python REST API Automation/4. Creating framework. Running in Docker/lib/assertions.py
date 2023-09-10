@@ -1,6 +1,8 @@
 import allure
 import json
+import jsonschema
 from requests import Response
+from jsonschema import validate
 
 
 class Assertions:
@@ -60,3 +62,16 @@ class Assertions:
     def assert_response_text_value(response: Response, expexted_value: str) -> None:
         response_text = response.content.decode("utf-8")
         assert response_text == expexted_value, f"Unexpected response content: {response.content}"
+
+
+    @staticmethod
+    @allure.step("Валидация JSON схемы")
+    def assert_validate_json_schema(response: Response, schema: dict) -> None:
+        try:
+            response_as_dict = response.json()
+        except json.JSONDecodeError:
+            assert False, f"Response is not JSON format. Response text is '{response.text}'"
+        try:
+            validate(instance=response_as_dict, schema=schema)
+        except jsonschema.exceptions.ValidationError as e:
+            assert False, f"JSON Schema validation failed: {e}"

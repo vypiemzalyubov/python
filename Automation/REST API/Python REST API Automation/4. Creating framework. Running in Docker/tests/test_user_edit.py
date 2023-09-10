@@ -1,5 +1,6 @@
 import pytest
 import allure
+from lib.schema import schema_user_register, schema_user_info
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
@@ -18,6 +19,7 @@ class TestUserEdit(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
 
         email = register_data["email"]
@@ -44,13 +46,14 @@ class TestUserEdit(BaseCase):
                                  )
         
         Assertions.assert_code_status(response3, 200)
-
+        
         # GET & CHECK
         response4 = MyRequests.get(f"/user/{user_id}", 
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
                                  )
         
+        Assertions.assert_validate_json_schema(response4, schema_user_info)
         Assertions.assert_json_value_by_name(response4, "firstName", new_name, "Wrong name of the user after edit")
 
 
@@ -63,6 +66,7 @@ class TestUserEdit(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
 
         email = register_data["email"]
@@ -95,6 +99,7 @@ class TestUserEdit(BaseCase):
                                  cookies={"auth_sid": auth_sid}
                                  )
         
+        Assertions.assert_validate_json_schema(response4, schema_user_info)
         Assertions.assert_json_value_by_name(response4, "lastName", last_name, "Last name was changed, but shouldn't have been")
 
 
@@ -108,6 +113,7 @@ class TestUserEdit(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data1)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
 
         first_name1 = register_data1["firstName"]
@@ -120,6 +126,7 @@ class TestUserEdit(BaseCase):
         response2 = MyRequests.post("/user/", data=register_data2)
 
         Assertions.assert_code_status(response2, 200)
+        Assertions.assert_validate_json_schema(response2, schema_user_register)
         Assertions.assert_json_has_key(response2, "id")
 
         password2 = register_data2["password"]
@@ -160,6 +167,7 @@ class TestUserEdit(BaseCase):
                                  cookies={"auth_sid": auth_sid2}
                                  )
 
+        Assertions.assert_validate_json_schema(response_check, schema_user_info)
         Assertions.assert_json_value_by_name(response_check, "firstName", first_name1, "First name was changed, but shouldn't have been")
 
 
@@ -172,6 +180,7 @@ class TestUserEdit(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
 
         email = register_data["email"]
@@ -204,7 +213,8 @@ class TestUserEdit(BaseCase):
                                  headers={"x-csrf-token": token},
                                  cookies={"auth_sid": auth_sid}
                                  )
-
+        
+        Assertions.assert_validate_json_schema(response4, schema_user_info)
         Assertions.assert_json_value_by_name(response4, "email", email, "Email was changed, but shouldn't have been")
 
 
@@ -217,6 +227,7 @@ class TestUserEdit(BaseCase):
         response1 = MyRequests.post("/user/", data=register_data)
 
         Assertions.assert_code_status(response1, 200)
+        Assertions.assert_validate_json_schema(response1, schema_user_register)
         Assertions.assert_json_has_key(response1, "id")
 
         first_name = register_data["firstName"]
@@ -251,4 +262,5 @@ class TestUserEdit(BaseCase):
                                  cookies={"auth_sid": auth_sid}
                                  )
 
+        Assertions.assert_validate_json_schema(response4, schema_user_info)
         Assertions.assert_json_value_by_name(response4, "firstName", first_name, "First name was changed, but shouldn't have been")

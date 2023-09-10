@@ -1,5 +1,6 @@
 import pytest
 import allure
+from lib.schema import schema_user_register, schema_user_info, schema_unauthorized_user
 from lib.base_case import BaseCase
 from lib.assertions import Assertions
 from lib.my_requests import MyRequests
@@ -14,6 +15,7 @@ class TestUserGet(BaseCase):
     def test_get_user_details_not_auth(self):
         response = MyRequests.get("/user/2")
         
+        Assertions.assert_validate_json_schema(response, schema_unauthorized_user)
         Assertions.assert_json_has_key(response, "username")
         Assertions.assert_json_has_not_key(response, "email")
         Assertions.assert_json_has_not_key(response, "firstName")
@@ -38,6 +40,7 @@ class TestUserGet(BaseCase):
                                  )
         expected_fields = ["username", "email", "firstName", "lastName"]
         
+        Assertions.assert_validate_json_schema(response2, schema_user_info)
         Assertions.assert_json_has_keys(response2, expected_fields)
 
 
@@ -57,6 +60,7 @@ class TestUserGet(BaseCase):
                                  cookies={"auth_sid": auth_sid}
                                  )
 
+        Assertions.assert_validate_json_schema(response2, schema_unauthorized_user)
         Assertions.assert_json_has_key(response2, "username")
         Assertions.assert_json_has_not_key(response2, "email")
         Assertions.assert_json_has_not_key(response2, "firstName")
