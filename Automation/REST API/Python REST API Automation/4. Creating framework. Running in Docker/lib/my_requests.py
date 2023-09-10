@@ -53,8 +53,6 @@ class MyRequests:
             
             Logger.add_response(response)
             
-            response.raise_for_status()
-            
             return response
         except requests.exceptions.RequestException as e:
-            raise Exception(f"Request error: {e}")
+            return e.response
