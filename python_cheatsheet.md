@@ -34,8 +34,7 @@
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
-- [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)  
-- [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
+- [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - Wiki
@@ -62,6 +61,7 @@
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
+- [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 
 ## YouTube
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
