@@ -30,16 +30,14 @@
 ## Python Automation Testing
 
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
+- [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)  
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
-- [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
-- [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
-- [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
 - Wiki
   - [Python и API](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API)
   - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
@@ -48,7 +46,13 @@
   - [Venv, Poetry и управление зависимостями проекта](https://github.com/vypiemzalyubov/python/wiki/Venv,-Poetry-%D0%B8-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
   - [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
   - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
-  - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)  
+  - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
+- Официальная документация
+  - [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
+  - [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
+  - [Requests: HTTP for Humans](https://requests.readthedocs.io/en/latest/)
+  - [HTTPX](https://www.python-httpx.org/)
+  - [Pydantic](https://docs.pydantic.dev/latest/)
 
 ## Полезные материалы
 
