@@ -39,17 +39,22 @@ class MyRequests:
 
         Logger.add_request(url, data, headers, cookies, method)
 
-        if method == "GET":
-            response = requests.get(url, params=data, headers=headers, cookies=cookies)
-        elif method == "POST":
-            response = requests.post(url, data=data, headers=headers, cookies=cookies)
-        elif method == "PUT":
-            response = requests.put(url, data=data, headers=headers, cookies=cookies)
-        elif method == "DELETE":
-            response = requests.delete(url, data=data, headers=headers, cookies=cookies)
-        else:
-            raise Exception(f"Bad HTTP method '{method}' was received")
-        
-        Logger.add_response(response)
-
-        return response
+        try:
+            if method == "GET":
+                response = requests.get(url, params=data, headers=headers, cookies=cookies)
+            elif method == "POST":
+                response = requests.post(url, data=data, headers=headers, cookies=cookies)
+            elif method == "PUT":
+                response = requests.put(url, data=data, headers=headers, cookies=cookies)
+            elif method == "DELETE":
+                response = requests.delete(url, data=data, headers=headers, cookies=cookies)
+            else:
+                raise Exception(f"Bad HTTP method '{method}' was received")
+            
+            Logger.add_response(response)
+            
+            response.raise_for_status()
+            
+            return response
+        except requests.exceptions.RequestException as e:
+            raise Exception(f"Request error: {e}")
