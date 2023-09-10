@@ -77,6 +77,7 @@
 - [Публикация Allure отчетов на GitHub pages с сохранением истории запусков и трендом. Senior Tester | Евгений Окулик](https://youtu.be/HLbSSVBu5qI?si=syLr-tI_bVqT-TgM)
 
 ## Test API
+- [ReqRes](https://reqres.in/)
 - [Swagger Petstore](https://petstore.swagger.io/)
 - [Send Request](https://send-request.me/)
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
