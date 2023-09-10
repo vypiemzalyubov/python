@@ -31,6 +31,7 @@
 
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
+- [Playwright: полный гайд + FAQ](https://testengineer.ru/playwright-tutorial/)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
 - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
