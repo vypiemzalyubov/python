@@ -82,3 +82,12 @@
 - [Send Request](https://send-request.me/)
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
 - [httpbin.org](https://httpbin.org/#/)
+
+## Курсы
+- ["Поколение Python": курс для начинающих](https://stepik.org/course/58852/info)
+- ["Поколение Python": курс для продвинутых](https://stepik.org/course/68343/info)
+- [Инди-курс программирования на Python](https://stepik.org/course/63085/info)
+- [Программирование на Python](https://stepik.org/course/67/info)
+- [Python: основы и применение](https://stepik.org/course/512/info)
+- [Добрый, добрый Python - обучающий курс от Сергея Балакирева](https://stepik.org/course/100707/info)
+- [Регулярные выражения в Python](https://stepik.org/course/107335/info)
