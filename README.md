@@ -4,8 +4,8 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100"/>
 </div>
 
+### Navigation
 ---
-
 - [**Automation**](https://github.com/vypiemzalyubov/python/tree/main/Automation)
   - [**REST API**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API)
     - [**Python REST API Automation / Автоматизация REST API на Python**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation)
@@ -20,4 +20,4 @@
   - [**Python Indie Programming Course / Инди-курс программирования на Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Indie%20Programming%20Course)
   - [**Regular Expressions in Python / Регулярные выражения в Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Regular%20Expressions%20in%20Python)
 ---
-**Python knowledge base:** [Wiki](https://github.com/vypiemzalyubov/python/wiki)
+### :rocket: Python knowledge base: [Wiki](https://github.com/vypiemzalyubov/python/wiki)
