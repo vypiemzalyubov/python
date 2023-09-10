@@ -41,18 +41,20 @@ class MyRequests:
 
         try:
             if method == "GET":
-                response = requests.get(url, params=data, headers=headers, cookies=cookies)
+                response = requests.get(url, params=data, headers=headers, cookies=cookies, timeout=10)
             elif method == "POST":
-                response = requests.post(url, data=data, headers=headers, cookies=cookies)
+                response = requests.post(url, data=data, headers=headers, cookies=cookies, timeout=10)
             elif method == "PUT":
-                response = requests.put(url, data=data, headers=headers, cookies=cookies)
+                response = requests.put(url, data=data, headers=headers, cookies=cookies, timeout=10)
             elif method == "DELETE":
-                response = requests.delete(url, data=data, headers=headers, cookies=cookies)
+                response = requests.delete(url, data=data, headers=headers, cookies=cookies, timeout=10)
             else:
                 raise Exception(f"Bad HTTP method '{method}' was received")
             
             Logger.add_response(response)
             
             return response
+        except requests.exceptions.Timeout:
+            raise Exception("Request timed out. The server is not responding")        
         except requests.exceptions.RequestException as e:
             return e.response
