@@ -4,8 +4,8 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" width="100"/>
 </div>
 
-### Navigation
 ---
+
 - [**Automation**](https://github.com/vypiemzalyubov/python/tree/main/Automation)
   - [**REST API**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API)
     - [**Python REST API Automation / Автоматизация REST API на Python**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation)
