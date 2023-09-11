@@ -1,10 +1,13 @@
 FROM python
+
 WORKDIR /4. Creating framework. Running in Docker
+
+VOLUME /allure-results
+
 COPY requirements.txt .
+
 RUN pip install -r requirements.txt
-ENV ENV=dev
-CMD python -m pytest -s --alluredir=allure_results/ tests/*
 
+COPY . .
 
-# docker build -t pytest-runner .
-# docker run pytest-runner
+CMD python -m pytest -s -v tests/* --alluredir=allure-results/
