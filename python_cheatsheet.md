@@ -30,8 +30,7 @@
 ## Python Automation Testing
 
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
-- [Python Testing с pytest. Начало работы с pytest. Главы 1-7](https://habr.com/ru/articles/448782/)
-- [Playwright: полный гайд + FAQ](https://testengineer.ru/playwright-tutorial/)
+- [Python Testing with pytest | Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
 - [Как правильно писать UI авто тесты на Python](https://habr.com/ru/articles/708932/)
 - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
@@ -40,6 +39,7 @@
 - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
+- [Playwright: полный гайд + FAQ](https://testengineer.ru/playwright-tutorial/)
 - Wiki
   - [Python и API: превосходное комбо для автоматизации работы с публичными данными](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API:-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B1%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8)
   - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
@@ -58,7 +58,7 @@
 
 ## Полезные материалы
 
-- [Самоучитель по Python для начинающих. Proglib](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-1-osobennosti-sfery-primeneniya-ustanovka-onlayn-ide-2022-09-26)
+- [Самоучитель по Python для начинающих | Proglib](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-1-osobennosti-sfery-primeneniya-ustanovka-onlayn-ide-2022-09-26)
 - [ТОП 15 трюков в Python 3](https://github.com/vypiemzalyubov/python/wiki/%D0%A2%D0%9E%D0%9F-15-%D1%82%D1%80%D1%8E%D0%BA%D0%BE%D0%B2-%D0%B2-Python-3)
 - [20 важных концепций в Python, которые помогут вам стать более эффективным разработчиком](https://github.com/vypiemzalyubov/python/wiki/20-%D0%B2%D0%B0%D0%B6%D0%BD%D1%8B%D1%85-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D0%B8%D0%B9-%D0%B2-Python,-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%B2%D0%B0%D0%BC-%D1%81%D1%82%D0%B0%D1%82%D1%8C-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%8D%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%BC-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC)
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
