@@ -1,5 +1,9 @@
 ## Python CheatSheet
 
+### [Python Automation Testing](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#python-automation-testing) | [Полезные материалы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B) | [YouTube](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#youtube) | [Test API](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#test-api) | [Курсы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BA%D1%83%D1%80%D1%81%D1%8B)
+
+## Основы
+
 1. [Ввод, вывод данных](https://github.com/vypiemzalyubov/python/wiki/1.-%D0%92%D0%B2%D0%BE%D0%B4,-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
 2. [Типы данных](https://github.com/vypiemzalyubov/python/wiki/2.-%D0%A2%D0%B8%D0%BF%D1%8B-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
 3. [Переменные](https://github.com/vypiemzalyubov/python/wiki/3.-%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5)
