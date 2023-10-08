@@ -144,6 +144,7 @@
 - [Template Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/template_strings.py)
 - [Training JS #18: Methods of String object--concat() split() and its good friend join()](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/training%20js_18_methods_of_string_object_concat_split_and_its_good_friend_join.py)
 - [Unexpected parsing](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/unexpected_parsing.py)
+- [validate code with simple regex](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/validate_code_with_simple_regex.py)
 - [Volume of a Cuboid](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/volume_of_a_cuboid.py)
 - [Welcome to the City](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/welcome_to_the_city.py)
 - [Who ate the cookie?](https://github.com/vypiemzalyubov/python/blob/main/Codewars/8%20kyu/who_ate_the_cookie.py)
