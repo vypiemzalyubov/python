@@ -34,16 +34,18 @@
 ## Python Automation Testing
 
 - [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
-- [Python Testing with pytest | Главы 1-7](https://habr.com/ru/articles/448782/)
+- [Python Testing with pytest by Brian Okken | Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
-- [Как правильно писать UI авто тесты на Python](https://habr.com/ru/articles/708932/)
-- [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
-- [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)
-- [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
-- [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - [Playwright: полный гайд + FAQ](https://testengineer.ru/playwright-tutorial/)
+- Примеры проектов
+  - [Как правильно писать UI авто тесты на Python](https://habr.com/ru/articles/708932/)
+  - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
+  - [Разбираемся с основами автотестирования: пошаговая инструкция по созданию собственного фреймворка для проверки API](https://habr.com/ru/companies/petrovich/articles/740050/)
+  - [Пишем АПИ автотесты на Python по шагам](https://habr.com/ru/articles/765512/)
+  - [Переписываем API тесты](https://habr.com/ru/articles/669880/)  
+  - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - Wiki
   - [Python и API: превосходное комбо для автоматизации работы с публичными данными](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API:-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B1%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8)
   - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
