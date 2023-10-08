@@ -69,6 +69,7 @@
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
+- [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
 
 ## YouTube
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
