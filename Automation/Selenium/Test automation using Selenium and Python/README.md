@@ -6,6 +6,8 @@
 
 Это базовый курс для начинающих тестировщиков, который научит вас писать автоматизированные UI-тесты на языке программирования Python с помощью библиотеки Selenium. А еще мы рассмотрим популярные фреймворки и хорошие практики написания автотестов
 
+---
+
 - [**Знакомимся с Selenium**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/1.%20Introducing%20Selenium)
 - [**Полезные методы Selenium**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/2.%20Useful%20Selenium%20methods)
 - [**Тестовые фреймворки**](https://github.com/vypiemzalyubov/python/tree/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/3.%20Testing%20Frameworks)
