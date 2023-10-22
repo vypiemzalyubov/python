@@ -6,6 +6,8 @@
 
 Курс с кучей тренировочных задач, удобный как для самостоятельного изучения, так и для работы в группе в рамках внеурочной деятельности.
 
+---
+
 - [**Ввод-вывод данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/1.%20Data%20input-output)
 - [**Условный оператор**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/2.%20Conditional%20operator)
 - [**Типы данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/3.%20Data%20types)
