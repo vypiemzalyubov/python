@@ -16,3 +16,8 @@
 - Писать простые и комплексные API-тесты
 - Создавать отчёты в **Allure**
 - Запускать тестирование API в **Docker**
+---
+- [**Настройка окружения, запуск первой программы**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation/1.%20Setting%20up%20the%20environment)
+- [**Создание простых запросов к API**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation/2.%20Simple%20API%20queries)
+- [**Интеграция pytest в проект**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation/3.%20Pytest)
+- [**Создание фреймворка и запуск в Docker**](https://github.com/vypiemzalyubov/python/tree/main/Automation/REST%20API/Python%20REST%20API%20Automation/4.%20Creating%20framework.%20Running%20in%20Docker)
