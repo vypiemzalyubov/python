@@ -8,6 +8,8 @@
 
 Курс представляет собой серию последовательных видеоуроков, где подробно и простым языком объясняется информация. После каждого урока Вас ждут практические задания, чтобы закрепить материал.
 
+---
+
 - [**Первые шаги**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Indie%20Programming%20Course/01.%20First%20Steps)
 - [**Строки и списки**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Indie%20Programming%20Course/02.%20Strings%20and%20Lists)
 - [**Условия и циклы**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Indie%20Programming%20Course/03.%20Conditions%20and%20Cycles)
