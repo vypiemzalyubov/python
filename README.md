@@ -15,8 +15,8 @@
 - [**Codewars**](https://github.com/vypiemzalyubov/python/tree/main/Codewars)
 - [**RedRover.school**](https://github.com/vypiemzalyubov/python/tree/main/RedRover.school)
 - [**Stepik**](https://github.com/vypiemzalyubov/python/tree/main/Stepik)
+  - [**Indie Python Programming Course | Инди-курс программирования на Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Indie%20Python%20Programming%20Course)
   - [**Python Generation Course for Beginners | "Поколение Python": курс для начинающих**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners)
-  - [**Python Indie Programming Course | Инди-курс программирования на Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Indie%20Programming%20Course)
   - [**Python basics and applications | Python: основы и применение**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20basics%20and%20applications)
   - [**Regular Expressions in Python | Регулярные выражения в Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Regular%20Expressions%20in%20Python)
 ---
