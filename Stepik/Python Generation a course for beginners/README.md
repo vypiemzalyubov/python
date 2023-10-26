@@ -8,11 +8,11 @@
 
 ---
 
-- [**Ввод-вывод данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/1.%20Data%20input-output)
-- [**Условный оператор**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/2.%20Conditional%20operator)
-- [**Типы данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/3.%20Data%20types)
-- [**Циклы for и while**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/4.%20For%20and%20while%20loops)
-- [**Строковый тип данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/5.%20String%20data%20type)
-- [**Списки**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/6.%20Lists)
-- [**Функции**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/7.%20Functions)
-- [**Работа над мини-проектом**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20Course%20for%20Beginners/8.%20Working%20on%20a%20mini-project)
+- [**Ввод-вывод данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/1.%20Data%20input-output)
+- [**Условный оператор**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/2.%20Conditional%20operator)
+- [**Типы данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/3.%20Data%20types)
+- [**Циклы for и while**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/4.%20For%20and%20while%20loops)
+- [**Строковый тип данных**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/5.%20String%20data%20type)
+- [**Списки**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/6.%20Lists)
+- [**Функции**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/7.%20Functions)
+- [**Работа над мини-проектом**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20beginners/8.%20Working%20on%20a%20mini-project)
