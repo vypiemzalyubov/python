@@ -9,5 +9,5 @@
 ---
 
 - [**Базовые принципы языка Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20basics%20and%20applications/1.%20Basic%20principles%20of%20the%20Python%20language)
-- **Cтандартные средства языка Python**
+- [**Cтандартные средства языка Python**](https://github.com/vypiemzalyubov/python/blob/main/Stepik/Python%20basics%20and%20applications/2.%20Python%20standard%20tools/python_standart_tools.py)
 - **Применение Python: анализ текста**
