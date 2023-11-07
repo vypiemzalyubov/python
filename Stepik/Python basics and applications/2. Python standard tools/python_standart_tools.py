@@ -71,7 +71,7 @@ except AssertionError:
 # 
 # 
 # ...
-# По условию этого теста, Костя посмотрел на этот код, и сказал Антону, что исключение FileNotFoundError можно не ловить, ведь мы уже ловим OSError -- предок FileNotFoundError
+# По условию этого теста, Костя посмотрел на этот код, и сказал Антону, что исключение FileNotFoundError можно не ловить, ведь мы уже ловим OSError - предок FileNotFoundError
 
 exceptions = {}
 throwed_exceptions = []
@@ -119,3 +119,42 @@ class PositiveList(list):
             super().append(x)
         else:
             raise NonPositiveError
+        
+# В первой строке дано три числа, соответствующие некоторой дате date - год, месяц и день. Во второй строке дано одно число days - число дней.
+# Вычислите и выведите год, месяц и день даты, которая наступит, когда с момента исходной даты date пройдет число дней, равное days.
+# Примечание:
+# Для решения этой задачи используйте стандартный модуль datetime.
+# Вам будут полезны класс datetime.date для хранения даты и класс datetime.timedelta﻿ для прибавления дней к дате.
+
+from datetime import date, timedelta
+
+date = date(*list(map(int, input().split())))
+days = timedelta(days = int(input()))
+res = date + days
+print(res.year, res.month, res.day)
+
+# Алиса владеет интересной информацией, которую хочет заполучить Боб.
+# Алиса умна, поэтому она хранит свою информацию в зашифрованном файле.
+# У Алисы плохая память, поэтому она хранит все свои пароли в открытом виде в текстовом файле.
+# Бобу удалось завладеть зашифрованным файлом с интересной информацией и файлом с паролями, но он не смог понять какой из паролей ему нужен. Помогите ему решить эту проблему.
+# Алиса зашифровала свою информацию с помощью библиотеки simple-crypt.
+# Она представила информацию в виде строки, и затем записала в бинарный файл результат работы метода simplecrypt.encrypt.
+# Вам необходимо установить библиотеку simple-crypt, и с помощью метода simplecrypt.decrypt узнать, какой из паролей служит ключом для расшифровки файла с интересной информацией.
+# Ответом для данной задачи служит расшифрованная интересная информация Алисы.
+# 
+# Файл с информацией: encrypted.bin 
+# Файл с паролями: passwords.txt
+
+import simplecrypt
+
+with open('passwords.txt', 'r') as file_p:
+    passwords = file_p.read()
+
+with open('encrypted.bin', 'rb') as file_e:
+    encrypted = file_e.read()
+
+for password in passwords.split():
+    try:
+        print(simplecrypt.decrypt(password, encrypted).decode('utf-8'))
+    except simplecrypt.DecryptionException:
+        print(password, 'Incorrect')
