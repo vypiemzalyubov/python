@@ -213,3 +213,44 @@ for password in passwords.split():
 # 
 #     def __iter__(self):
 #         # возвращает итератор по результирующей последовательности
+
+class multifilter:
+
+    def judge_half(pos, neg):
+        return pos >= neg
+
+    def judge_any(pos, neg):
+        return pos >= 1
+
+    def judge_all(pos, neg):
+        return neg == 0
+
+    def __init__(self, iterable, *funcs, judge=judge_any):
+        self.iterable = iter(iterable)
+        self.funcs = funcs
+        self.judge = judge
+
+    def __iter__(self):
+        for elem in self.iterable:
+            pos, neg = 0, 0
+            for func in self.funcs:
+                if func(elem):
+                    pos += 1
+                else:
+                    neg += 1
+            if self.judge(pos, neg):
+                yield elem
+
+# Целое положительное число называется простым, если оно имеет ровно два различных делителя, то есть делится только на единицу и на само себя.
+# Например, число 2 является простым, так как делится только на 1 и 2. Также простыми являются, например, числа 3, 5, 31, и еще бесконечно много чисел.
+# Число 4, например, не является простым, так как имеет три делителя – 1, 2, 4. Также простым не является число 1, так как оно имеет ровно один делитель – 1.
+# Реализуйте функцию-генератор primes, которая будет генерировать простые числа в порядке возрастания, начиная с числа 2.
+
+from math import factorial
+
+def primes():
+    n = 2
+    while True:
+        if not (factorial(n - 1) + 1) % n:
+            yield n
+        n += 1
