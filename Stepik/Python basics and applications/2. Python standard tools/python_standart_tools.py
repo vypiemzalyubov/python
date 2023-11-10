@@ -272,3 +272,14 @@ def primes():
 
 with open('dataset_24465_4.txt', 'r') as f, open('result.txt', 'w') as res:
     res.writelines(f.readlines()[::-1])
+
+# Вам дана в архиве (main.zip) файловая структура, состоящая из директорий и файлов.
+# Вам необходимо распаковать этот архив, и затем найти в данной в файловой структуре все директории, в которых есть хотя бы один файл с расширением ".py". 
+# Ответом на данную задачу будет являться файл со списком таких директорий, отсортированных в лексикографическом порядке.
+
+import os
+
+with open('result.txt', 'a') as f:
+    for current_dir, dirs, files in os.walk('main'):
+        if list(filter(lambda x: x.endswith('.py'), files)):
+            f.write(f"{current_dir}\n")
