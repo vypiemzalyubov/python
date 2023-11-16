@@ -32,3 +32,25 @@ print(count)
 
 s, t = [input() for _ in range(2)]
 print(sum([1 for i in range(len(s)) if s[i:].startswith(t)]))
+
+# Вам дана последовательность строк.
+# Выведите строки, содержащие "cat" в качестве подстроки хотя бы два раза.
+
+import re
+import sys
+
+for line in sys.stdin:
+    line = line.rstrip()
+    if re.search(r'((cat).*){2,}', line):
+        print(line)
+
+# Вам дана последовательность строк.
+# Выведите строки, содержащие "cat" в качестве слова.
+
+import re
+import sys
+
+for line in sys.stdin:
+    line = line.rstrip()
+    if re.search(r'\bcat\b', line):
+        print(line)
