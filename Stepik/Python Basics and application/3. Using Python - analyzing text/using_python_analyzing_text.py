@@ -138,3 +138,15 @@ pattern = __import__('re').compile(r'<a.*?href=["|\'](.*?:\/\/)?(\w.*?)([/|:].*)
 
 domains = [link[1] for link in pattern.findall(response.text)]
 [print(domain) for domain in sorted(set(domains))]
+
+# Вам дана частичная выборка из датасета зафиксированных преступлений, совершенных в городе Чикаго с 2001 года по настоящее время.
+# Одним из атрибутов преступления является его тип – Primary Type.
+# Вам необходимо узнать тип преступления, которое было зафиксировано максимальное число раз в 2015 году.
+# 
+# Файл с данными:
+# Crimes.csv
+
+with open("Crimes.csv") as f:
+    reader = __import__("csv").reader(f)
+    crimes = __import__("collections").Counter(list(zip(*list(reader)[1:]))[5])
+    print(crimes.most_common(1)[0][0])
