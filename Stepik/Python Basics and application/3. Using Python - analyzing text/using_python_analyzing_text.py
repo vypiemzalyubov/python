@@ -124,3 +124,17 @@ for url in __import__('re').findall(pattern, __import__('requests').get(a).text)
 
 urls = list(map(lambda url: url.replace('stepic.org', 'stepik.org'), urls))
 print('Yes' if b in urls else 'No')
+
+# Вашей программе на вход подается ссылка на HTML файл.
+# Вам необходимо скачать этот файл, затем найти в нем все ссылки вида <a ... href="..." ... > и вывести список сайтов, на которые есть ссылка.
+# 
+# Сайтом в данной задаче будем называть имя домена вместе с именами поддоменов. То есть, это последовательность символов, которая следует сразу после символов протокола, 
+# если он есть, до символов порта или пути, если они есть, за исключением случаев с относительными ссылками вида <a href="../some_path/index.html">.
+# 
+# Сайты следует выводить в алфавитном порядке.
+
+response = __import__('requests').get(input())
+pattern = __import__('re').compile(r'<a.*?href=["|\'](.*?:\/\/)?(\w.*?)([/|:].*)?["|\'].*')
+
+domains = [link[1] for link in pattern.findall(response.text)]
+[print(domain) for domain in sorted(set(domains))]
