@@ -105,3 +105,22 @@ for line in __import__('sys').stdin:
 
 for line in __import__('sys').stdin:
     print(__import__('re').sub(r'(\w)\1+', r'\1', line.rstrip()))
+
+# Рассмотрим два HTML-документа A и B.
+# Из A можно перейти в B за один переход, если в A есть ссылка на B, т. е. внутри A есть тег <a href="B">, возможно с дополнительными параметрами внутри тега.
+# Из A можно перейти в B за два перехода если существует такой документ C, что из A в C можно перейти за один переход и из C в B можно перейти за один переход.
+# 
+# Вашей программе на вход подаются две строки, содержащие url двух документов A и B.
+# Выведите Yes, если из A в B можно перейти за два перехода, иначе выведите No.
+# 
+# Обратите внимание на то, что не все ссылки внутри HTML документа могут вести на существующие HTML документы.
+
+a, b = [input() for _ in range(2)]
+urls = []
+pattern = r'<a.*href="(.*)">'
+
+for url in __import__('re').findall(pattern, __import__('requests').get(a).text):
+    urls.extend(__import__('re').findall(pattern, __import__('requests').get(url).text))
+
+urls = list(map(lambda url: url.replace('stepic.org', 'stepik.org'), urls))
+print('Yes' if b in urls else 'No')
