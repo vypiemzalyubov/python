@@ -145,8 +145,6 @@ print(res.year, res.month, res.day)
 # Файл с информацией: encrypted.bin 
 # Файл с паролями: passwords.txt
 
-import simplecrypt
-
 with open('passwords.txt', 'r') as file_p:
     passwords = file_p.read()
 
@@ -155,8 +153,8 @@ with open('encrypted.bin', 'rb') as file_e:
 
 for password in passwords.split():
     try:
-        print(simplecrypt.decrypt(password, encrypted).decode('utf-8'))
-    except simplecrypt.DecryptionException:
+        print(__import__("simplecrypt").decrypt(password, encrypted).decode('utf-8'))
+    except __import__("simplecrypt").DecryptionException:
         print(password, 'Incorrect')
 
 # Одним из самых часто используемых классов в Python является класс filter. Он принимает в конструкторе два аргумента a и f – последовательность и функцию, 
