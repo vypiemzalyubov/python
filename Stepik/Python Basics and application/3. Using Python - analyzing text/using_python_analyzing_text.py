@@ -150,3 +150,37 @@ with open("Crimes.csv") as f:
     reader = __import__("csv").reader(f)
     crimes = __import__("collections").Counter(list(zip(*list(reader)[1:]))[5])
     print(crimes.most_common(1)[0][0])
+
+# Вам дано описание наследования классов в формате JSON.
+# Описание представляет из себя массив JSON-объектов, которые соответствуют классам. У каждого JSON-объекта есть поле name, которое содержит имя класса, 
+# и поле parents, которое содержит список имен прямых предков.
+# 
+# Пример:
+# [{"name": "A", "parents": []}, {"name": "B", "parents": ["A", "C"]}, {"name": "C", "parents": ["A"]}]
+# 
+# Эквивалент на Python:
+# 
+# class A:
+#     pass
+# 
+# class B(A, C):
+#     pass
+# 
+# class C(A):
+#     pass
+# 
+# Гарантируется, что никакой класс не наследуется от себя явно или косвенно, и что никакой класс не наследуется явно от одного класса более одного раза.
+# Для каждого класса вычислите предком скольких классов он является и выведите эту информацию в следующем формате: <имя класса> : <количество потомков>
+# Выводить классы следует в лексикографическом порядке.
+
+def counter(value):
+    for key in tmp_dict:
+        if value in tmp_dict[key]:
+            s.add(key)
+            counter(key)
+    return str(len(s) + 1)
+
+tmp_dict = {alpha['name']: alpha['parents'] for alpha in __import__('json').loads(input())}
+for key in sorted(tmp_dict):
+    s = set()
+    print(f"{key} : {counter(key)}")
