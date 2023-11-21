@@ -184,3 +184,59 @@ tmp_dict = {alpha['name']: alpha['parents'] for alpha in __import__('json').load
 for key in sorted(tmp_dict):
     s = set()
     print(f"{key} : {counter(key)}")
+
+# В этой задаче вам необходимо воспользоваться API сайта numbersapi.com
+# Вам дается набор чисел. Для каждого из чисел необходимо узнать, существует ли интересный математический факт об этом числе.
+# Для каждого числа выведите Interesting, если для числа существует интересный факт, и Boring иначе.
+# Выводите информацию об интересности чисел в таком же порядке, в каком следуют числа во входном файле.
+# 
+# Пример запроса к интересному числу:
+# http://numbersapi.com/31/math?json=true
+# 
+# Пример запроса к скучному числу:
+# http://numbersapi.com/999/math?json=true
+
+with open("dataset_24476_3.txt") as file:
+    for number in file:
+        number = number.strip()
+        params = {"json": True}
+        url = f"http://numbersapi.com/{number}/math"
+        response = __import__("requests").get(url, params=params)
+        if response.json()["found"]:
+            print("Interesting")
+        else:
+            print("Boring")
+
+# В этой задаче вам необходимо воспользоваться API сайта artsy.net
+# API проекта Artsy предоставляет информацию о некоторых деятелях искусства, их работах, выставках.
+# В рамках данной задачи вам понадобятся сведения о деятелях искусства (назовем их, условно, художники).
+# 
+# Вам даны идентификаторы художников в базе Artsy.
+# Для каждого идентификатора получите информацию о имени художника и годе рождения.
+# Выведите имена художников в порядке неубывания года рождения. В случае если у художников одинаковый год рождения, выведите их имена в лексикографическом порядке.
+
+client_id = "******"
+client_secret = "******"
+
+response_artsy = __import__("requests").post("https://api.artsy.net/api/tokens/xapp_token",
+                                             data={
+                                                 "client_id": client_id,
+                                                 "client_secret": client_secret
+                                             })
+
+response = __import__("json").loads(response_artsy.text)
+
+token = response["token"]
+
+artists = {}
+
+with open("dataset_24476_4.txt") as file:
+    for artist_id in file:
+        artist_id = artist_id.strip()
+        url = f"https://api.artsy.net/api/artists/{artist_id}"
+        headers = {"X-Xapp-Token": token}
+        r = __import__("requests").get(url, headers=headers)
+        artists[r.json()["sortable_name"]] = int(r.json()["birthday"])
+
+for k, v in sorted(artists.items(), key=lambda x: (x[1], x[0])):
+    print(k)
