@@ -73,6 +73,7 @@
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
+- [Асинхронный python без головной боли (часть 1-2)](https://habr.com/ru/articles/667630/)
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 - [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
 - [Шпаргалка по Python3](https://devscr.ru/mementopython3-russian.pdf)
