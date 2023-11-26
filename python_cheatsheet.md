@@ -106,3 +106,4 @@
 - [Python: основы и применение](https://stepik.org/course/512/info)
 - [Добрый, добрый Python - обучающий курс от Сергея Балакирева](https://stepik.org/course/100707/info)
 - [Регулярные выражения в Python](https://stepik.org/course/107335/info)
+- [Быстрый старт в FastAPI Python](https://stepik.org/course/179694/syllabus)
