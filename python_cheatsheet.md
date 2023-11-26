@@ -83,6 +83,7 @@
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
 - [Изучаем Python с Марком Лутцем. Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
 - [ARTVLAD | Automation Craft](https://www.youtube.com/@AutomationCraft)
+- [FastAPI Курс | Артём Шумейко](https://www.youtube.com/playlist?list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS)
 - [SolveMe](https://www.youtube.com/@SolveMeChannel)
 - [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
 - [Python Hub Studio](https://www.youtube.com/@PythonHubStudio)
