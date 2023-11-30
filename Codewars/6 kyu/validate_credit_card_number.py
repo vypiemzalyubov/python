@@ -29,7 +29,7 @@ def validate(n):
     if len(digits) % 2 == 0:
         digits = [y * 2 if x % 2 == 0 else y for x, y in enumerate(digits)]
     else:
-        digits = [y * 2 if x % 2 != 0 else y for x, y in enumerate(digits)]
+        digits = [y * 2 if x % 2 else y for x, y in enumerate(digits)]
     digits = sum([x if x <= 9 else x - 9 for x in digits])
     return not digits % 10
 
