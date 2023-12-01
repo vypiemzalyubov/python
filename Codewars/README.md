@@ -47,6 +47,7 @@
 - [Mexican Wave](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/mexican_wave.py)
 - [Multiples of 3 or 5](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/multiples_of_3_or_5.py)
 - [Replace With Alphabet Position](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/replace_with_alphabet_position.py)
+- [Split Strings](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/split_strings.py)
 - [Stop gninnipS My sdroW!](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/stop_gninnips_my_sdrow.py)
 - [Take a Ten Minutes Walk](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/take_a_ten_minutes_walk.py)
 - [Validate Credit Card Number](https://github.com/vypiemzalyubov/python/blob/main/Codewars/6%20kyu/validate_credit_card_number.py)
