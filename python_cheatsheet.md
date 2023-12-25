@@ -78,6 +78,7 @@
 - [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
 - [Шпаргалка по Python3](https://devscr.ru/mementopython3-russian.pdf)
 - [Пространства имен и области видимости в Python](https://nuancesprog.ru/p/9211/)
+- [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 
 ## YouTube
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
