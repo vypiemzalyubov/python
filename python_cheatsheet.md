@@ -48,7 +48,7 @@
   - [Тесты на pytest с генерацией отчетов в Allure с использованием Docker и Gitlab Pages и частично selenium](https://habr.com/ru/articles/513432/https://habr.com/ru/articles/513432/)
 - Wiki
   - [Python и API: превосходное комбо для автоматизации работы с публичными данными](https://github.com/vypiemzalyubov/python/wiki/Python-%D0%B8-API:-%D0%BF%D1%80%D0%B5%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B1%D0%BE-%D0%B4%D0%BB%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8)
-  - [Selenium и Pytest](https://github.com/vypiemzalyubov/python/blob/main/Automation/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
+  - [Selenium и Pytest](https://github.com/vypiemzalyubov/qa-automation/blob/main/Selenium/Test%20automation%20using%20Selenium%20and%20Python/selenium_cheatsheet.md)
   - [Принципы написания автотестов](https://github.com/vypiemzalyubov/python/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%86%D0%B8%D0%BF%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2)
   - [PyTest](https://github.com/vypiemzalyubov/python/wiki/Pytest)
   - [Venv, Poetry и управление зависимостями проекта](https://github.com/vypiemzalyubov/python/wiki/Venv,-Poetry-%D0%B8-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8F%D0%BC%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0)
@@ -88,9 +88,9 @@
 - [SolveMe](https://www.youtube.com/@SolveMeChannel)
 - [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
 - [Python Hub Studio](https://www.youtube.com/@PythonHubStudio)
-- [Собеседование Python. Разбор вопросов. Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
-- [Пошаговая настройка запуска автотестов в Github Actions. Python, Pytest, Selenium. Senior Tester | Евгений Окулик](https://youtu.be/E0nbcCZSI7g?si=kXLJc6736wDnkUQk)
-- [Публикация Allure отчетов на GitHub pages с сохранением истории запусков и трендом. Senior Tester | Евгений Окулик](https://youtu.be/HLbSSVBu5qI?si=syLr-tI_bVqT-TgM)
+- [Собеседование Python. Разбор вопросов | Rineisky Dev](https://www.youtube.com/watch?v=BoazgBZ4D7k)
+- [Пошаговая настройка запуска автотестов в Github Actions. Python, Pytest, Selenium | Senior Tester | Евгений Окулик](https://youtu.be/E0nbcCZSI7g?si=kXLJc6736wDnkUQk)
+- [Публикация Allure отчетов на GitHub pages с сохранением истории запусков и трендом | Senior Tester | Евгений Окулик](https://youtu.be/HLbSSVBu5qI?si=syLr-tI_bVqT-TgM)
 
 ## Test API
 - [ReqRes](https://reqres.in/)
