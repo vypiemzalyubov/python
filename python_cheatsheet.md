@@ -33,7 +33,7 @@
 
 ## Python Automation Testing
 
-- [awesome-test-automation](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
+- [Python test automation | Awesome Test Automation | GitHub](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing with pytest by Brian Okken | Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
