@@ -55,12 +55,6 @@
   - [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
   - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
   - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
-- Официальная документация
-  - [Full pytest documentation](https://docs.pytest.org/en/stable/contents.html)
-  - [pytest-selenium](https://pytest-selenium.readthedocs.io/en/latest/index.html)
-  - [Requests: HTTP for Humans](https://requests.readthedocs.io/en/latest/)
-  - [HTTPX](https://www.python-httpx.org/)
-  - [Pydantic](https://docs.pydantic.dev/latest/)
 
 ## Полезные материалы
 
