@@ -85,6 +85,7 @@
 - [Изучаем Python с Марком Лутцем. Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
 - [FastAPI Курс | Артём Шумейко](https://www.youtube.com/playlist?list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS)
 - [ARTVLAD | Automation Craft](https://www.youtube.com/@AutomationCraft)
+- [Полный курс по Selenium | QA PROKA4 | Aleksei Koledachkin](https://www.youtube.com/playlist?list=PLN2EyQPKD10s0iwF077X5QarjEzR40M9A)
 - [SolveMe](https://www.youtube.com/@SolveMeChannel)
 - [PyLounge - программирование на Python и всё о IT](https://www.youtube.com/@pylounge)
 - [Python Hub Studio](https://www.youtube.com/@PythonHubStudio)
