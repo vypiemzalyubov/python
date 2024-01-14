@@ -109,4 +109,5 @@
 - [Добрый, добрый Python - обучающий курс от Сергея Балакирева](https://stepik.org/course/100707/info)
 - [Регулярные выражения в Python](https://stepik.org/course/107335/info)
 - [Автоматизация тестирования с помощью Selenium и Python](https://stepik.org/course/575/syllabus)
+- [Курс по Selenium от Алексея Коледачкина](https://stepik.org/course/188355/syllabus)
 - [Быстрый старт в FastAPI Python](https://stepik.org/course/179694/syllabus)
