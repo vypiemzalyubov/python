@@ -1,4 +1,4 @@
-## "Поколение Python": курс для начинающих
+## "Поколение Python": курс для продвинутых
 
 <div id="header" align="center">
   <img src="https://cdn.stepik.net/media/cache/images/courses/68343/cover_smiwB3b/7dc87056cab89185c092db69f1139227.png" width="100"/>
