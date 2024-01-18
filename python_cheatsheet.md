@@ -56,19 +56,19 @@
   - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
   - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
 
-## Полезные материалы
+## Туториалы
 
 - [Самоучитель по Python для начинающих | Proglib](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-1-osobennosti-sfery-primeneniya-ustanovka-onlayn-ide-2022-09-26)
 - [Основы Python | proproprogs.ru](https://proproprogs.ru/python_base)
 - [Python ООП | proproprogs.ru](https://proproprogs.ru/python_oop)
 - [Перевод интерактивного учебника «Problem Solving with Algorithms and Data Structures»](https://aliev.me/runestone/)
-- [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
-- [Как подружить Python и базы данных SQL. Подробное руководство](https://proglib.io/p/kak-podruzhit-python-i-bazy-dannyh-sql-podrobnoe-rukovodstvo-2020-02-27)
+
+## Полезные материалы
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
+- [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Асинхронный python без головной боли (часть 1-2)](https://habr.com/ru/articles/667630/)
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 - [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
-- [Шпаргалка по Python3](https://devscr.ru/mementopython3-russian.pdf)
 - [Пространства имен и области видимости в Python](https://nuancesprog.ru/p/9211/)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 
