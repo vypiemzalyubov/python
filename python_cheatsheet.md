@@ -1,6 +1,6 @@
 ## Python CheatSheet
 
-### [Основы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B) | [Python Automation Testing](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#python-automation-testing) | [Полезные материалы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B) | [YouTube](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#youtube) | [Test API](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#test-api) | [Курсы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BA%D1%83%D1%80%D1%81%D1%8B)
+### [Основы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B) | [Туториалы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D1%82%D1%83%D1%82%D0%BE%D1%80%D0%B8%D0%B0%D0%BB%D1%8B) | [Python Automation Testing](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#python-automation-testing) | [Полезные материалы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BF%D0%BE%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B) | [YouTube](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#youtube) | [Test API](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#test-api) | [Курсы](https://github.com/vypiemzalyubov/python/blob/main/python_cheatsheet.md#%D0%BA%D1%83%D1%80%D1%81%D1%8B)
 
 ## Основы
 
@@ -31,8 +31,13 @@
 24. [Основы работы с SQLite](https://github.com/vypiemzalyubov/python/wiki/24.-%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B-%D1%81-SQLite)
 25. [Работаем с JSON в Python](https://github.com/vypiemzalyubov/python/wiki/25.-%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D0%BC-%D1%81-JSON-%D0%B2-Python)
 
-## Python Automation Testing
+## Туториалы
+- [Самоучитель по Python для начинающих | Proglib](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-1-osobennosti-sfery-primeneniya-ustanovka-onlayn-ide-2022-09-26)
+- [Основы Python | proproprogs.ru](https://proproprogs.ru/python_base)
+- [Python ООП | proproprogs.ru](https://proproprogs.ru/python_oop)
+- [Перевод интерактивного учебника «Problem Solving with Algorithms and Data Structures»](https://aliev.me/runestone/)
 
+## Python Automation Testing
 - [Python test automation | Awesome Test Automation | GitHub](https://github.com/atinfo/awesome-test-automation/blob/master/python-test-automation.md)
 - [Python Testing with pytest by Brian Okken | Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
@@ -55,13 +60,6 @@
   - [Allure Reports](https://github.com/vypiemzalyubov/python/wiki/Allure-Reports)
   - [Allure TestOps](https://github.com/vypiemzalyubov/python/wiki/Allure-TestOps)
   - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
-
-## Туториалы
-
-- [Самоучитель по Python для начинающих | Proglib](https://proglib.io/p/samouchitel-po-python-dlya-nachinayushchih-chast-1-osobennosti-sfery-primeneniya-ustanovka-onlayn-ide-2022-09-26)
-- [Основы Python | proproprogs.ru](https://proproprogs.ru/python_base)
-- [Python ООП | proproprogs.ru](https://proproprogs.ru/python_oop)
-- [Перевод интерактивного учебника «Problem Solving with Algorithms and Data Structures»](https://aliev.me/runestone/)
 
 ## Полезные материалы
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
