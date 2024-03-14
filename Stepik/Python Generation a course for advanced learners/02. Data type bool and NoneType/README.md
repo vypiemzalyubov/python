@@ -1,0 +1,1 @@
+## Тип данных bool и NoneType
