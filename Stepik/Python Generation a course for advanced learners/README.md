@@ -8,4 +8,6 @@
 
 ---
 
-- [**Повторяем основные конструкции языка Python**]()
+- [**Повторяем основные конструкции языка Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/01.%20Repeat%20basic%20Python%20language%20constructs)
+- [**Тип данных bool и NoneType**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/02.%20Data%20type%20bool%20and%20NoneType)
+- [**Вложенные списки**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/03.%20Nested%20lists)
