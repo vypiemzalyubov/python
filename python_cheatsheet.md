@@ -43,7 +43,6 @@
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
-- [Playwright: полный гайд + FAQ](https://testengineer.ru/playwright-tutorial/)
 - Примеры проектов
   - [Как правильно писать UI авто тесты на Python](https://habr.com/ru/articles/708932/)
   - [Как правильно писать API авто тесты на Python](https://habr.com/ru/articles/709380/)
@@ -62,6 +61,7 @@
   - [Selenoid](https://github.com/vypiemzalyubov/python/wiki/Selenoid)
 
 ## Полезные материалы
+- [Наследование и композиция: руководство по ООП в Python](https://webdevblog.ru/nasledovanie-i-kompoziciya-rukovodstvo-po-oop-python/)
 - [Полное руководство по SQLAlchemy](https://pythonru.com/biblioteki/vvedenie-v-sqlalchemy)
 - [Разбираемся с параллельными и конкурентными вычислениями в Python](https://habr.com/ru/companies/wunderfund/articles/581994/)
 - [Асинхронный python без головной боли (часть 1-2)](https://habr.com/ru/articles/667630/)
