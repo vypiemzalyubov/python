@@ -81,3 +81,21 @@ def pascal(n):
     return(triangle[-1])
 
 print(pascal(int(input())))
+
+# 29. На вход программе подается натуральное число n. Напишите программу, которая выводит первые n строк треугольника Паскаля.
+# 
+#     Формат входных данных
+#     На вход программе подается число n (n≥1).
+# 
+#     Формат выходных данных
+#     Программа должна вывести первые n строк треугольника Паскаля, каждую на отдельной строке в соответствии с образцом.
+
+n = int(input())
+triangle = [[1] + [0]*n for _ in range(n+1)]
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        triangle[i][j] = triangle[i-1][j] + triangle[i-1][j-1]
+for i in range(n):
+    for j in range(i+1):
+        print(triangle[i][j], end=' ')
+    print()
