@@ -6,7 +6,7 @@
 
 **My profile on** [**Codewars**](https://www.codewars.com/users/vypiemzalyubov):
 
-[![codewars](https://www.codewars.com/users/vypiemzalyubov/badges/large)](https://www.codewars.com/users/username)   
+[![codewars](https://www.codewars.com/users/vypiemzalyubov/badges/large)](https://www.codewars.com/users/vypiemzalyubov)   
 
 ---
 
