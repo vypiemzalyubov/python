@@ -457,3 +457,56 @@ for i in range(1, 9):
 
 for row in mtrx:
     print(*row)
+
+# 48. Магическим квадратом порядка n называется квадратная таблица размера n×n, составленная из всех чисел 1,2,3,…,n**2 (то есть все числа разные) так, 
+#     что суммы по каждому столбцу, каждой строке и каждой из двух диагоналей равны между собой. 
+#     Напишите программу, которая проверяет, является ли заданная квадратная матрица магическим квадратом.
+# 
+#     Формат входных данных
+#     На вход программе подаётся натуральное число n — количество строк и столбцов в матрице, затем элементы матрицы: n строк, по n чисел в каждой, разделённые пробелами.
+# 
+#     Формат выходных данных
+#     Программа должна вывести слово YES, если матрица является магическим квадратом, и слово NO в противном случае.
+
+def magic_square(n, mtrx, reference_sum, reference_list, flag):
+    tmp = []
+    for row in mtrx:
+        tmp.extend(row)
+
+    for row in mtrx:
+        if len(set(row)) != len(row) or not all(i in tmp for i in reference_list):
+            flag = False
+            return flag
+        
+    for i in range(n):
+        sum_row = 0
+        sum_col = 0
+        sum_row += sum(mtrx[i])
+        if sum_row != reference_sum:
+            flag = False
+            return flag
+        for j in range(n):
+            sum_col += mtrx[j][i]
+        if sum_col != reference_sum:
+            flag = False
+            return flag
+
+    sum_main = 0
+    sum_incidental = 0
+    for i in range(n):
+        sum_main += mtrx[i][i]
+        sum_incidental += mtrx[i][n-i-1]
+
+    if sum_main != reference_sum or sum_incidental != reference_sum:
+        flag = False
+        return flag
+    
+    return flag
+
+n = int(input())
+mtrx = [[*map(int, input().split())] for _ in range(n)]
+reference_sum = sum([sum(row) for row in mtrx[:1]])
+reference_list = [i for i in range(1, n**2+1)]
+flag = True
+
+print('YES' if magic_square(n, mtrx, reference_sum, reference_list, flag) else 'NO')
