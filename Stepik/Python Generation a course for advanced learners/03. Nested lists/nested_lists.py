@@ -716,3 +716,66 @@ for i in range(n * m):
 
 for row in mtrx:
     print(*[str(r).ljust(3) for r in row])
+
+# 59. Напишите программу для вычисления суммы двух матриц.
+# 
+#     Формат входных данных
+#     На вход программе подаются два натуральных числа n и m — количество строк и столбцов в матрицах, затем элементы первой матрицы, 
+#     затем пустая строка, далее следуют элементы второй матрицы.
+# 
+#     Формат выходных данных
+#     Программа должна вывести результирующую матрицу, разделяя элементы символом пробела.
+
+n, m = map(int, input().split())
+mtrx1 = [list(map(int, input().split())) for _ in range(n)]
+input()
+mtrx2 = [list(map(int, input().split())) for _ in range(n)]
+
+for i in range(n):
+    for j in range(m):
+        mtrx1[i][j] += mtrx2[i][j]
+        print(mtrx1[i][j], end=' ')
+    print()
+
+# 60. Напишите программу, которая перемножает две матрицы.
+# 
+#     Формат входных данных
+#     На вход программе подаются два натуральных числа n и m — количество строк и столбцов в первой матрице, затем элементы первой матрицы, затем пустая строка. 
+#     Далее следуют числа m и k — количество строк и столбцов второй матрицы затем элементы второй матрицы.
+# 
+#     Формат выходных данных
+#     Программа должна вывести результирующую матрицу, разделяя элементы символом пробела.
+
+n, m = map(int, input().split())
+mtrx1 = [list(map(int, input().split())) for _ in range(n)]
+input()
+m, k = map(int, input().split())
+mtrx2 = [list(map(int, input().split())) for _ in range(m)]
+result = [[0] * k for _ in range(n)]
+
+for i in range(n):
+    for j in range(k):
+        for x in range(m):
+            result[i][j] += mtrx1[i][x] * mtrx2[x][j]
+
+for row in result:
+    print(*row)
+
+# 61. Напишите программу, которая возводит квадратную матрицу в m-ую степень.
+# 
+#     Формат входных данных
+#     На вход программе подаётся натуральное число n — количество строк и столбцов в матрице, затем элементы матрицы, затем натуральное число m.
+# 
+#     Формат выходных данных
+#     Программа должна вывести результирующую матрицу, разделяя элементы символом пробела.
+
+n = int(input())
+mtrx = [list(map(int, input().split())) for _ in range(n)]
+m = int(input())
+result = __import__('copy').deepcopy(mtrx)
+
+for _ in range(m-1):
+    result = [[sum([result[i][x] * mtrx[x][j] for x in range(n)]) for j in range(n)] for i in range(n)]
+
+for row in result:
+    print(*row)
