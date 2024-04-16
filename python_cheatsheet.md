@@ -68,6 +68,7 @@
 - [Понимание схемы JSON (JSON Schema)](https://infostart.ru/1c/articles/1543922/)
 - [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
 - [Пространства имен и области видимости в Python](https://nuancesprog.ru/p/9211/)
+- [Python декораторы на максималках. Универсальный рецепт по написанию и аннотированию от мала до велика](https://habr.com/ru/articles/750312/)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 
 ## YouTube
@@ -100,4 +101,5 @@
 - [Регулярные выражения в Python](https://stepik.org/course/107335/info)
 - [Автоматизация тестирования с помощью Selenium и Python](https://stepik.org/course/575/syllabus)
 - [Курс по Selenium от Алексея Коледачкина](https://stepik.org/course/188355/syllabus)
+- [Selenium Python](https://stepik.org/course/119495/syllabus)
 - [Быстрый старт в FastAPI Python](https://stepik.org/course/179694/syllabus)
