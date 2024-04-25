@@ -69,6 +69,7 @@
 - [Автоматизация обеспечения качества кода на языке Python](https://habr.com/ru/companies/otus/articles/750214/)
 - [Пространства имен и области видимости в Python](https://nuancesprog.ru/p/9211/)
 - [Python декораторы на максималках. Универсальный рецепт по написанию и аннотированию от мала до велика](https://habr.com/ru/articles/750312/)
+- [Python Big O: the time complexities of different data structures in Python](https://www.pythonmorsels.com/time-complexities/#heap-priority-queue)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 
 ## YouTube
