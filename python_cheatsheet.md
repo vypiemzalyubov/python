@@ -71,6 +71,7 @@
 - [Python декораторы на максималках. Универсальный рецепт по написанию и аннотированию от мала до велика](https://habr.com/ru/articles/750312/)
 - [Python Big O: the time complexities of different data structures in Python](https://www.pythonmorsels.com/time-complexities/#heap-priority-queue)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
+- [Вопросы для собеседования Python Junior](https://github.com/joerude/python-junior-interview-questions)
 
 ## YouTube
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
