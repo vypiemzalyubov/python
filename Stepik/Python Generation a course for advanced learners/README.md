@@ -11,3 +11,8 @@
 - [**Повторяем основные конструкции языка Python**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/01.%20Repeat%20basic%20Python%20language%20constructs)
 - [**Тип данных bool и NoneType**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/02.%20Data%20type%20bool%20and%20NoneType)
 - [**Вложенные списки**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/03.%20Nested%20lists)
+- [**Кортежи**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/04.%20Corteges)
+- [**Множества**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/05.%20Sets)
+- [**Словари**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/06.%20Dictionaries)
+- [**Модули random и string**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/07.%20Random%20and%20string%20modules)
+- [**Модули decimal, fraction и complex**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/08.%20Decimal%2C%20fraction%20and%20complex%20modules)
