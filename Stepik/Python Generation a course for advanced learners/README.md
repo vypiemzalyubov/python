@@ -16,3 +16,5 @@
 - [**Словари**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/06.%20Dictionaries)
 - [**Модули random и string**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/07.%20Random%20and%20string%20modules)
 - [**Модули decimal, fraction и complex**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/08.%20Decimal%2C%20fraction%20and%20complex%20modules)
+- [**Модуль turtle**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/09.%20Turtle%20module)
+- [**Функции**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Python%20Generation%20a%20course%20for%20advanced%20learners/10.%20Functions)
