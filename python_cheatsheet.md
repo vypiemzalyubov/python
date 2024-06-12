@@ -72,6 +72,7 @@
 - [Python Big O: the time complexities of different data structures in Python](https://www.pythonmorsels.com/time-complexities/#heap-priority-queue)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 - [Вопросы для собеседования Python Junior](https://github.com/joerude/python-junior-interview-questions)
+- [Вопрос-ответ, для Python-разработчика на собеседовании](https://github.com/DEBAGanov/interview_questions/blob/main/400%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2%20%D1%81%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D0%B4%D0%BE%D0%BB%D0%B6%D0%B5%D0%BD%20%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20Python-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA.md)
 
 ## YouTube
 - [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
