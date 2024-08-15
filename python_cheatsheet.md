@@ -75,8 +75,9 @@
 - [Вопрос-ответ, для Python-разработчика на собеседовании](https://github.com/DEBAGanov/interview_questions/blob/main/400%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D0%BE%D0%B2%20%D1%81%20%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D0%B0%D0%BC%D0%B8%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5%20%D0%B4%D0%BE%D0%BB%D0%B6%D0%B5%D0%BD%20%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20Python-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA.md)
 
 ## YouTube
-- [2017-2018 Алгоритмы и структуры данных на Python 3. Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
-- [Изучаем Python с Марком Лутцем. Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
+- [2017-2018 Алгоритмы и структуры данных на Python 3 | Тимофей Хирьянов](https://www.youtube.com/playlist?list=PLRDzFCPr95fK7tr47883DFUbm4GeOjjc0)
+- [Программирование на Python, осень 2018 | Computer Science Center](https://www.youtube.com/playlist?list=PLlb7e2G7aSpQhNphPSpcO4daaRPeVstku)
+- [Изучаем Python с Марком Лутцем | Python с нуля и до мидла Андрей+=Пронин](https://www.youtube.com/playlist?list=PLv_mO3iQ2o2fZllHFsEniuy1D-2IXr8eU)
 - [FastAPI Курс | Артём Шумейко](https://www.youtube.com/playlist?list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS)
 - [ARTVLAD | Automation Craft](https://www.youtube.com/@AutomationCraft)
 - [Полный курс по Selenium | QA PROKA4 | Aleksei Koledachkin](https://www.youtube.com/playlist?list=PLN2EyQPKD10s0iwF077X5QarjEzR40M9A)
