@@ -42,6 +42,7 @@
 - [Python Testing with pytest by Brian Okken | Главы 1-7](https://habr.com/ru/articles/448782/)
 - [Тесты в Python: все основные подходы, плюсы и минусы. Доклад Яндекса](https://habr.com/ru/companies/yandex/articles/517266/)
 - [Pytest-фикстуры на человеческом](https://habr.com/ru/articles/716248/)
+- [Как адаптировать терминальные отчёты pytest под свои интересы](https://habr.com/ru/articles/844728/?code=c924ce994f373f0504f7b2c367938dd5&state=IjGTEvI7ajDhvM57OCnvMXud&hl=ru)
 - [Requests в Python – Примеры выполнения HTTP запросов](https://python-scripts.com/requests)
 - Примеры проектов
   - [Как правильно писать UI авто тесты на Python](https://habr.com/ru/articles/708932/)
