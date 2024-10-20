@@ -71,6 +71,7 @@
 - [Пространства имен и области видимости в Python](https://nuancesprog.ru/p/9211/)
 - [Python декораторы на максималках. Универсальный рецепт по написанию и аннотированию от мала до велика](https://habr.com/ru/articles/750312/)
 - [Python Big O: the time complexities of different data structures in Python](https://www.pythonmorsels.com/time-complexities/#heap-priority-queue)
+- [Pydantic 2: Полное руководство для Python-разработчиков — от основ до продвинутых техник](https://habr.com/ru/companies/amvera/articles/851642/?code=128bfb097fa367eef6c84299c6ba99c3&state=mJBgbE72QkW2VsB0zHsoiobP&hl=ru)
 - [FastAPI Best Practices](https://github.com/zhanymkanov/fastapi-best-practices)
 - [Refactoring Guru | design-patterns-python ](https://github.com/RefactoringGuru/design-patterns-python/tree/main/src)
 - [Вопросы для собеседования Python Junior](https://github.com/joerude/python-junior-interview-questions)
