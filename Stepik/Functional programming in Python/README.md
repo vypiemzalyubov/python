@@ -8,4 +8,4 @@
 
 ---
 
-- [**Первые шаги**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Indie%20Python%20Programming%20Course/01.%20First%20Steps)
+- [**Знакомство с функциями**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Functional%20programming%20in%20Python/01.%20Familiarity%20with%20functions)
