@@ -367,3 +367,41 @@ def create_matrix(size=3, up_fill=0, down_fill=0):
             else:
                 mtrx[i][j] = down_fill
     return mtrx
+
+# Помните функцию words_length, которая по входному списку слов создавала список длины соответствующих слов и возвращала его в качестве результата?
+# Одна из возможных реализаций этой функции представлена ниже
+# def words_length(words):
+#     return [len(word) for word in words]
+# Здесь функция words_length является чистой. Ваша задача переписать ее так, чтобы она начала изменять входной список:
+# вместо слов должна подставляться его длина. В качестве результата новая words_length должна вернуть None
+
+def words_length(words):
+    for i in range(len(words)):
+        words[i] = len(words[i])
+    return
+
+# Перепишите функцию my_func так, чтобы она стала чистой
+
+def my_func(collection, n):
+    result = collection.copy()
+    for i in range(1, n + 1):
+        result.append(i)
+    return result
+
+# Напишите функцию lstrip, которая принимает список lst и значение value.
+# Функция lstrip должна удалить из начала списка lst все упоминания значения value, остальные элементы должны остаться без изменения,
+# даже те, которые равны значению value, но не находятся в начале списка.
+# Изначальный список lst должен измениться после вызова lstrip. Сама lstrip ничего не возвращает
+
+def lstrip(lst, value):
+    tmp = list(map(int, ''.join(list(map(str, lst))).lstrip(str(value))))
+    lst.clear()
+    for i in range(len(tmp)):
+        lst.append(tmp[i])
+
+# Напишите функцию lstrip, которая принимает список lst и значение value.
+# Функция lstrip должна теперь создать новый список, который является копией lst, но без элементов в самом начале, равных значению value.
+# Изначальный список, переданный в lst, не должен измениться
+
+def lstrip(lst, value):
+    return list(map(int, ''.join(list(map(str, lst))).lstrip(str(value))))
