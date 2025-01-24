@@ -560,3 +560,189 @@ def truncate_sentences(n, *args):
 
 def make_strings_big(*args, reverse=False):
     print(*[i.lower() if reverse else i.upper() for i in args], sep='\n')
+
+# Напишите функцию calculate_high_low_avg, которая принимает произвольное количество позиционных аргументов в виде целых чисел.
+# Функция находит среднее арифметическое самого большого и самого маленького из аргументов и возвращает в качестве ответа.
+# К тому же, если в calculate_high_low_avg передать необязательный именованный аргумент log_to_console со значением True,
+# то дополнительно функция должна вывести на экран информацию в следующем формате: high={max}, low={min}, avg={average}
+# где max - принимает значение самого большого аргумента, min - принимает значение самого маленького аргумента,
+# average - принимает среднее арифметическое самого большого и самого маленького из аргументов. Напомню, что return сразу же производит выход из функции.
+
+def calculate_high_low_avg(*args, log_to_console=False):
+    max_d = max(args)
+    min_d = min(args)
+    avg_d = (max_d + min_d) / 2
+    if log_to_console:
+        print(f'high={max_d}, low={min_d}, avg={avg_d}')
+        return avg_d
+    return avg_d
+
+# Настало время в нашем ресторане добавить возможность делать заказ посетителям ресторана. Они могут выбрать любую позицию из меню по следующим категориям:
+# salad
+# soup
+# main_dish
+# drink
+# desert
+# Подумайте где и в каком виде можно хранить названия данных категорий
+# Ваша задача переписать последнюю рабочую версию функции reserve_table (задача Резервация столов: изменение требований - 2) так,
+# чтобы она создавала поле для хранения заказа (ключ «order» со значением пустой словарь). Вот такая структура должна получаться после резервации стола.
+# tables = {
+#     1: {'name': 'Andrey', 'is_vip': True, 'order': {}},
+#     2: None,
+#     3: None,
+#     4: None,
+#     5: {'name': 'Vasiliy', 'is_vip': False, 'order': {}},
+#     6: None,
+#     7: None,
+#     8: None,
+#     9: None,
+# }
+# В это поле мы далее будем складывать заказы при помощи функции make_order.
+# Теперь самое интересное - функция make_order, которая принимает номер стола и далее перечисление желаемого.
+# Вот примеры вызова функции make_order для стола номер 1
+# make_order(1, soup='Borsh')
+# make_order(1, desert='Наполеон', drink='Чай')
+# Здесь мы видим, что человек сперва заказал борщ, а потом сделал повторный заказ, где  дозаказал десерт и напиток.
+# В итоге, в структуре данных по первому столу должна сохраниться следующая информация
+# 1: {'is_vip': True,
+#      'name': 'Andrey',
+#      'order': {'desert': 'Наполеон', 'drink': 'Чай', 'soup': 'Borsh'}}
+# Человек может сделать несколько заказов с одинаковыми категориями,
+# make_order(1, soup='Borsh')
+# make_order(1, desert='Наполеон', drink='Чай')
+# make_order(1, desert='Медовик', drink='Кофе')
+# в таком случае значения должны перезатираться и берется значение из последнего заказа
+# 1: {'is_vip': True,
+#      'name': 'Andrey',
+#      'order': {'desert': 'Медовик', 'drink': 'Кофе', 'soup': 'Borsh'}
+# Еще может быть такая ситуация, что человек заказывает еду не из перечисленных выше категорий или просит оказать услугу в рамках заказа.
+# Тогда все имена ключей, которые не входят в перечисленные выше категории меню, не нужно записывать в итоговый заказ.
+# Вот пример, где во втором заказе попросили принести салфетку и манную кашу.
+# make_order(1, soup='Borsh')
+# make_order(1, soup='Лапша', bring='Салфетку', meal='Манка')
+# Имена bring и meal отсутствуют в категориях, поэтому структура заказа для стола 1 должна будет выглядеть так:
+# 1: {'is_vip': True, 'name': 'Andrey', 'order': {'soup': 'Лапша'}}
+# Для успешного решения задания вам необходимо определить функции reserve_table и make_order.
+# Возможно понадобится продублировать функции, от которых зависела работа перечисленных ранее функций. Не забывайте про кнопку
+# «Запустить код» для проверки работоспособности программы перед отправкой.
+
+def is_table_free(n):
+    return tables[n] is None
+
+
+def reserve_table(number, name, status=False):
+    tables[number] = {'name': name, 'is_vip': status, 'order': {}} if is_table_free(number) else tables[number]
+
+
+def delete_reservation(number):
+    tables[number] = None
+
+
+def make_order(n, **kwargs):
+    order_list = ['salad', 'soup', 'main_dish', 'drink', 'desert']
+    true_order = dict()
+    for k, v in kwargs.items():
+        if k in order_list:
+            true_order[k] = v
+    tables[n]['order'].update(**true_order)
+    return tables[n]
+
+# От менеджеров поступило требование написать функционал, который позволяет очищать заказ.
+# Для этого нужно разработать функцию delete_order, которая имеет следующие параметры:
+# - обязательный ключевой параметр number_table - номер стола, где будем очищать заказ
+# - необязательный ключевой параметр delete_all со значением по умолчанию False.
+#   Если передать в него True, должна очищаться полностью информация о заказе для указанного столика.
+#   При значении False удаление в заказе будет точечным по категориям
+# - произвольное количество ключевых параметров с булевым значением вида drink=True, desert=True, call=True, шаурма=True
+#   Среди этих значений вам нужно удалять из заказа только те, имена которых находятся в списке категорий и переданное значение равно True
+# Для успешного решения задания вам необходимо определить новую функцию delete_order и продублировать ранее созданные
+# reserve_table и make_order со всеми их зависимостями.
+# Не забывайте про кнопку «Запустить код» для проверки работоспособности программы перед отправкой.
+
+order_list = ['salad', 'soup', 'main_dish', 'drink', 'desert']
+
+
+def is_table_free(n):
+    return tables[n] is None
+
+
+def reserve_table(number, name, status=False):
+    tables[number] = {'name': name, 'is_vip': status, 'order': {}} if is_table_free(number) else tables[number]
+
+
+def delete_reservation(number):
+    tables[number] = None
+
+
+def make_order(n, **kwargs):
+    true_order = dict()
+    for k, v in kwargs.items():
+        if k in order_list:
+            true_order[k] = v
+    tables[n]['order'].update(**true_order)
+    return tables[n]
+
+
+def delete_order(*, number_table, delete_all=False, **kwargs):
+    if delete_all:
+        tables[number_table]['order'].clear()
+    else:
+        for k, v in kwargs.items():
+            if k in order_list and v and k in tables[number_table]['order']:
+                del tables[number_table]['order'][k]
+
+# Проблема предыдущей версии функции make_order заключается в том, что она перезатирала ранее заказанные блюда.
+# И она также не давала в рамках одного вызова заказать несколько блюд из одной категории.
+# Ваша задача переписать функцию  make_order так, чтобы она сохраняла блюда из одной категории в виде списка,
+# а в случае нового заказа с блюдами из той же категории, эти блюда добавлялись бы в тот же список..
+# Давайте разберем примеры, имеется такая структура данных
+
+# tables = {
+#     1: {'name': 'Andrey', 'is_vip': True, 'order': {}},
+#     2: None,
+#     3: {'name': 'Vasiliy', 'is_vip': False, 'order': {}},
+# }
+# Далее Андрей делает два заказа make_order
+# make_order(1, soup='Borsh')
+# make_order(1, soup='Лапша')
+# Оба заказанных блюда из категории суп, значит в итоге нужно сложить их в один список и получить следующее
+# {
+#  1: {'name': 'Andrey', 'is_vip': True, 'order': {'soup': ['Borsh', 'Лапша']}},
+#  2: None,
+#  3: {'name': 'Vasiliy', 'is_vip': False, 'order': {}}
+# }
+# Также новая реализация функции make_order   должна позволять передать несколько блюд через запятую в рамках одной категории
+# make_order(1, soup='Borsh,Лапша', desert='Медовик', drink='Cola')
+# make_order(1, soup='Гаспачо', desert='Печенье,Наполеон')
+# Для успешного решения задания вам необходимо переписать функцию make_order и продублировать ранее созданные
+# reserve_table и delete_order со всеми их зависимостями.
+# Не забывайте про кнопку «Запустить код» для проверки работоспособности программы перед отправкой.
+
+order_list = ['salad', 'soup', 'main_dish', 'drink', 'desert']
+
+
+def is_table_free(n):
+    return tables[n] is None
+
+
+def reserve_table(number, name, status=False):
+    tables[number] = {'name': name, 'is_vip': status, 'order': {}} if is_table_free(number) else tables[number]
+
+
+def delete_reservation(number):
+    tables[number] = None
+
+
+def make_order(n, **kwargs):
+    true_order = dict()
+    for k, v in kwargs.items():
+        if k in order_list:
+            tables[n]['order'].setdefault(k, []).extend(v.split(','))
+    
+def delete_order(*, number_table, delete_all=False, **kwargs):
+    if delete_all:
+        tables[number_table]['order'].clear()
+    else:
+        for k, v in kwargs.items():
+            if k in order_list and v and k in tables[number_table]['order']:
+                del tables[number_table]['order'][k]
