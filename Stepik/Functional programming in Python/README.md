@@ -11,3 +11,4 @@
 - [**Знакомство с функциями**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Functional%20programming%20in%20Python/01.%20Familiarity%20with%20functions)
 - [**Параметры и аргументы функции**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Functional%20programming%20in%20Python/02.%20Function%20parameters%20and%20arguments)
 - [**Докстрока и аннотации**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Functional%20programming%20in%20Python/03.%20Dockstring%20and%20annotations)
+- [**Области видимости, замыкания, декораторы**](https://github.com/vypiemzalyubov/python/tree/main/Stepik/Functional%20programming%20in%20Python/04.%20Scopes%2C%20closures%2C%20decorators)
