@@ -412,3 +412,49 @@ def filter_collection(f, collection):
     elif isinstance(collection, tuple):
         return tuple([i for i in collection if f(i)])
     return [i for i in collection if f(i)]
+
+# Реализуйте функцию aggregation, которая принимает на вход функцию func и коллекцию элементов sequence. Функция func будет принимать только два элемента.
+# Задача функции aggregation уметь накапливать результат вычисления функции func путем последовательного применения ее ко всем элементам. 
+# Но так как функция func умеет работать только с двумя значениями, вам необходимо передавать элементы последовательно парами. 
+# В результате у вас должен получиться список, в котором копятся результаты работы функции aggregation
+# Пример, в качестве func возьмем функцию 
+# def get_add(x, y):
+#     return x + y
+# Коллекцией у нас будет следующий список
+# numbers = [5, 2, 4, 3, 5]
+# Применяя func к первым элементам коллекции 5 и 2, получим сумму 7. Это первое наше агрегированное значение
+# Далее берем уже накопленное значение 7 и следующий необработанный элемент 4, суммируем и получаем новую агрегацию 11.
+# Затем суммируем нашу агрегацию 11 со значением 3, получаем 14. И в конце добавляем последний элемент и готово итоговое значение 19. 
+# В итоге в процессе применения функции func мы нашли следующие значения [7, 11, 14, 19]. Данный список и нужно будет вернуть в качестве ответа.
+
+def aggregation(func, sequence):
+    res = []
+    total = None
+    for i in range(len(sequence)-1):
+        if total is None:
+            total = func(sequence[i], sequence[i+1])
+            res.append(total)            
+        else:
+            total = func(total, sequence[i+1])
+            res.append(total)
+    return res
+
+# Перепишите функцию aggregation так, чтобы она возвращала итоговое значение агрегации.
+# Функция aggregation по-прежнему должна принимать на вход функцию func и коллекцию элементов sequence. 
+
+def aggregation(func, sequence):
+    total = sequence[0]
+    while len(sequence) > 1:
+        total = func(total, sequence.pop())
+    return total
+
+# Перепишите функцию aggregation с прошлого шага так, чтобы у нее появился необязательный параметр initial по умолчанию равный None. 
+# Данный параметр отвечает за начальное состояние агрегации, если в него передать значение. Если ничего не передавать в initial, то функция aggregation работает как прежде
+
+def aggregation(func, sequence, initial = None):
+    if initial is not None:
+        sequence.append(initial)
+    total = sequence[0]
+    while len(sequence) > 1:
+        total = func(total, sequence.pop())
+    return total
