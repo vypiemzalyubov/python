@@ -580,3 +580,102 @@ def create_dict():
         return dct
     
     return inner
+
+# Перед вами декоратор uppercase , который преобразует к заглавному регистру все буквы результата оригинальной функции
+# Ваша задача задекорировать функцию calculate_tax декоратором uppercase, чтобы в трех принтах мы уже увидели результат задекорированной функции.
+
+def uppercase(func):
+    def inner(n, i, rate):
+        res = func(n, i, rate)
+        return res.upper()
+
+    return inner
+
+
+@uppercase
+def calculate_tax(name, income, tax_rate):
+    tax = income - income * (1 - tax_rate / 100)
+    return f'{name} должен заплатить налог {tax}$'
+
+
+print(calculate_tax("Ivan", 5000, 25))
+print(calculate_tax("vaSilIy", 15000, 30))
+print(calculate_tax("depardieu", 215000, 40))
+
+# Программист Кузьма познакомился с декораторами и решил написать свой первый пример, где он пытался сопроводить вызов функции add дополнительными выводами на экран.
+# Вот что получилось:
+# def decorator(func):
+#     def wrapper():
+#         print('---Start calculation---')
+#         result = func()
+#         print(f'---Finish calculation. Result is {result}---')
+#         return result
+#     return wrapper
+#
+# @decorator
+# def add(a, b):
+#     return a + b
+# По его задумке декоратор должен сопровождать вызов декорируемой функции сообщениями
+# ---Start calculation---
+#
+# и
+#
+# ---Finish calculation. Result is {result}---
+# Но во время тестирования функции add Кузьма столкнулся с ошибкой
+# takes 0 positional arguments but 2 were given
+# Помогите исправить его декоратор так, чтобы все заработало.
+
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print('---Start calculation---')
+        result = func(*args, **kwargs)
+        print(f'---Finish calculation. Result is {result}---')
+        return result
+    return wrapper
+
+
+@decorator
+def add(a, b):
+    return a + b
+
+# Теперь убедитесь, что декоратор Кузьмы из предыдущего задания успешно работает и с другими функциями, вне зависимости от количества аргументов и их типов.
+# Для решения задачи вам необходимо написать только определение функции-декоратора decorator.
+
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print('---Start calculation---')
+        result = func(*args, **kwargs)
+        print(f'---Finish calculation. Result is {result}---')
+        return result
+    return wrapper
+
+# Напишите декоратор repeater, который трижды вызывает декорированную функцию
+# Ваша задача написать только определение функции декоратора repeater
+
+def repeater(func):
+    def wrapper(*args, **kwargs):
+        for _ in range(3):
+            func(*args, **kwargs)
+    return wrapper
+
+# Напишите декоратор double_it, который возвращает удвоенный результат вызова декорированной функции
+# Ваша задача написать только определение функции декоратора double_it
+
+def double_it(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs) * 2
+    return wrapper
+
+# Ваша задача написать логику работы декоратора uppercase_elements, который умеет работать с функциями, возвращающими коллекции элементов.
+# Задача декоратора uppercase_elements преобразовать каждый строковый элемент коллекции к заглавному регистру.
+# В случае, если оригинальная функция возвращает словарь, то элементом считаем только строковые ключи словаря.
+# Элементы, не являющиеся строкой, не должны изменяться декоратором uppercase_elements
+# Гарантируется, что коллекции, возвращаемые оригинальной функцией, не являются вложенными
+
+def uppercase_elements(func):
+    def wrapper(*args, **kwargs):
+        res = func(*args, **kwargs)
+        if not isinstance(res, dict):
+            return [i.upper() if isinstance(i, str) else i for i in res]
+        return {k.upper() if isinstance(k, str) else k: v for k, v in res.items()}
+    return wrapper
