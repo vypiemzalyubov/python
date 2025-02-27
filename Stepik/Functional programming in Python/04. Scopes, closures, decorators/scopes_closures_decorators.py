@@ -679,3 +679,105 @@ def uppercase_elements(func):
             return [i.upper() if isinstance(i, str) else i for i in res]
         return {k.upper() if isinstance(k, str) else k: v for k, v in res.items()}
     return wrapper
+
+# Перед вами реализация двух функций-декораторов  first_validator и second_validator. Также имеется функция sum_values.
+# Вам необходимо сперва проанализировать имеющийся код и разобраться, как он работает.
+# После этого вашей задачей является:
+#    ✔️ наложить два декоратора на функцию sum_values в правильной последовательности;
+#    ✔️ вызвать задекорированную функцию sum_values подобрав аргументы так, чтобы совпал вывод результата.
+# Код самих функций менять не нужно.
+
+def first_validator(func):
+    def my_wrapper(*args, **kwargs):
+        print("Начинаем важную проверку")
+        if len(args) == 3:
+            func(*args, **kwargs)
+        else:
+            print("Важная проверка не пройдена")
+            return None
+        print("Заканчиваем важную проверку")
+
+    return my_wrapper
+
+
+def second_validator(func):
+    def my_wrapper(*args, **kwargs):
+        print("Начинаем самую важную проверку")
+        if kwargs.get('name') == 'Boris':
+            func(*args)
+        else:
+            print("Самая важная проверка не пройдена")
+            return None
+        print("Заканчиваем самую важную проверку")
+
+    return my_wrapper
+
+
+@second_validator
+@first_validator
+def sum_values(*args):
+    print(f'Получили результат равный {sum(args)}')
+
+
+sum_values(1, 1, 75, name='Boris')
+
+# Напишите декоратор validate_all_args_str, который проверяет на корректность (валидирует) переданные позиционные аргументы.
+# Корректным он считает любое строковое значение, стоящее в позиционном аргументе; ключевые аргументы при проверке игнорируются.
+# Если было передано хотя бы одно не строковое значение в позиционный аргумент, функция-декоратор validate_all_args_str должна:
+#  - вывести на экран фразу «Все аргументы должны быть строками»
+#  - вернуть None и не запускать оригинальную  функцию
+# Если же все аргументы корректны, validate_all_args_str запускает оригинальную функцию со всеми переданными значениями.
+
+def validate_all_args_str(func):
+    def wrapper(*args, **kwargs):
+        for arg in args:
+            if not isinstance(arg, str):
+                print('Все аргументы должны быть строками')
+                return
+        return func(*args, **kwargs)
+    return wrapper
+
+# Напишите декоратор validate_all_kwargs_int_pos, который проверяет на корректность переданные именованные аргументы.
+# Корректным будет считаться именованный аргумент, значение которого является целым положительным числом.
+# Позиционные аргументы игнорируются во время проверки декоратора validate_all_kwargs_int_pos.
+# Если было передано хотя бы одно некорректное значение в именованный аргумент, функция-декоратор validate_all_kwargs_int_pos должна:
+#  - вывести на экран фразу «Все именованные аргументы должны быть положительными числами»;
+#  - вернуть None и не запускать оригинальную  функцию.
+# Если же все аргументы корректны, validate_all_kwargs_int_pos запускает оригинальную функцию со всеми переданными значениями.
+# Также для проверки вам необходимо скопировать из предыдущего шага реализацию декоратора validate_all_args_str,
+# потому что в проверках будет использоваться валидация сразу и на *args, и на **kwargs.
+
+def validate_all_kwargs_int_pos(func):
+    def wrapper(*args, **kwargs):
+        if all(isinstance(kwarg, int) and kwarg > 0 for kwarg in kwargs.values()):
+            return func(*args, **kwargs)
+        print('Все именованные аргументы должны быть положительными числами')
+        return
+    return wrapper
+
+# Ваша задача создать два декоратора:
+#     1️⃣ filter_even, который фильтрует только позиционные аргументы.
+#        Среди всех переданных значений он оставляет только четные числа, False и коллекции, длина которых четная
+#     2️⃣ delete_short, который фильтрует только именованные аргументы.
+#        Среди всех переданных значений он оставляет только те, имена которых более четырех символов
+
+def filter_even(func):
+    def wrapper(*args, **kwargs):
+        args = [
+            arg
+            for arg in args
+            if arg is False
+            or (isinstance(arg, (str, list, tuple, dict)) and len(arg) % 2 == 0)
+            or (isinstance(arg, int) and int(arg) % 2 == 0)
+        ]
+        return func(*args, **kwargs)
+
+    return wrapper
+
+
+def delete_short(func):
+    def wrapper(*args, **kwargs):
+        kwargs = {k: v for k, v in kwargs.items() if len(k) > 4}
+        return func(*args, **kwargs)
+
+    return wrapper
