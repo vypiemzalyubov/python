@@ -781,3 +781,181 @@ def delete_short(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+# Отредактируйте код так, чтобы сохранялись оригинальное имя и док строка декорируемой функции
+# Сделайте это без использования функции wraps.
+
+def upper(func):
+    def inner(*args, **kwargs):
+        """
+        Внутренняя функция декоратора
+        """
+        return func(*args, **kwargs).upper()
+    
+    inner.__name__ = func.__name__
+    inner.__doc__ = func.__doc__
+    inner.__annotations__ = func.__annotations__
+    
+    return inner
+
+
+@upper
+def concatenate(*args):
+    """
+    Возвращает конкатенацию переданных строк
+    """
+    return ', '.join(args)
+
+print(concatenate.__name__)
+print(concatenate.__doc__.strip())
+
+# Напишите декоратор limit_query, который ограничивает вызов оригинальной функции так, чтобы она могла вызываться не больше трех раз.
+# Когда декорируемая функция исчерпает лимит вызовов, необходимо выводить на экран фразу «Лимит вызовов закончен, все 3 попытки израсходованы»
+# Если лимит исчерпан, оригинальная функция не должна быть вызвана, декоратор возвращает None
+
+def limit_query(func):
+    count = 0
+    def wrapper(*args, **kwargs):
+        nonlocal count
+        count += 1
+        if count > 3:
+            print('Лимит вызовов закончен, все 3 попытки израсходованы')
+            return
+        else:
+            return func(*args, **kwargs)
+    
+    wrapper.__name__ = func.__name__
+    return wrapper
+
+
+# Напишите декоратор no_side_effects_decorator, который защищает от побочных действий функций
+
+from copy import deepcopy
+from functools import wraps
+
+
+def no_side_effects_decorator(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        new_args = deepcopy(args)
+        return func(*new_args, **kwargs)
+    return wrapper
+
+# Напишите декоратор add_args, который добавляет к переданным аргументам еще два значения: строку «begin» в начало аргументов, строку «end» в конец.
+# Также декоратор должен сохранить первоначальное имя декорируемой функции и ее строку документации
+
+from functools import wraps
+
+
+def add_args(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        args = ('begin',) + args + ('end',)
+        return func(*args, **kwargs)
+    return wrapper
+
+# Реализуйте декоратор explicit_args, который не позволяет запускать оригинальную функцию, если были переданы позиционные аргументы.
+# Декоратор explicit_args должен выводить фразу:
+# Вы не можете передать позиционные аргументы. Используйте именованный способ передачи значений
+# и предотвращать запуск оригинальной функции
+
+from functools import wraps
+
+
+def explicit_args(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if args:
+            print('Вы не можете передать позиционные аргументы. Используйте именованный способ передачи значений')
+            return
+        return func(**kwargs)
+    return wrapper
+
+# Реализуйте декоратор reverse, который сделает так, чтобы декорированная функция принимала все свои позиционные аргументы в обратном порядке.
+# Именованные аргументы должны игнорироваться декоратором reverse. Также нужно сохранить информацию о декорируемой функции.
+
+from functools import wraps
+
+
+def reverse(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        return func(*args[::-1])
+    return wrapper
+
+# Monkey patch -  это прием в программировании, который используется для динамического изменения поведения фрагмента кода во время выполнения.
+# Ваша задача написать декоратор monkey_patching, который заменяет значения всех переданных аргументов при вызове оригинальной функции следующим образом:
+#     ➕   значение каждого позиционного аргумента заменяется на строку «Monkey»
+#     ➕   значение каждого именованного аргумента заменяется на строку «patching»
+
+from functools import wraps
+
+
+def monkey_patching(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        args = [str(arg).replace(str(arg), 'Monkey') for arg in args]
+        kwargs = {k: str(v).replace(str(v), 'patching') for k, v in kwargs.items()}
+        return func(*args, **kwargs)
+    return wrapper
+
+# Реализуйте декоратор counting_calls, который будет подсчитывать количество вызовов оригинальной функции.
+# После декорирования при помощи counting_calls у функции должен появиться атрибут call_count, который отслеживает текущее количество вызовов.
+
+from functools import wraps
+
+
+def counting_calls(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        wrapper.call_count += 1
+        return func(*args, **kwargs)
+    wrapper.call_count = 0
+    return wrapper
+
+# Напишите декоратор check_count_args, который проверяет количество переданных аргументов. Проверка заключается в следующем:
+#  - в оригинальную функцию должно быть передано только два аргумента и неважно позиционно или по ключу.
+#    Если это условие выполняется, возвращаем результат вызова оригинальной функции
+#  - Если передано меньшее количество, декоратор должен вывести строку «Not enough arguments» и не должен запускать оригинальную функцию;
+#  - Если передано более двух аргументов, то декоратор должен вывести строку «Too many arguments» и не должен запускать оригинальную функцию.
+# Не забывайте сохранять имя функции и строку документации. Для решения необходимо написать только реализацию декоратора check_count_args
+
+from functools import wraps
+
+
+def check_count_args(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if len(args) + len(kwargs) > 2:
+            print('Too many arguments')
+            return
+        elif len(args) + len(kwargs) < 2:
+            print('Not enough arguments')
+            return
+        return func(*args, **kwargs)
+    return wrapper
+
+# Кэширование – это способ оптимизации работы приложения, при котором повторно запрашиваемые данные сохраняются и далее используются
+# для обслуживания последующих запросов. Кешом называется место, куда будут сохраняться данные после первого вызова.
+# Ваша задача написать декоратор cache_result, который оптимизирует производительность за счет сохранения и извлечения результатов функций,
+# устраняя избыточные вычисления для повторяющихся входных данных и улучшая скорость отклика приложения, особенно для длительных вычислений.
+# Декоратор cache_result должен сохранять результат вызова оригинальной функции с учетом передаваемых аргументов.
+# При повторном вызове функции с теми же аргументами, результат должен возвращаться из кеша, предварительно сопроводив выводом следующего текста на экран
+# [FROM CACHE] Вызов {имя_функции} = {результат_из_кеша}
+# Ваша задача написать только функцию-декоратор cache_result
+
+from functools import wraps
+
+cache = dict()
+
+
+def cache_result(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        if cache.get(args) is None:
+            cache[args] = func(*args, **kwargs)
+            return func(*args, **kwargs)
+        else:
+            print(f'[FROM CACHE] Вызов {wrapper.__name__} = {cache.get(args)}')
+            return cache.get(args)
+    return wrapper
