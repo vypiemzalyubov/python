@@ -959,3 +959,157 @@ def cache_result(func):
             print(f'[FROM CACHE] Вызов {wrapper.__name__} = {cache.get(args)}')
             return cache.get(args)
     return wrapper
+
+# Усовершенствуем ранее созданный декоратор counting_calls, добавив отслеживание переданных аргументов при каждом вызове.
+# Для этого декоратор counting_calls должен добавить в декорируемой функции атрибут calls - список,
+# в который будут сохраняться все переданные аргументы в момент вызова в виде словаря.
+# Каждый словарь должен иметь два ключа: args и kwargs для сохранения соответствующих аргументов.
+
+from functools import wraps
+
+
+def counting_calls(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        wrapper.call_count += 1
+        wrapper.calls.append({'args': args, 'kwargs': kwargs})
+        return func(*args, **kwargs)
+    wrapper.call_count = 0
+    wrapper.calls = list()
+    return wrapper
+
+# Создайте декоратор multiply_result_by, который принимает аргумент N и возвращает функцию-декоратор, которая умножает результат декорированной функции на N
+
+from functools import wraps
+
+
+def multiply_result_by(n):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            return func(*args, **kwargs) * n
+        return wrapper
+    return decorator
+
+# Ваша задача переписать декоратор limit_query так, чтобы он ограничивал разрешенное количество вызовов оригинальной функции по переданному параметру limit.
+# Когда декорируемая функция исчерпает лимит вызовов, необходимо выводить на экран фразу:
+# «Лимит вызовов закончен, все <limit> попытки израсходованы»
+# Если лимит исчерпан, оригинальная функция не должна быть вызвана, декоратор возвращает None
+
+from functools import wraps
+
+
+def limit_query(limit):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            wrapper.count += 1
+            if wrapper.count > limit:
+                print(f'Лимит вызовов закончен, все {limit} попытки израсходованы')
+                return
+            else:
+                return func(*args, **kwargs)
+        wrapper.count = 0
+        return wrapper
+    return decorator
+
+# Ваша задача переписать декоратор monkey_patching. Ранее он заменял значения всех переданных аргументов при вызове оригинальной функции следующим образом:
+#     ➕   значение каждого позиционного аргумента заменяется на строку «Monkey»
+#     ➕   значение каждого именованного аргумента заменяется на строку «patching»
+# Теперь необходимо завести параметры arg и kwarg, при помощи которых можно влиять на значения, которые будут проставляться в позиционные и именованные аргументы.
+# Параметры arg и kwarg являются необязательными для передачи, их значения по умолчанию «Monkey» и «patching» соответственно.
+
+from functools import wraps
+
+
+def monkey_patching(arg='Monkey', kwarg='patching'):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            args = [str(a).replace(str(a), arg) for a in args]
+            kwargs = {k: str(v).replace(str(v), kwarg) for k, v in kwargs.items()}
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+# Ваша задача написать параметризированный декоратор pass_arguments, который принимает произвольное количество именованных и позиционных аргументов
+# и пробрасывает их дополнительно к аргументам, которые передаются при вызове оригинальной функции
+
+from functools import wraps
+
+
+def pass_arguments(*arg, **kwarg):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            args += arg
+            kwargs.update(kwarg)
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+# Напишите декоратор convert_to, который позволяет автоматически преобразовать возвращаемое значение в указанный тип данных.
+# Функция-декоратор convert_to имеет обязательный параметр type_, в который необходимо передать тип данных для дальнейшего преобразования.
+
+from functools import wraps
+
+
+def convert_to(type_):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            return type_(func(*args, **kwargs))
+        return wrapper
+    return decorator
+
+# Помните декоратор validate_all_args_str, который проверял, что все переданные позиционные значения являются строками?
+# А если вдруг нам потребуется создать декоратор, который будет проверять аргументы не на принадлежность к строке, а, скажем, к списку или числу?
+# Тогда нам понадобится создавать отдельный декоратор на каждый тип данных. Или сделать параметризированный декоратор validate_all_args,
+# который будет принимать тип данных в качестве аргумента и проверять, что все значения в args относятся к переданному типу данных.
+# Ваша задача написать такой декоратор validate_all_args, который имеет параметр type_. Если все позиционные аргументы принадлежат типу type_,
+# то запускается оригинальная функция; в противном случае необходимо отменить ее запуск и вывести сообщение:
+# Все аргументы должны принадлежать типу {type_}
+
+def validate_all_args(type_):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            for arg in args:
+                if not isinstance(arg, type_):
+                    print(f'Все аргументы должны принадлежать типу {type_}')
+                    return
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
+
+# Ваша задача написать параметризированный декоратор compose,
+# который принимает произвольное количество функций и применяет их последовательно к результату декорируемой функции
+
+from functools import wraps
+
+
+def compose(*funcs):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            res = func(*args, **kwargs)
+            for f in funcs:
+                res = f(res)
+            return res
+        return wrapper
+    return decorator
+
+# Ваша задача написать параметризированный декоратор add_attrs,
+# который принимает произвольное количество именованных аргументов и на их основании добавляет новые атрибуты для оригинальной функции
+
+from functools import wraps
+
+
+def add_attrs(**attrs):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for k, v in attrs.items():
+                setattr(wrapper, k, v)
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
