@@ -307,3 +307,60 @@ def get_info_marks(students, *args):
         for name, best, worst in
         zip(students, map(max, zip(*args)), map(min, zip(*args)))
     }
+
+# Перед вами кортеж english_words. При помощи enumerate обойдите слова этой коллекции и для каждого элемента выведите строку вида
+# Word № {number} = {word}
+# Например, для кортежа english_words = ('hi', 'World') ответ был бы таким:
+# Word № 1 = hi
+# Word № 2 = World
+# Обратите внимание, что нумерация слов начинается с единицы
+
+english_words = ('attack', 'bless', 'look', 'reckless', 'short', 'monster', 'trolley', 'sound',
+                 'ambiguity', 'researcher', 'trunk', 'coat', 'quantity', 'question', 'tenant',
+                 'miner', 'definite', 'kit', 'spectrum', 'satisfied', 'selection', 'carve',
+                 'ask', 'go', 'suggest')
+for number, word in enumerate(english_words, start=1):
+    print(f'Word № {number} = {word}')
+
+# Напишите функцию even_items, которая принимает в свой единственный параметр итерируемый объект.
+# Задача функции even_items - оставить среди элементов переданного объекта только те элементы, которые располагаются на четных местах.
+# На рисунке ниже я выделил элементы, которые должны остаться. Функция even_items должна вернуть оставшиеся элементы в виде списка
+
+def even_items(obj):
+    return [v for i, v in enumerate(obj, start=1) if i % 2 == 0]
+
+# Напишите функцию get_words_with_position , которая принимает на вход строку words, состоящую из слов, разделенных пробелом.
+# Функция get_words_with_position должна создать и вернуть список кортежей, где каждый элемент-кортеж должен содержать два значения:
+# само слово и его порядковый номер в исходной строке words.
+# Порядковый номер слов необходимо считать с единицы. К примеру, такой вызов функции get_words_with_position
+# get_words_with_position('variation random electronics competence collapse')
+# должен вернуть следующий результат
+# [
+#  ('variation', 1),
+#  ('random', 2),
+#  ('electronics', 3),
+#  ('competence', 4),
+#  ('collapse', 5)
+# ]
+# Ваша задача - написать реализацию функции get_words_with_position.
+
+def get_words_with_position(string):
+    return [(v, i) for i, v in enumerate(string.split(), start=1)]
+
+# Напишите функцию find_different_indexes, которая принимает две строки одинаковой длины и возвращает список индексов,
+# на позициях которых находятся разные символы в этих строках.
+
+def find_different_indexes(s1: str, s2: str) -> list[int]:
+    return [i for i, v in enumerate(zip(s1, s2)) if v[0] != v[1]]
+
+# А вы знали, что цифры на банковской карте выбираются не просто случайным образом? Сумма определенных цифр на карте должна проходить условия алгоритма Луна.
+# Упрощенная версия алгоритма выглядит так:
+# - Цифры проверяемой последовательности нумеруются справа налево;
+# - Цифры, оказавшиеся на нечётных местах, остаются без изменений;
+# - Цифры, стоящие на чётных индексах, умножаются на 2. Если в результате такого умножения возникает число больше 9, оно уменьшается на значение 9;
+# - Все полученные в результате преобразования 16 цифр складываются. Если сумма кратна 10, то исходные данные верны.
+# Ваша задача  - написать функцию luhn_algorithm, которая проверяет, является ли переданный номер карты валидным в соответствии с алгоритмом Луна.
+# Функция luhn_algorithm должна вернуть True, если номер карты валидный, в противном случае - False.
+
+def luhn_algorithm(number):
+    return sum([int(v) if i % 2 else int(v) * 2 - 9 if int(v) * 2 > 9 else int(v) * 2 for i, v in enumerate(str(number))]) % 10 == 0
