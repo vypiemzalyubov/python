@@ -204,3 +204,131 @@ def quick_power(a, n):
     elif n % 2 == 0:
         return quick_power(a, n // 2) ** 2
     return a * quick_power(a, n - 1)
+
+# Напишите функцию sum_recursive, которая принимает на вход вложенный список, конечными элементами которого являются целые числа,
+# и возвращает сумму элементов переданного списка. Уровень вложенности списка произвольный.
+# Ваша задача только написать определение рекурсивной функции sum_recursive
+
+def sum_recursive(lst):
+    total = 0
+    for i in lst:
+        if isinstance(i, list):
+            tmp_total = sum_recursive(i)
+            total += tmp_total
+        else:
+            total += i
+    return total
+
+# Напишите функцию multu_recursive, которая принимает на вход вложенный список, конечными элементами которого являются целые числа и строки,
+# и возвращает произведение числовых элементов переданного списка. Уровень вложенности исходного списка произвольный.
+# Произведение пустого списка должно быть равно 1. Также единице должно быть равно произведение списка, в котором нету ни одного числового значения.
+# Ваша задача только написать определение рекурсивной функции multu_recursive
+
+def multu_recursive(lst):
+    total = 1
+    for i in lst:
+        if isinstance(i, list):
+            tmp_total = multu_recursive(i)
+            total *= tmp_total
+        elif isinstance(i, int):
+            total *= i
+    return total
+
+# Напишите функцию get_max_recursive, которая принимает на вход вложенный список, конечными элементами которого являются целые числа,
+# и возвращает самый большой элемент переданного списка. Уровень вложенности исходного списка произвольный.
+# Ваша задача только написать определение рекурсивной функции get_max_recursive
+
+def get_max_recursive(lst):
+    result = float('-inf')
+    for i in lst:
+        if isinstance(i, list):
+            tmp = get_max_recursive(i)
+            if tmp > result:
+                result = tmp
+        elif isinstance(i, int):
+            if i > result:
+                result = i
+    return result
+
+# Представьте, что у нас есть список целых чисел неограниченной вложенности. То есть наш список может состоять из списков, внутри которых также могут быть списки.
+# Задача функции flatten вернуть новый линейный список, составленный из элементов входного списка, в котором уже отсутствует какая-либо вложенность.
+# Элементы в плоском списке должны располагаться в том же порядке, как они следовали в исходном списке.
+# Ваша задача — написать только определение функции flatten.
+
+def flatten(lst):
+    result = []
+    for i in lst:
+        if isinstance(i, list):
+            tmp = flatten(i)
+            result.extend(tmp)
+        elif isinstance(i, int):
+            result.append(i)
+    return result
+
+# Ранее мы уже делали проверку на вхождение элемента в линейный список. Теперь ваша задача переписать функцию is_member так,
+# чтобы она могла искать элемент в списке с произвольной вложенностью. Функция принимает некое значение value и список значений lst.
+# Функция is_member должна вернуть True, если значение value присутствует в списке lst на любом уровне, и False в противном случае.
+
+def is_member(value, lst):
+    def _flatten(lst):
+        result = []
+        for i in lst:
+            if isinstance(i, list):
+                tmp = _flatten(i)
+                result.extend(tmp)
+            elif isinstance(i, int):
+                result.append(i)
+        return result
+    return value in _flatten(lst)
+
+# Создайте рекурсивную функцию find_level_element, которая определяет на каком уровне вложенности располагается интересующий нас элемент.
+# Нумерация уровней вложенности начинается с единицы. Функция find_level_element принимает некое значение value и список значений lst.
+# Функция find_level_element должна вернуть номер уровня, где встречается первое найденное значение value в списке lst на любом уровне.
+# Если же в lst отсутствует значение value, функция find_level_element должна вернуть -1.
+
+def find_level_element(value, lst, level=1):
+    if value in lst:
+        return level
+    for i in lst:
+        if isinstance(i, list):
+            result = find_level_element(value, i, level+1)
+            if result:
+                return result
+    return -1
+
+# Встроенная функция reversed позволяет расположить элементы упорядоченной коллекции в обратном порядке.
+# Но работает данная функция только на первый уровень вложенности. Это значит, что результатом следующей инструкции
+# print(list(reversed([[1, 2, 3], [4, 5], [6, 7, 8]])))
+# будет следующий список
+# [[6, 7, 8], [4, 5], [1, 2, 3]]
+# Порядок элементов на втором уровне не поменялся.
+# Ваша задача написать рекурсивную функцию reversed_recursive, которая принимает на вход вложенный список произвольной вложенности
+# и располагает все элементы на каждом уровне в обратном направлении .Ваша задача только написать определение рекурсивной функции reversed_recursive
+
+def reversed_recursive(lst):
+    result = []
+    for i in lst:
+        if isinstance(i, list):
+            tmp = reversed_recursive(i)
+            result.append(tmp)
+        elif isinstance(i, int):
+            result.append(i)
+    result.reverse()
+    return result
+
+# Перед вами имеется вложенный словарь, уровень вложенности произвольный и заранее неизвестен.
+# Ключами словаря на любом уровне могут быть только строки, значениями - только числа.
+# Учитывая указанные выше условия, ваша задача состоит в том, чтобы преобразовать этот вложенный словарь в плоский (состоящий только из одного уровня),
+# где ключи формируются конкатенацией вложенных ключей, соединенных знаком _
+# Для этого необходимо определить рекурсивную функцию flatten_dict. Она должна принимать вложенный словарь и возвращать плоский
+# Ваша задача только написать определение функции flatten_dict
+
+def flatten_dict(dct, parent_key='', sep='_'):
+    result = {}
+    for k, v in dct.items():
+        tmp_key = f'{parent_key}{sep}{k}' if parent_key else k
+        if isinstance(v, dict):
+            result.update(flatten_dict(v, tmp_key, sep=sep))
+        else:
+            result[tmp_key] = v
+    return result
