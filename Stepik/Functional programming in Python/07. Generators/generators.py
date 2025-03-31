@@ -300,3 +300,85 @@ def checker(password):
         and any(char.isupper() for char in password)
         and any(char.isdigit() for char in password)
     )
+
+# Ниже представлен код из урока, где мы разбирали различные состояния генератора.
+# При запуске данного кода возникает исключение и из-за него не отрабатывает последняя строка.
+# Ваша задача - обработать возникающее исключение так, чтобы все оставшиеся строки смогли отработать без ошибок.
+
+from inspect import getgeneratorstate
+
+
+def my_coro(a):
+    print(f'Запускаем корутину со значением a={a}')
+    b = yield a
+    print(f'Получено значение b={b}')
+    c = yield a + b
+    print(f'Получено значение c={c}')
+
+coro = my_coro(7)
+print(getgeneratorstate(coro))
+next(coro)
+print(getgeneratorstate(coro))
+
+print(coro.send(23))
+print(getgeneratorstate(coro))
+
+try:
+    print(coro.send(100))
+except StopIteration:
+    pass
+
+print(getgeneratorstate(coro))
+
+# На предыдущем уроке вы решали задачу «Словарь».
+# В ней гарантировалось, что в сопрограмму alphabet будут передаваться только значения, которые являются ключами глобальной переменной DICTIONARY.
+# Теперь вам необходимо переписать сопрограмму alphabet  так, чтобы она могла обрабатывать исключение KeyError.
+# В случае, когда возникнет исключение KeyError, сопрограмма должна генерировать значение «default».
+# Переменная DICTIONARY вам в редакторе кода по-прежнему не видна, но вы можете обращаться к ней внутри сопрограммы alphabet.
+
+def alphabet():
+    letter = None
+    while True:
+        try:
+            key = yield letter
+            letter = DICTIONARY.get(key, 'default')
+        except KeyError:
+            letter = 'default'
+
+# Перед вами генератор flatten_matrix, который обходит все элементы двумерного списка и возвращает их по одному.
+# По сути, преобразование результата работы flatten_matrix в список позволяет создать одномерный (плоский) список из двумерного списка.
+# Ваша задача — переписать генератор flatten_matrix через инструкцию yield from так, чтобы функциональность генератора при этом не пострадала.
+# Гарантируется, что в генератор flatten_matrix будет поступать только двумерный список.
+
+def flatten_matrix(nested_list):
+    for sublist in nested_list:
+        yield from sublist
+
+# Вы разрабатываете систему обработки данных, где несколько источников данных представляют собой генераторы.
+# Чтобы упростить работу, нужно объединить эти генераторы в один поток, который будет последовательно выдавать элементы из всех источников.
+# Напишите функцию-генератор merge_generators, которая принимает несколько генераторов и объединяет их в один с помощью конструкции yield from.
+# Каждый элемент должен выдаваться в том порядке, в котором он поступает из исходных генераторов.
+
+def merge_generators(*gens):
+    for gen in gens:
+        yield from gen
+
+# Перепишите рекурсивную функцию flatten из задачи «Превращаем вложенный список в плоский» в рекурсивный генератор. Имя для генератора оставьте прежним flatten
+
+def flatten(lst):
+    for i in lst:
+        if isinstance(i, list):
+            yield from flatten(i)
+        elif isinstance(i, int):
+            yield i
+
+# Вы разрабатываете инструмент для работы с данными, которые хранятся в виде сложных вложенных словарей.
+# Данные могут быть организованы в несколько уровней вложенности, и ваш инструмент должен извлекать все значения, игнорируя ключи.
+# Напишите генератор get_nested_dict_values, который принимает на вход вложенный словарь и обходит его рекурсивно, возвращая только значения.
+
+def get_nested_dict_values(dct):
+    for value in dct.values():
+        if isinstance(value, dict):
+            yield from get_nested_dict_values(value)
+        else:
+            yield value
